@@ -1,33 +1,15 @@
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
 import type { Metadata } from "next";
+import { UnlockForm } from "./UnlockForm";
 
 export const metadata: Metadata = {
   title: "Portfolio — Magdalena Sapkowska",
 };
-
-async function submit(formData: FormData) {
-  "use server";
-  const password = formData.get("password") as string;
-  if (password === "magdalena2026") {
-    cookies().set("portfolio_auth", "magdalena2026", {
-      httpOnly: true,
-      maxAge: 60 * 60 * 24 * 30,
-      path: "/",
-      sameSite: "lax",
-    });
-    redirect("/");
-  }
-  redirect("/unlock?error=1");
-}
 
 export default function UnlockPage({
   searchParams,
 }: {
   searchParams: { error?: string };
 }) {
-  const hasError = searchParams.error === "1";
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-neutral-50 px-4">
       <div className="w-full max-w-sm">
@@ -55,29 +37,7 @@ export default function UnlockPage({
           </p>
         </div>
 
-        <form action={submit} className="space-y-4">
-          <div>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter password"
-              autoComplete="current-password"
-              autoFocus
-              className="w-full px-4 py-3 rounded-xl border border-neutral-200 bg-white text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-lime-300 focus:border-transparent transition-all text-sm"
-            />
-            {hasError && (
-              <p className="mt-2 text-sm text-red-500">
-                Incorrect password. Try again.
-              </p>
-            )}
-          </div>
-          <button
-            type="submit"
-            className="w-full py-3 px-4 rounded-xl bg-lime-300 hover:bg-lime-200 text-neutral-950 font-semibold text-sm transition-colors duration-200"
-          >
-            Enter
-          </button>
-        </form>
+        <UnlockForm hasError={searchParams.error === "1"} />
       </div>
     </div>
   );
