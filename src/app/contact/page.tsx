@@ -75,9 +75,9 @@ function ContactCard({
 
 export default function ContactPage() {
   return (
-    <div className="relative overflow-hidden pt-16 md:pt-24 md:min-h-screen flex flex-col justify-center">
+    <div className="relative overflow-hidden">
       <ContactTriangleStage />
-      <Container as="section" className="py-12 md:py-24 relative z-10">
+      <Container as="section" className="pt-24 pb-20 md:pt-32 md:pb-32 relative z-10">
         <div className="max-w-2xl mx-auto text-center mb-16">
           <FadeIn>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-6">
