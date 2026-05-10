@@ -19,10 +19,10 @@ export default function AboutPage() {
   const paragraphs = aboutContent.intro.split("\n\n");
 
   return (
-    <div className="pt-24">
+    <div className="pt-16 md:pt-24">
       {/* Intro section */}
-      <Container as="section" className="py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <Container as="section" className="py-10 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
           {/* Portrait */}
           <SlideUp delay={0.1} className="order-2 lg:order-1">
             <div className="rounded-2xl overflow-hidden aspect-[4/5] bg-neutral-100 max-w-md mx-auto lg:mx-0">
@@ -53,7 +53,7 @@ export default function AboutPage() {
       </Container>
 
       {/* What I bring */}
-      <section className="py-20 bg-neutral-50/60">
+      <section className="py-10 md:py-20 bg-neutral-50/60">
         <Container>
           <FadeIn>
             <SectionHeading
@@ -80,7 +80,7 @@ export default function AboutPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-neutral-50/60">
+      <section className="py-10 md:py-20 bg-neutral-50/60">
         <Container>
           <FadeIn>
             <SectionHeading
@@ -106,7 +106,7 @@ export default function AboutPage() {
       </section>
 
       {/* Tools & Competencies */}
-      <Container as="section" className="py-20">
+      <Container as="section" className="py-10 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <FadeIn>
             <h2 className="text-xl font-bold text-neutral-900 mb-6">Tools & Software</h2>
@@ -132,7 +132,7 @@ export default function AboutPage() {
       </Container>
 
       {/* Experience */}
-      <section className="py-20 bg-neutral-50/60">
+      <section className="py-10 md:py-20 bg-neutral-50/60">
         <Container>
           <FadeIn>
             <SectionHeading title="Experience" />
@@ -142,7 +142,7 @@ export default function AboutPage() {
       </section>
 
       {/* Education */}
-      <Container as="section" className="py-20">
+      <Container as="section" className="py-10 md:py-20">
         <FadeIn>
           <SectionHeading title="Education & Certifications" />
         </FadeIn>
@@ -150,7 +150,7 @@ export default function AboutPage() {
       </Container>
 
       {/* CTA */}
-      <section className="py-20 border-t border-neutral-100">
+      <section className="py-10 md:py-20 border-t border-neutral-100">
         <Container>
           <FadeIn>
             <div className="text-center max-w-xl mx-auto">

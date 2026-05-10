@@ -11,7 +11,7 @@ export function Timeline({ entries }: TimelineProps) {
       {/* Vertical line */}
       <div className="absolute left-4 top-0 bottom-0 w-px bg-neutral-100 hidden sm:block" />
 
-      <div className="space-y-8">
+      <div className="space-y-4 md:space-y-8">
         {entries.map((entry, i) => (
           <FadeIn key={entry.id} delay={i * 0.08}>
             <div className="sm:pl-12 relative">
