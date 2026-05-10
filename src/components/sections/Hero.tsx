@@ -35,10 +35,10 @@ export function Hero() {
   const nameDelay = nameWords.length * 0.08;
 
   return (
-    <section className="relative min-h-screen flex items-start md:items-center overflow-hidden">
+    <section className="relative md:min-h-screen flex items-start md:items-center overflow-hidden">
       <TriangleStage />
 
-      <Container className="pt-24 pb-16 md:pt-24 md:pb-32 relative z-10">
+      <Container className="pt-16 pb-12 md:pt-24 md:pb-32 relative z-10">
         <div>
           {/* Name */}
           <h1 id="hero-name" className="font-display font-extrabold text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-[-0.03em] text-neutral-900 leading-[1.05]">
