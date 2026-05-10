@@ -6,7 +6,7 @@ import { AdditionalWorkCard } from "@/components/cards/AdditionalWorkCard";
 
 export function AdditionalWork() {
   return (
-    <section className="py-24">
+    <section className="py-12 md:py-24">
       <Container>
         <SectionHeading
           title="Additional Work"

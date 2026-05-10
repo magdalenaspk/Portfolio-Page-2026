@@ -3,7 +3,7 @@ import { Container } from "./Container";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-neutral-100 py-10 mt-24">
+    <footer className="border-t border-neutral-100 py-10 mt-8 md:mt-24">
       <Container>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
           <span>© {year} Magdalena Sapkowska</span>
