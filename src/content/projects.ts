@@ -359,7 +359,7 @@ export const selectedProjects: Project[] = [
   },
 ];
 
-// Workshops and talks hosted — shown in their own section on the homepage
+// Workshops and talks hosted, ordered by impact. Shown in their own section on the homepage
 export const workshops: Project[] = [
   {
     id: 5,
@@ -369,9 +369,9 @@ export const workshops: Project[] = [
     subtitle: "Designing at the Speed of Ideas",
     description:
       "Built a fully interactive prototype using only prompts and presented the methods at UX Camp 2025 and AutoScout24.",
-    company: "UX Camp Workshop",
+    company: "UX Camp Berlin · AutoScout24",
     role: "Speaker & Workshop Facilitator",
-    platform: "Figma, AI Tools",
+    platform: "Figma Make, AI tools, prompting",
     tags: ["AI Tools", "Prototyping", "Workshop", "Thought Leadership"],
     thumbnail: {
       src: "/images/projects/project-5/thumb.png",
@@ -407,6 +407,128 @@ export const workshops: Project[] = [
         heading: "Outcomes",
         body: "Creating an interactive prototype can be faster than stitching static mockups: treat the AI as a co-creator, break the project into atomic steps, and iterate in tight loops. The debugging toolkit matters as much as the prompting one.\n\nAs one of the earliest adopters of Figma Make at AutoScout24, I became a go-to resource for the team, running informal sessions, sharing prompting strategies, and helping colleagues get unblocked when the tool behaved unexpectedly.\n\nI shared these methods at UX Camp (October 2025) and at an internal UX All Hands (August 2025): how to structure prompts, how to use visual references effectively, and when to step into the code rather than keep prompting around a problem.",
         presentation: "/images/projects/project-5/presentation.pdf",
+      },
+    ],
+  },
+  {
+    id: 8,
+    slug: "broadcasting-your-design",
+    status: "published",
+    title: "Broadcasting Your Design",
+    subtitle: "Teaching Designers to Present Like a Newsroom",
+    description:
+      "A UX Camp workshop that turns presenting into a newsroom: four roles, two frameworks, and a live 60-second broadcast to practise them.",
+    company: "UX Camp Berlin",
+    role: "Speaker & Workshop Facilitator",
+    platform: "Storytelling, presenting, design reviews",
+    tags: ["Workshop", "Storytelling", "Presentation Skills", "Facilitation"],
+    thumbnail: {
+      src: "/images/projects/project-8/thumb.png",
+      alt: "Broadcasting Your Design - UX Camp workshop",
+      width: 1200,
+      height: 800,
+      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+    },
+    heroImage: {
+      src: "/images/projects/project-8/hero.png",
+      alt: "Retro TV showing a breaking news broadcast",
+      width: 1920,
+      height: 840,
+    },
+    overview:
+      "Good design work only has impact when people understand it. Many designers do strong work and then lose the room in a design review: too much text on the slides, a Figma file nobody can follow, or a story that never quite lands. I built this workshop around a simple idea: every great news broadcast has four roles, and every designer who presents plays all four. I ran it at UX Camp Berlin in July 2026.",
+    sections: [
+      {
+        heading: "Four Roles, One Presenter",
+        body: "The Producer builds the story before the slides: answering why, what, how, and what's next, using AI as a thinking partner to shape the narrative, and keeping slides simple and visual. The Anchor keeps everyone on the same page: signposting where the talk is going, guiding the pace, and letting personality come through.\n\nThe Reporter takes the audience into the story by leaving the slides and walking through the real product in Figma, explaining why decisions were made, not just what was designed. The Weatherman makes complexity easy: everyday language instead of jargon, concrete examples, and one idea per slide.\n\nEach role came with core tips for everyone and level-up tips for more confident presenters, so the session worked for juniors and seniors in the same room.",
+        image: {
+          src: "/images/projects/project-8/detail-1.png",
+          alt: "Workshop slide introducing the four broadcast roles: Producer, Anchor, Reporter, Weatherman",
+          width: 1200,
+          height: 800,
+        },
+      },
+      {
+        heading: "Two Frameworks to Take Home",
+        body: "I wanted people to leave with something they could use in their very next review. For building the story, I adapted the STAR method (Situation, Task, Action, Result) into a presentation structure: here's today's story, here's why it matters, here's what we did, here's what happened.\n\nFor walking through Figma, which is where many presentations fall apart, I created the FIELD framework: Frame the context, Identify the route, Eliminate clutter, Lead the audience, and Deliver the takeaway. It turns a wandering file tour into a guided walkthrough that ends on a decision.",
+        image: {
+          src: "/images/projects/project-8/detail-2.png",
+          alt: "FIELD framework slide: Frame, Identify, Eliminate, Lead, Deliver",
+          width: 1200,
+          height: 800,
+        },
+      },
+      {
+        heading: "The UX Newsroom",
+        body: "The second half was hands-on. Participants became the editorial team behind the evening news. Each team received a UX project based on a real case, a partially completed design story, and a broadcast worksheet. They had 10 minutes to prepare and 60 seconds to go live, with one person stepping up as the Anchor to present.\n\nThe debrief brought it back to everyday work: were the stories easy to follow, could people picture the Figma walkthrough, what proof made the update convincing, and which techniques they would use in their next design review.",
+        image: {
+          src: "/images/projects/project-8/detail-3.png",
+          alt: "Workshop exercise slide: The UX Newsroom, 10 minutes to prepare, 60 seconds live",
+          width: 1200,
+          height: 800,
+        },
+        presentation: "/images/projects/project-8/presentation.pdf",
+      },
+    ],
+  },
+  {
+    id: 9,
+    slug: "code-basics-for-designers",
+    status: "published",
+    title: "Code Basics for Designers",
+    subtitle: "How Figma Decisions Become Frontend Rules",
+    description:
+      "An internal session teaching designers how Figma maps to HTML, CSS, tokens and component props, for cleaner handoff and better AI-generated code.",
+    company: "AutoScout24 UX All Hands",
+    role: "Speaker",
+    platform: "HTML, CSS, design tokens, handoff",
+    tags: ["Workshop", "Design-to-Code", "Handoff", "Design Systems"],
+    thumbnail: {
+      src: "/images/projects/project-9/thumb.png",
+      alt: "Code Basics for Designers - internal session",
+      width: 1200,
+      height: 800,
+      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+    },
+    heroImage: {
+      src: "/images/projects/project-9/hero.png",
+      alt: "Laptop and slides from the Code Basics for Designers session",
+      width: 1920,
+      height: 840,
+    },
+    overview:
+      "Designers and engineers describe the same interface in different languages. Designers talk about frames, Auto Layout and variants; engineers talk about containers, Flexbox and props. With AI tools now generating code straight from design files, that gap matters more than ever. I put together this session for the UX team to show how the decisions we already make in Figma become frontend rules.",
+    sections: [
+      {
+        heading: "From Pixels to Structure",
+        body: "I started with how far design tools have come. Paint-era interfaces were a single flat bitmap that captured the look but not the logic. Photoshop added layers: editable order, but still no idea of the product's structure. Figma frames finally nest the way code does: a screen contains sections, and sections contain components.\n\nThat set up the core idea of the session: structure on the left, style on the right. The layers panel tells engineers what the interface is, which is HTML. The design properties panel tells them how it should look and respond, which is CSS. Handoff is simply structure plus presentation.",
+        image: {
+          src: "/images/projects/project-9/detail-1.png",
+          alt: "Slide comparing the Figma layers panel to HTML and the design properties panel to CSS",
+          width: 1200,
+          height: 800,
+        },
+      },
+      {
+        heading: "One Card, Five Steps",
+        body: "Rather than teaching code in the abstract, I built a single pricing card and translated it step by step. Frames become containers. Auto Layout becomes Flexbox, with direction, gap, padding and stretch carrying over directly. Styles become CSS properties. Variables become design tokens and CSS variables. Component variants become the props engineers use to reuse the component.\n\nA small cheat sheet tied it together, mapping each Figma term to its frontend twin and the designer intuition behind it: a translation guide, not a perfect dictionary.",
+        image: {
+          src: "/images/projects/project-9/detail-2.png",
+          alt: "Slide mapping Figma structure to a pricing card and its CSS",
+          width: 1200,
+          height: 800,
+        },
+      },
+      {
+        heading: "Before Handoff",
+        body: "The session closed with a checklist designers can use on every file: define the structure (what are the containers?), the layout (how should it respond?), the tokens (which values are reusable?), the states (what can change or fail?), and the components (which pieces should be reused?).\n\nThe message for working with AI was simple: a well-structured Figma component with sensible Auto Layout, variants, variables and naming gives AI tools clues about what the code should be. Messy Figma leads to messy AI-generated code. I finished with a live demo inspecting the card in Figma alongside its code.",
+        image: {
+          src: "/images/projects/project-9/detail-3.png",
+          alt: "Slide listing five things to define before handoff",
+          width: 1200,
+          height: 800,
+        },
+        presentation: "/images/projects/project-9/presentation.pdf",
       },
     ],
   },

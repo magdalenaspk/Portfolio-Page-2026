@@ -12,8 +12,8 @@ export function Workshops() {
     <section id="workshops" className="py-12 md:py-24">
       <Container>
         <SectionHeading
-          title="Workshops"
-          subtitle="Sessions I've hosted to share methods and tools with other designers."
+          title="Workshops & Talks"
+          subtitle="I run sessions that help designers grow beyond the canvas: prototyping with AI, understanding code, and presenting their work with confidence."
         />
         <StaggerChildren
           staggerDelay={0.1}

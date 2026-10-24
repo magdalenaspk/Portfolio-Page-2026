@@ -84,7 +84,7 @@ export default function ProjectPage({ params }: PageProps) {
               {project.company && (
                 <div>
                   <span className="block text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-0.5">
-                    Company
+                    {workshop ? "Hosted at" : "Company"}
                   </span>
                   <span className="font-medium text-neutral-700">
                     {project.company}
@@ -104,7 +104,7 @@ export default function ProjectPage({ params }: PageProps) {
               {project.platform && (
                 <div>
                   <span className="block text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-0.5">
-                    Platform
+                    {workshop ? "Topics" : "Platform"}
                   </span>
                   <span className="font-medium text-neutral-700">
                     {project.platform}
