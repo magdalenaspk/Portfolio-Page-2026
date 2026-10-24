@@ -89,7 +89,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "3. Popularity: Finding the Leak",
-        body: "Showing how many people viewed and saved a listing gives buyers social proof, and blurring it for logged-out users creates a natural reason to sign in. Before building anything, we ran a fake-door test: logged-out users saw blurred views and favourites, and tapping them showed a short work-in-progress message. [verify: what the fake-door test showed] Usability sessions confirmed people actively looked for this information.\n\nOnce live on web, it drove 5% of all login attempts. But the data also showed a gap: only 2% of logged-in users came through it, so a meaningful share of people who started to log in never finished. The feature worked; the old login screen was losing them. That finding made the case for redesigning the login itself.",
+        body: "Showing how many people viewed and saved a listing gives buyers social proof, and blurring it for logged-out users creates a natural reason to sign in. Before building anything, we ran a fake-door test: logged-out users saw blurred views and favourites, and tapping them showed a short work-in-progress message. It confirmed the demand, with about 2% better conversion: a small gain, but enough to roll it out. Usability sessions had already shown that people actively looked for this information.\n\nOnce live on web, it drove 5% of all login attempts. But the data also showed a gap: only 2% of logged-in users came through it, so a meaningful share of people who started to log in never finished. The feature worked; the old login screen was losing them. That finding made the case for redesigning the login itself.",
         image: {
           src: "/images/projects/project-7/screens/pop-fakedoor.png",
           alt: "Fake-door test dialog on the vehicle detail page",
@@ -160,13 +160,13 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "5. Saved Search: From Soft Sign-up to One Tap",
-        body: "Saving a search is a high-intent moment, so it became our testing ground. The flow went through several versions, each built on what the previous one taught us.\n\nV2 was a soft, email-first sign-up: users subscribed to alerts without feeling blocked by account creation. I explored a one-time code to turn that email into an account without any password, which needed sign-off from Trust & Identity. V3 removed the separate success step and let the login screen carry the confirmation, which only became possible with the new, customisable login dialog. V4 replaced the soft ending with a mandatory sign-in bottom sheet. We tested Apple only, Google only and both, because many iPhone users rely on Google as their main account. [verify: which variant won]\n\nThe hypothesis was that the lower friction of social login would outweigh the added requirement. It did: the login rate in the flow rose from 17% to 32%, an increase of about 90%, and logged-in users grew by about 2% across all platforms.",
+        body: "Saving a search is a high-intent moment, so it became our testing ground. The flow went through several versions, each built on what the previous one taught us.\n\nV2 was a soft, email-first sign-up: users subscribed to alerts without feeling blocked by account creation. I explored a one-time code to turn that email into an account without any password, which needed sign-off from Trust & Identity. V3 removed the separate success step and let the login screen carry the confirmation, which only became possible with the new, customisable login dialog. V4 replaced the soft ending with a mandatory sign-in bottom sheet. We tested Apple only, Google only and both, because many iPhone users rely on Google as their main account. Even so, Apple alone performed best on iPhones, so we shipped one button per platform: Apple on iOS, Google on Android.\n\nThe hypothesis was that the lower friction of social login would outweigh the added requirement. It did: the login rate in the flow rose from 17% to 32%, an increase of about 90%, and logged-in users grew by about 2% across all platforms.",
         gallery: {
           items: [
             { src: "/images/projects/project-7/screens/sase-v2-soft.png", alt: "Search saved dialog asking for an email address", caption: "V2: soft sign-up, email only" },
             { src: "/images/projects/project-7/screens/sase-v3-login.png", alt: "Login screen confirming matching vehicles will be sent by email", caption: "V3: the login screen is the confirmation" },
-            { src: "/images/projects/project-7/screens/sase-v4-apple.png", alt: "Bottom sheet with Continue with Apple", caption: "V4 test: Apple only" },
-            { src: "/images/projects/project-7/screens/sase-v4-both.png", alt: "Bottom sheet with Apple and Google sign-in", caption: "V4 test: Apple and Google" },
+            { src: "/images/projects/project-7/screens/sase-v4-apple.png", alt: "Bottom sheet with Continue with Apple", caption: "V4 shipped on iOS: Apple only" },
+            { src: "/images/projects/project-7/screens/sase-v4-both.png", alt: "Bottom sheet with Apple and Google sign-in", caption: "V4 test: both, which lost to Apple only" },
           ],
         },
       },
@@ -411,24 +411,24 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Iterations",
-        body: "Each version answered a question the previous one raised. A simpler two-column grid let more cars fit on screen. Horizontal rows grouped by type were clear in testing but lost clicks live. Two tabs kept the grid and added deals as their own category. The final iteration replaced the tabs with chips, so more recommendation types fit without crowding, and the most clicked types come first. [verify: which iterations shipped on iOS and Android]",
+        body: "Each version answered a question the previous one raised. A simpler two-column grid let more cars fit on screen. Horizontal rows grouped by type were clear in testing but lost clicks live. Two tabs kept the grid and added deals as their own category. The final iteration replaced the tabs with chips, so more recommendation types fit without crowding, and the most clicked types come first. The chips are what shipped.",
         gallery: {
           items: [
             { src: "/images/projects/project-2/screens/hs-2-simplified.png", alt: "Two-column recommendation grid", caption: "Simplified two-column grid" },
             { src: "/images/projects/project-2/screens/hs-3-horizontal.png", alt: "Horizontal rows grouped by recommendation type", caption: "Horizontal rows: ~21% fewer clicks" },
             { src: "/images/projects/project-2/screens/hs-4-tabs.png", alt: "Tabbed layout, recommended for you", caption: "Tabs: recommended for you" },
             { src: "/images/projects/project-2/screens/hs-4-tabs-deals.png", alt: "Tabbed layout, deals and discounts", caption: "Tabs: deals and discounts" },
-            { src: "/images/projects/project-2/screens/hs-5-chips.png", alt: "Recommendation types as chips with load more", caption: "Chips, ordered by performance" },
+            { src: "/images/projects/project-2/screens/hs-5-chips.png", alt: "Recommendation types as chips with load more", caption: "Shipped: chips, ordered by performance" },
           ],
         },
       },
       {
         heading: "Beyond the Homepage",
-        body: "The same recommender also lived on the vehicle detail page, where it sat at the very bottom, below the seller details. I designed an experiment that moved it up, directly after the vehicle description, to catch people who were unsure about the car they were looking at. [verify: result and whether it shipped]",
+        body: "The same recommender also lived on the vehicle detail page, where it sat at the very bottom, below the seller details. I designed an experiment that moved it up, directly after the vehicle description, to catch people who were unsure about the car they were looking at.\n\nRecommender engagement stayed roughly the same, but engagement with everything below it dropped, including the seller details. A higher position didn't create new interest, it only moved attention around, so we rolled it back. It was a useful reminder to measure the whole page, not just the component being tested.",
         gallery: {
           items: [
             { src: "/images/projects/project-2/screens/dp-before.png", alt: "Detail page with the recommender at the very bottom", caption: "Before: recommender at the very end" },
-            { src: "/images/projects/project-2/screens/dp-after.png", alt: "Detail page with the recommender after the vehicle description", caption: "Experiment: right after the description" },
+            { src: "/images/projects/project-2/screens/dp-after.png", alt: "Detail page with the recommender after the vehicle description", caption: "Experiment: right after the description, rolled back" },
           ],
         },
       },
