@@ -41,7 +41,6 @@ export const selectedProjects: Project[] = [
       {
         heading: "The Problem",
         body: "Logged-in users behaved very differently. On web, their enquiry conversion rate was 75% higher than for logged-out users, they viewed 40% more vehicle detail pages per week, and they had a third more sessions coming from CRM channels.\n\nYet people saw little reason to sign up. They used the platform infrequently, had privacy concerns, saw no clear benefit, and the site worked perfectly well without an account.\n\nA login behaviour deep dive by our Buyer Analytics team shaped the strategy. Most logins happened in a user's very first session, and logging in tended to mark the point where a buying journey was intensifying. But users who delayed logging in still browsed and enquired for about a week beforehand. A hard login wall would have blocked real marketplace demand. The job was to make the value of logging in obvious at the moment people were ready for it, and to remove every bit of friction once they were.",
-        image: todo("Chart: logged-in vs logged-out behaviour, and login timing from the analytics deep dive"),
       },
       {
         heading: "My Role & Team",
@@ -53,7 +52,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "1. The First App Open",
-        body: "The app's launch sequence had grown screen by screen, with no clear value proposition and no moment to register. Users slipped straight into an anonymous session.\n\nI rebuilt it as one unified, scalable sequence: tell users why before asking for anything, put registration early, and leave room to add steps later. I explored three directions. Static full-bleed images broke down across light and dark mode and varying text lengths in different languages. A feature walkthrough solved contrast but felt dated. Video handled both and gave the first open an emotional moment, so that's what we chose.\n\nWe A/B tested it on iOS in Q1 2026. Logged-in users on iOS grew by 40%, and push opt-in rose by about 20%. Sessions dipped slightly, an accepted trade-off for adding steps up front, while detail page views and enquiries were unaffected. Android followed.",
+        body: "The app's launch sequence had grown screen by screen, with no clear value proposition and no moment to register. Users slipped straight into an anonymous session.\n\nI rebuilt it as one unified, scalable sequence: tell users why before asking for anything, put registration early, and leave room to add steps later. I explored three directions. Static full-bleed images broke down across light and dark mode and varying text lengths in different languages. A feature walkthrough solved contrast but felt dated. Video handled both and gave the first open an emotional moment, so that's what we chose.\n\nPlatform conventions shaped the details. iOS only allows one system notification prompt, so the app explains the benefit first and shows Apple's prompt only after a yes. Registration always offers a clear way to continue without an account.\n\nWe A/B tested it on iOS in Q1 2026. Logged-in users on iOS grew by 40%, and push opt-in rose by about 20%. Sessions dipped slightly, an accepted trade-off for adding steps up front, while detail page views and enquiries were unaffected. Android followed.",
         image: {
           src: "/images/projects/project-6/detail-2.png",
           alt: "New app launch sequence with video and value-driven prompts",
@@ -61,30 +60,77 @@ export const selectedProjects: Project[] = [
           height: 800,
         },
         media: "onboarding-video",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-7/screens/ob-1-welcome.png", alt: "Welcome screen with video header and market selection", caption: "Welcome: what the app does, market preselected" },
+            { src: "/images/projects/project-7/screens/ob-2-market.png", alt: "Marketplace selection list", caption: "Market can be changed any time later" },
+            { src: "/images/projects/project-7/screens/ob-3-notifications.png", alt: "Notifications value screen", caption: "The benefit of notifications, before any prompt" },
+            { src: "/images/projects/project-7/screens/ob-4-system-prompt.png", alt: "iOS system notification prompt", caption: "iOS prompt only after a yes" },
+            { src: "/images/projects/project-7/screens/ob-5-register.png", alt: "Register now screen with skip option", caption: "Register, with a clear way to skip" },
+            { src: "/images/projects/project-7/screens/ob-6-home.png", alt: "App home screen", caption: "Straight into the app" },
+          ],
+        },
       },
       {
         heading: "2. Price History: Teaser or Direct Login?",
-        body: "Price history was already behind a login wall on mobile, and the wall caused no significant drop in leads. The next step was bringing it to web.\n\nMy first web version simply showed the entry point and then hit the login wall. It felt like the login was doing all the work before the value was clear, so I designed a teaser: a modal showing part of the insight, then asking users to log in for the full history. That made the flow heavier: entry point, teaser, login, then feature.\n\nWe tested both. Users who went straight to a dedicated, purpose-specific login screen were about 16% more likely to log in than those who saw the teaser. The value was already obvious at the point of intent, and extra persuasion behaved like friction.\n\nThat result became the principle for every later experiment: communicate the value at the point of intent, then keep authentication as direct as possible. I then aligned web, iOS and Android on one shared pattern, and redesigned the history view to do the maths for users: total price reduction, market evaluation and changes shown in euros. [verify: headline outcome, e.g. web logins +15%, registrations +25%]",
-        image: todo("Teaser version vs dedicated login version, side by side, with the test result"),
+        body: "Price history was already behind a login wall on mobile, and the wall caused no significant drop in leads. The next step was bringing it to web.\n\nMy first web version showed the entry point and went straight to login. It felt like the login was doing all the work before the value was clear, so I designed a teaser: the Price Insights dialog showed the price rating and asked users to log in to unlock the history. That made the flow heavier: entry point, teaser, login, then feature.\n\nWe tested both. Users who went straight to a dedicated, purpose-specific login were about 16% more likely to log in than those who saw the teaser. The value was already obvious at the point of intent, and extra persuasion behaved like friction.\n\nThat result became the principle for every later experiment: communicate the value at the point of intent, then keep authentication as direct as possible.",
+        gallery: {
+          variant: "desktop",
+          items: [
+            { src: "/images/projects/project-7/screens/ph-teaser-desktop.png", alt: "Price Insights dialog with locked price history and an unlock button", caption: "Tested: a teaser dialog that unlocks the history after login" },
+            { src: "/images/projects/project-7/screens/ph-direct-desktop.png", alt: "Dedicated login dialog titled See how this car is priced", caption: "Shipped: a direct login framed around the insight, about 16% more logins" },
+          ],
+        },
+      },
+      {
+        heading: "The Shipped Flow",
+        body: "After login, users land back on the listing with the full insight open. I redesigned the view to do the maths for them: where the price sits against the market, the total price reduction, and every change shown in euros rather than percentages. Each price rating (below, at or above market, or no data) has its own state. I then aligned web, iOS and Android on this one pattern. [verify: headline outcome, e.g. web logins and registrations]",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-7/screens/ph-1-detail.png", alt: "Vehicle detail page with a good price rating", caption: "The price rating is visible to everyone" },
+            { src: "/images/projects/project-7/screens/ph-2-login.png", alt: "Login screen titled See how this car is priced", caption: "Login framed around the insight" },
+            { src: "/images/projects/project-7/screens/ph-3-listed.png", alt: "Price Insights with market position and listed price", caption: "Market position, unlocked" },
+            { src: "/images/projects/project-7/screens/ph-4-history.png", alt: "Price Insights with full price history and total reduction", caption: "Full history, with the total reduction calculated" },
+          ],
+        },
       },
       {
         heading: "3. Popularity: Finding the Leak",
-        body: "Showing how many people viewed and saved a listing gave buyers social proof, and blurring it for logged-out users created a natural reason to sign in. Usability sessions confirmed people actively looked for this information.\n\nOn web it drove 5% of all login attempts. But the data also showed a gap: only 2% of logged-in users came through it, so a meaningful share of people who started to log in never finished. The feature worked; the login screen was losing them. That finding made the case for redesigning the login itself.",
-        image: todo("Vehicle detail page with blurred popularity data and the login prompt"),
+        body: "Showing how many people viewed and saved a listing gives buyers social proof, and blurring it for logged-out users creates a natural reason to sign in. Before building anything, we ran a fake-door test: logged-out users saw blurred views and favourites, and tapping them showed a short work-in-progress message. [verify: what the fake-door test showed] Usability sessions confirmed people actively looked for this information.\n\nOnce live on web, it drove 5% of all login attempts. But the data also showed a gap: only 2% of logged-in users came through it, so a meaningful share of people who started to log in never finished. The feature worked; the old login screen was losing them. That finding made the case for redesigning the login itself.",
+        image: {
+          src: "/images/projects/project-7/screens/pop-fakedoor.png",
+          alt: "Fake-door test dialog on the vehicle detail page",
+          width: 1440,
+          height: 1024,
+        },
+        gallery: {
+          items: [
+            { src: "/images/projects/project-7/screens/pop-1-blurred.png", alt: "Popularity section with blurred views and favourites", caption: "Logged out: numbers blurred, with a reason to sign in" },
+            { src: "/images/projects/project-7/screens/pop-2-legacy-login.png", alt: "Legacy login screen", caption: "The old login screen, where users dropped off" },
+            { src: "/images/projects/project-7/screens/pop-3-revealed.png", alt: "Popularity section showing interactions and favourites", caption: "Logged in: interactions and favourites revealed" },
+          ],
+        },
       },
       {
         heading: "4. Fixing the Login Screen",
-        body: "I audited the login screen against guidance from Nielsen Norman Group and Baymard Institute. It failed all four standards: reduce cognitive load at the point of entry, make social login prominent and place it before the email form, explain what users get by logging in, and give the screen one clear primary action.\n\nThe redesign leads with why to log in (track price drops, save favourites, check if a price is fair), puts Google, Apple and Facebook sign-in first, and makes email the second option. The modal is wider so long German words no longer break. I designed it for three contexts: full page, popup and mobile web.\n\nThe hardest decision was the dealer button. It sat full-width at the top, so every private buyer had to skip past it. I proposed a text link at the bottom; market managers pushed back to protect a key segment. We settled on a secondary outlined button at the bottom: dealers know they have a separate account and look for it, so it stays findable without competing with the main journey. We agreed to monitor dealer login rates and later test the text link. It launched first in Austria. [verify: rollout status and result]",
+        body: "I audited the login screen against guidance from Nielsen Norman Group and Baymard Institute. It failed all four standards: reduce cognitive load at the point of entry, make social login prominent and place it before the email form, explain what users get by logging in, and give the screen one clear primary action.\n\nThe redesign leads with why to log in (track price drops, save favourites, check if a price is fair), puts Google, Apple and Facebook sign-in first, and makes email the second option. The modal is wider so long German words no longer break. I designed it for three contexts: a full page, a popup over the page the user came from, and mobile web. It launched first in Austria. [verify: rollout status and result]",
         image: {
           src: "/images/projects/project-7/detail-1.png",
           alt: "Legacy login modal compared with the redesigned login modal",
           width: 1200,
           height: 800,
         },
+        gallery: {
+          variant: "desktop",
+          items: [
+            { src: "/images/projects/project-7/screens/login-fullpage.png", alt: "Full-page login with value proposition and social sign-in", caption: "Full page: room for imagery and a dealer card" },
+            { src: "/images/projects/project-7/screens/login-popup.png", alt: "Login popup over the homepage", caption: "Popup: users keep their place on the page" },
+          ],
+        },
       },
       {
         heading: "Dealer Entry Point: The Trade-off",
-        body: "Text link or outlined button? The text link gave buyers the cleanest path but worried dealer-side stakeholders. The outlined button kept a clear affordance for professionals while dropping it below the primary journey. We shipped the button and kept the text link as a follow-up test.",
+        body: "The legacy screen put a full-width dealer button at the very top, so every private buyer had to skip past it. I proposed a text link at the bottom; market managers pushed back to protect a key segment.\n\nWe settled on a secondary outlined button at the bottom of the popup and mobile screens, and a dedicated dealer card on the full page, where there's room for it. Dealers know they have a separate account and look for it, so it stays findable without competing with the main journey. We agreed to monitor dealer login rates and keep the text link as a follow-up test.",
         image: {
           src: "/images/projects/project-7/detail-2.png",
           alt: "Dealer entry point as a text link compared with a secondary outlined button",
@@ -93,14 +139,43 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "5. Saved Search: From Soft Sign-up to One Tap",
-        body: "Saving a search is a high-intent moment, so it became our testing ground. The flow went through four versions, each built on what the previous one taught us.\n\nV2 was a soft, email-first sign-up: users subscribed to alerts without feeling blocked by account creation. I explored a one-time code to turn that email into an account without any password, which needed sign-off from Trust & Identity. V3 removed the separate success step and let the login screen carry the confirmation, which only became possible with the new, customisable login dialog. V4 replaced the soft ending with a mandatory sign-in bottom sheet offering Apple and Google, because many iPhone users rely on Google as their main account.\n\nThe hypothesis was that the lower friction of social login would outweigh the added requirement. It did: the login rate in the flow rose from 17% to 32%, an increase of about 90%, and logged-in users grew by about 2% across all platforms.",
-        image: todo("Saved search flow V2 → V3 → V4, one row per version"),
+        heading: "The Registration Flow",
+        body: "On mobile web, the whole journey happens in a few steps. Social sign-in comes first. Email users get password rules checked as they type, so errors are prevented rather than reported. Consent and the captcha stay on the same screen, and users land back where they started with a short welcome message.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-7/screens/reg-1-start.png", alt: "Sign in or register screen", caption: "Social first, email second" },
+            { src: "/images/projects/project-7/screens/reg-2-email.png", alt: "Email address entered", caption: "One field to start" },
+            { src: "/images/projects/project-7/screens/reg-3-password.png", alt: "Create account with live password rules", caption: "Password rules checked as you type" },
+            { src: "/images/projects/project-7/screens/reg-4-consent.png", alt: "Consent checkbox and captcha completed", caption: "Consent and captcha on one screen" },
+            { src: "/images/projects/project-7/screens/reg-5-welcome.png", alt: "Homepage with a welcome message", caption: "Back where they started, signed in" },
+          ],
+        },
       },
       {
-        heading: "Edge Cases & States",
-        body: "Every login moment came with its full set of states, designed for each platform.",
-        image: todo("States grid: wrong password, account already exists, social sign-in cancelled, captcha, code expired, push permission denied, skipped login"),
+        heading: "Edge Cases & Recovery",
+        body: "Every error tells users what went wrong and how to fix it, right where it happened. A wrong password puts recovery one tap away, and password reset uses a six-digit code instead of a link, so users never have to leave the flow.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-7/screens/err-email.png", alt: "Invalid email error", caption: "Invalid email" },
+            { src: "/images/projects/project-7/screens/err-password.png", alt: "Password requirements not met", caption: "Password rules not met" },
+            { src: "/images/projects/project-7/screens/err-signin.png", alt: "Wrong password with forgot password link", caption: "Wrong password, recovery one tap away" },
+            { src: "/images/projects/project-7/screens/rec-code.png", alt: "Enter six-digit reset code", caption: "Six-digit reset code" },
+            { src: "/images/projects/project-7/screens/err-code.png", alt: "Incomplete code error", caption: "Incomplete code" },
+            { src: "/images/projects/project-7/screens/rec-new-password.png", alt: "Create a new password", caption: "New password, same live rules" },
+          ],
+        },
+      },
+      {
+        heading: "5. Saved Search: From Soft Sign-up to One Tap",
+        body: "Saving a search is a high-intent moment, so it became our testing ground. The flow went through several versions, each built on what the previous one taught us.\n\nV2 was a soft, email-first sign-up: users subscribed to alerts without feeling blocked by account creation. I explored a one-time code to turn that email into an account without any password, which needed sign-off from Trust & Identity. V3 removed the separate success step and let the login screen carry the confirmation, which only became possible with the new, customisable login dialog. V4 replaced the soft ending with a mandatory sign-in bottom sheet. We tested Apple only, Google only and both, because many iPhone users rely on Google as their main account. [verify: which variant won]\n\nThe hypothesis was that the lower friction of social login would outweigh the added requirement. It did: the login rate in the flow rose from 17% to 32%, an increase of about 90%, and logged-in users grew by about 2% across all platforms.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-7/screens/sase-v2-soft.png", alt: "Search saved dialog asking for an email address", caption: "V2: soft sign-up, email only" },
+            { src: "/images/projects/project-7/screens/sase-v3-login.png", alt: "Login screen confirming matching vehicles will be sent by email", caption: "V3: the login screen is the confirmation" },
+            { src: "/images/projects/project-7/screens/sase-v4-apple.png", alt: "Bottom sheet with Continue with Apple", caption: "V4 test: Apple only" },
+            { src: "/images/projects/project-7/screens/sase-v4-both.png", alt: "Bottom sheet with Apple and Google sign-in", caption: "V4 test: Apple and Google" },
+          ],
+        },
       },
       {
         heading: "Outcome",

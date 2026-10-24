@@ -10,12 +10,25 @@ export interface ProjectImage {
   background?: string; // CSS gradient/color rendered behind transparent PNGs
 }
 
+export interface GalleryItem {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+export interface Gallery {
+  variant?: "phone" | "desktop"; // phone = one row of screens, desktop = two columns
+  items: GalleryItem[];
+  caption?: string;
+}
+
 export interface CaseStudySection {
   heading: string;
   body: string; // Supports \n for paragraphs
   image?: ProjectImage;
   presentation?: string; // Path to PDF in /public
   media?: "onboarding-video"; // Renders an embedded video instead of the image
+  gallery?: Gallery; // Full-width row of screens below the text
 }
 
 export interface Project {

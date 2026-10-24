@@ -15,6 +15,7 @@ import { SlideUp } from "@/components/motion/SlideUp";
 import { PlaceholderImage } from "@/components/cards/PlaceholderImage";
 import { OnboardingAnimation } from "@/components/OnboardingAnimation";
 import { PresentationWrapper } from "@/components/PresentationWrapper";
+import { ScreenGallery } from "@/components/ScreenGallery";
 
 interface PageProps {
   params: { slug: string };
@@ -210,6 +211,9 @@ export default function ProjectPage({ params }: PageProps) {
                       )
                     )}
                   </div>
+
+                  {/* Screen gallery (full width, below text) */}
+                  {section.gallery && <ScreenGallery gallery={section.gallery} />}
 
                   {/* Presentation viewer (full width, below text) */}
                   {section.presentation && (
