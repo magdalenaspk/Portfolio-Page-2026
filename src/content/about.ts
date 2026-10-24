@@ -93,19 +93,28 @@ export const aboutContent: AboutContent = {
   ],
   experience: [
     {
+      id: 11,
+      type: "work",
+      title: "Senior Product Designer",
+      organization: "Formel Skin & Voy",
+      period: "Oct 2026 – Present",
+      description:
+        "Product design across two digital health brands, with a focus on growth and conversion optimisation.",
+    },
+    {
       id: 1,
       type: "work",
       title: "Product Designer",
       organization: "AutoScout24",
-      period: "Aug 2024 – Present",
+      period: "Aug 2024 – Sep 2026",
       description:
-        "Leading UX for growth and engagement initiatives on Europe's largest car marketplace: homescreen personalization, favourites redesign, deals strategy, and cross-platform feature rollouts.",
+        "Designed growth and engagement initiatives on Europe's largest car marketplace: login and onboarding, homescreen personalization, favourites redesign, deals strategy, and cross-platform feature rollouts.",
     },
     {
       id: 2,
       type: "work",
       title: "Senior Product Designer",
-      organization: "Pepper.com",
+      organization: "Atolls (Pepper.com)",
       period: "Feb 2024 – Jul 2024",
       description:
         "Designed user engagement and loyalty features for the world's largest deal community, with 25M+ monthly users across 12 countries.",
@@ -122,7 +131,7 @@ export const aboutContent: AboutContent = {
     {
       id: 4,
       type: "work",
-      title: "UX UI Designer",
+      title: "UI UX Designer",
       organization: "Friendsurance",
       period: "Jul 2018 – Jul 2022",
       description:
@@ -137,8 +146,36 @@ export const aboutContent: AboutContent = {
       description:
         "Landing pages, app visual content, and marketing collateral for a health-tech startup.",
     },
+    {
+      id: 12,
+      type: "work",
+      title: "Visual Marketing Designer",
+      organization: "Tyszkiewicz Nieruchomości",
+      period: "Jan 2015 – Jan 2016",
+    },
+    {
+      id: 13,
+      type: "work",
+      title: "Owner, Visual Designer & Event Planner",
+      organization: "RockOut Pub",
+      period: "Jun 2011 – Jan 2015",
+    },
+    {
+      id: 14,
+      type: "work",
+      title: "Journalist",
+      organization: "Dziennik Bałtycki / Polskapresse",
+      period: "Jun 2009 – May 2011",
+    },
   ],
   education: [
+    {
+      id: 15,
+      type: "education",
+      title: "AI Coding Bootcamp",
+      organization: "Memorisely",
+      period: "Jun 2026",
+    },
     {
       id: 7,
       type: "education",
@@ -149,8 +186,8 @@ export const aboutContent: AboutContent = {
     {
       id: 8,
       type: "education",
-      title: "Cross-functional UX Design Course",
-      organization: "GrowthTribe",
+      title: "12-week Cross-functional UX Design Course",
+      organization: "Growth Tribe",
       period: "2021 – 2022",
     },
     {
