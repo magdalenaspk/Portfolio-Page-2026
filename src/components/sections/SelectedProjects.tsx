@@ -15,7 +15,7 @@ export function SelectedProjects() {
         />
         <StaggerChildren
           staggerDelay={0.1}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-2xl mx-auto md:max-w-none"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-stretch max-w-2xl mx-auto md:max-w-none"
         >
           {selectedProjects.map((project) =>
             project.status === "coming-soon" ? (

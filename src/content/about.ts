@@ -14,7 +14,7 @@ export const aboutContent: AboutContent = {
   strengths: [
     {
       title: "Problem Framing",
-      body: "I question assumptions early and reframe around root causes, not symptoms. On a recent app onboarding project, shifting the focus from login friction to perceived value resulted in a 40% increase in logged-in users within three weeks of release.",
+      body: "I question assumptions early and reframe around root causes, not symptoms. On a recent app onboarding project, shifting the focus from login friction to perceived value resulted in a 40% increase in logged-in iOS users within three weeks of release.",
     },
     {
       title: "Systems Thinking",

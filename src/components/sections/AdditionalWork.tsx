@@ -14,7 +14,7 @@ export function AdditionalWork() {
         />
         <StaggerChildren
           staggerDelay={0.1}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="flex flex-col gap-4 lg:gap-6"
         >
           {additionalWork.map((item) => (
             <AdditionalWorkCard key={item.id} item={item} />

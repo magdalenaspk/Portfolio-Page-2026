@@ -20,11 +20,11 @@ export function AdditionalWorkCard({ item }: AdditionalWorkCardProps) {
       <motion.div variants={itemVariants}>
         <div
           onClick={() => isClickable && setModalOpen(true)}
-          className={`group bg-white rounded-2xl overflow-hidden border border-neutral-100 hover:border-neutral-200 hover:shadow-md transition-all duration-300 h-full flex flex-col ${isClickable ? "cursor-pointer" : ""}`}
+          className={`group bg-white rounded-2xl overflow-hidden border border-neutral-100 hover:border-neutral-200 hover:shadow-md transition-all duration-300 h-full flex flex-col sm:flex-row ${isClickable ? "cursor-pointer" : ""}`}
         >
           {/* Thumbnail */}
           <div
-            className="relative overflow-hidden aspect-[4/3]"
+            className="relative overflow-hidden aspect-[4/3] sm:w-56 lg:w-72 shrink-0"
             style={{ background: item.thumbnail.background ?? "#F5F5F5" }}
           >
             <PlaceholderImage
@@ -36,21 +36,22 @@ export function AdditionalWorkCard({ item }: AdditionalWorkCardProps) {
           </div>
 
           {/* Content */}
-          <div className="p-5 flex-1">
+          <div className="flex-1 flex flex-col justify-center">
+          <div className="p-5 lg:p-8 lg:pb-5">
             <p className="text-xs font-medium text-neutral-500 mb-1 uppercase tracking-wider">
               {item.company}
             </p>
-            <h3 className="text-base font-bold text-neutral-900 mb-2">
+            <h3 className="text-base lg:text-lg font-bold text-neutral-900 mb-2">
               {item.title}
             </h3>
-            <p className="text-sm text-neutral-500 leading-relaxed mb-4">
+            <p className="text-sm lg:text-base text-neutral-500 leading-relaxed max-w-2xl">
               {item.description}
             </p>
           </div>
 
           {/* Read more indicator */}
           {isClickable && (
-            <div className="px-5 pb-5 flex items-center gap-1 text-xs font-medium text-neutral-500 group-hover:text-lime-700 transition-colors">
+            <div className="px-5 pb-5 lg:px-8 lg:pb-8 flex items-center gap-1 text-xs font-medium text-neutral-500 group-hover:text-lime-700 transition-colors">
               Read more
               <svg
                 className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-1"
@@ -63,6 +64,7 @@ export function AdditionalWorkCard({ item }: AdditionalWorkCardProps) {
               </svg>
             </div>
           )}
+          </div>
         </div>
       </motion.div>
 

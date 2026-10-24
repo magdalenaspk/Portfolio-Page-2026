@@ -53,7 +53,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "1. The First App Open",
-        body: "The app's launch sequence had grown screen by screen, with no clear value proposition and no moment to register. Users slipped straight into an anonymous session.\n\nI rebuilt it as one unified, scalable sequence: tell users why before asking for anything, put registration early, and leave room to add steps later. I explored three directions. Static full-bleed images broke down across light and dark mode and varying text lengths in different languages. A feature walkthrough solved contrast but felt dated. Video handled both and gave the first open an emotional moment, so that's what we chose.\n\nWe A/B tested it on iOS in Q1 2026. Logged-in users grew [verify: +25% or +40%], and push opt-in rose by about 20%. Sessions dipped slightly, an accepted trade-off for adding steps up front, while detail page views and enquiries were unaffected. Android followed.",
+        body: "The app's launch sequence had grown screen by screen, with no clear value proposition and no moment to register. Users slipped straight into an anonymous session.\n\nI rebuilt it as one unified, scalable sequence: tell users why before asking for anything, put registration early, and leave room to add steps later. I explored three directions. Static full-bleed images broke down across light and dark mode and varying text lengths in different languages. A feature walkthrough solved contrast but felt dated. Video handled both and gave the first open an emotional moment, so that's what we chose.\n\nWe A/B tested it on iOS in Q1 2026. Logged-in users on iOS grew by 40%, and push opt-in rose by about 20%. Sessions dipped slightly, an accepted trade-off for adding steps up front, while detail page views and enquiries were unaffected. Android followed.",
         image: {
           src: "/images/projects/project-6/detail-2.png",
           alt: "New app launch sequence with video and value-driven prompts",
@@ -104,7 +104,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Outcome",
-        body: "Each experiment moved the number on its own: [verify: final onboarding uplift] from the new app launch sequence, about 16% more logins from direct login on price history, 5% of login attempts from popularity, and a near doubling of the login rate in saved search.\n\nTogether they shifted how the company approached login: from a wall to a series of well-timed, low-friction invitations. [verify: overall progress against the OKR, e.g. share of weekly active users logged in]",
+        body: "Each experiment moved the number on its own: 40% more logged-in iOS users from the new app launch sequence, about 16% more logins from direct login on price history, 5% of login attempts from popularity, and a near doubling of the login rate in saved search.\n\nTogether they shifted how the company approached login: from a wall to a series of well-timed, low-friction invitations. [verify: overall progress against the OKR, e.g. share of weekly active users logged in]",
       },
       {
         heading: "Where It Was Heading",
