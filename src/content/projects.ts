@@ -1,41 +1,80 @@
 import { Project } from "./types";
 
+// V3 note: images whose src contains "PLACEHOLDER" render as a labelled box
+// describing the screen still to add. "[verify: …]" marks figures to confirm.
+const todo = (what: string) => ({
+  src: "PLACEHOLDER",
+  alt: what,
+  width: 1200,
+  height: 900,
+});
+
 export const selectedProjects: Project[] = [
   {
     id: 7,
-    slug: "login-redesign",
+    slug: "growing-logged-in-users",
     status: "published",
-    title: "Login Redesign",
-    subtitle: "Converting Intent into Identity",
+    title: "Growing Logged-in Users",
+    subtitle: "Five Experiments, One OKR",
     description:
-      "Rebuilt AutoScout24's login around a clear value proposition and social-first hierarchy: the first step of a Club vision for logged-in users.",
+      "A year-long programme to turn anonymous browsers into members, from the first app open to the login screen itself. One experiment nearly doubled the login rate.",
     company: "AutoScout24",
     role: "Product Designer",
-    platform: "Web, mWeb",
-    tags: ["Growth", "Login & Registration", "Stakeholder Management", "Product Vision"],
+    platform: "iOS, Android, Web, mWeb",
+    tags: ["Growth", "Login & Registration", "A/B Testing", "Cross-platform"],
     thumbnail: {
       src: "/images/projects/project-7/thumb.png",
-      alt: "Login Redesign - AutoScout24",
+      alt: "Growing Logged-in Users - AutoScout24",
       width: 1200,
       height: 800,
       background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
     },
     heroImage: {
       src: "/images/projects/project-7/hero.png",
-      alt: "Redesigned AutoScout24 full-page login with social sign-in options",
+      alt: "Redesigned AutoScout24 login with social sign-in options",
       width: 1920,
       height: 840,
     },
     overview:
-      "Most people use AutoScout24 like a one-off marketplace: they search, browse, and leave without ever logging in. Only 5.4% of users were logged in, and the company set an OKR to lift that by 50%, to 8.1%, by the end of 2026. The login screen is the exact moment where intent turns into identity, yet ours was doing little to earn that step. Fixing it was the foundation for everything else.",
+      "Most people use AutoScout24 like a one-off marketplace: they search, browse and leave without ever logging in. Logged-in users enquire more, come back more and give dealers better leads, so the company set an OKR to grow the share of logged-in users by 50% by the end of 2026. I designed most of the experiments behind that goal, across apps and web, over [verify: timeframe, e.g. mid-2025 to autumn 2026].",
     sections: [
       {
-        heading: "Why Login Matters",
-        body: "Logged-in users behave very differently. On web, their enquiry conversion rate was 75% higher than logged-out users, they viewed 40% more vehicle detail pages per week, and they had 33% more sessions coming from CRM channels. Logged-in users meant more personalisation, more return visits, and better leads for dealers.\n\nSo why weren't people registering? They saw no clear benefit, they used the platform infrequently, they had privacy concerns, and the site worked perfectly well without an account.\n\nA login behaviour deep dive with our Buyer Analytics team sharpened the picture. Most logins happened in a user's very first session, and logging in tended to mark a phase where the journey was already intensifying. At the same time, users who delayed logging in still browsed and made enquiries before they did. That ruled out an aggressive login wall. The job was to make the value of logging in obvious at the moment people were ready for it.",
+        heading: "The Problem",
+        body: "Logged-in users behaved very differently. On web, their enquiry conversion rate was 75% higher than for logged-out users, they viewed 40% more vehicle detail pages per week, and they had a third more sessions coming from CRM channels.\n\nYet people saw little reason to sign up. They used the platform infrequently, had privacy concerns, saw no clear benefit, and the site worked perfectly well without an account.\n\nA login behaviour deep dive by our Buyer Analytics team shaped the strategy. Most logins happened in a user's very first session, and logging in tended to mark the point where a buying journey was intensifying. But users who delayed logging in still browsed and enquired for about a week beforehand. A hard login wall would have blocked real marketplace demand. The job was to make the value of logging in obvious at the moment people were ready for it, and to remove every bit of friction once they were.",
+        image: todo("Chart: logged-in vs logged-out behaviour, and login timing from the analytics deep dive"),
       },
       {
-        heading: "Fixing the Basics",
-        body: "Earlier initiatives, including a new app onboarding and gating price history behind login, had already moved the numbers. But the login screen itself still looked outdated next to the rest of the product, and it broke established best practice.\n\nI audited it against guidance from Nielsen Norman Group and Baymard Institute, which comes down to four standards: reduce cognitive load at the point of entry; make social login prominent and place it before the email form; explain what users get by logging in; and give the screen one clear primary action. The old design failed on all four. Its value proposition used non-library styling, the hierarchy was email-first, social options sat below the form where they were easily ignored, and the modal was narrow even though desktop had plenty of room.\n\nThe redesign addressed each one. A clear \"why log in\" message now leads the screen: track price drops on cars you like, save and revisit favourites, check if a price is fair. Google, Apple, and Facebook sign-in sit front and centre, with email as the second option. The modal is wider, so long German words no longer break across lines. I designed it across three contexts: a full page, a popup, and mobile web.",
+        heading: "My Role & Team",
+        body: "[verify: who was on the team, e.g. PM, engineers per platform, Buyer Analytics, Trust & Identity, and how the work was split.]\n\nI owned the end-to-end design of every experiment in this case study: framing the hypotheses with the PM, designing all states across iOS, Android, web and mWeb, preparing test variants, and presenting results and next steps to the wider design and product organisation at UX All Hands.",
+      },
+      {
+        heading: "Constraints",
+        body: "No hard walls. The analytics showed that blocking logged-out users would cost leads, so every login moment had to be optional or tied to a clear, immediate benefit.\n\nTwo audiences, one screen. Dealers log in through the same entry point as private buyers, and they are a key business segment. Anything that made their path harder needed sign-off from market managers.\n\nFour platforms behaving differently. Apps were already far more logged-in than web, and mWeb was the largest, mostly logged-out surface. One pattern rarely fitted all four.\n\nSecurity and identity rules. Authentication changes went through the Trust & Identity team, a mandatory click captcha sat in the flow, and long German compound words had to fit every layout across markets.",
+      },
+      {
+        heading: "1. The First App Open",
+        body: "The app's launch sequence had grown screen by screen, with no clear value proposition and no moment to register. Users slipped straight into an anonymous session.\n\nI rebuilt it as one unified, scalable sequence: tell users why before asking for anything, put registration early, and leave room to add steps later. I explored three directions. Static full-bleed images broke down across light and dark mode and varying text lengths in different languages. A feature walkthrough solved contrast but felt dated. Video handled both and gave the first open an emotional moment, so that's what we chose.\n\nWe A/B tested it on iOS in Q1 2026. Logged-in users grew [verify: +25% or +40%], and push opt-in rose by about 20%. Sessions dipped slightly, an accepted trade-off for adding steps up front, while detail page views and enquiries were unaffected. Android followed.",
+        image: {
+          src: "/images/projects/project-6/detail-2.png",
+          alt: "New app launch sequence with video and value-driven prompts",
+          width: 1200,
+          height: 800,
+        },
+        media: "onboarding-video",
+      },
+      {
+        heading: "2. Price History: Teaser or Direct Login?",
+        body: "Price history was already behind a login wall on mobile, and the wall caused no significant drop in leads. The next step was bringing it to web.\n\nMy first web version simply showed the entry point and then hit the login wall. It felt like the login was doing all the work before the value was clear, so I designed a teaser: a modal showing part of the insight, then asking users to log in for the full history. That made the flow heavier: entry point, teaser, login, then feature.\n\nWe tested both. Users who went straight to a dedicated, purpose-specific login screen were about 16% more likely to log in than those who saw the teaser. The value was already obvious at the point of intent, and extra persuasion behaved like friction.\n\nThat result became the principle for every later experiment: communicate the value at the point of intent, then keep authentication as direct as possible. I then aligned web, iOS and Android on one shared pattern, and redesigned the history view to do the maths for users: total price reduction, market evaluation and changes shown in euros. [verify: headline outcome, e.g. web logins +15%, registrations +25%]",
+        image: todo("Teaser version vs dedicated login version, side by side, with the test result"),
+      },
+      {
+        heading: "3. Popularity: Finding the Leak",
+        body: "Showing how many people viewed and saved a listing gave buyers social proof, and blurring it for logged-out users created a natural reason to sign in. Usability sessions confirmed people actively looked for this information.\n\nOn web it drove 5% of all login attempts. But the data also showed a gap: only 2% of logged-in users came through it, so a meaningful share of people who started to log in never finished. The feature worked; the login screen was losing them. That finding made the case for redesigning the login itself.",
+        image: todo("Vehicle detail page with blurred popularity data and the login prompt"),
+      },
+      {
+        heading: "4. Fixing the Login Screen",
+        body: "I audited the login screen against guidance from Nielsen Norman Group and Baymard Institute. It failed all four standards: reduce cognitive load at the point of entry, make social login prominent and place it before the email form, explain what users get by logging in, and give the screen one clear primary action.\n\nThe redesign leads with why to log in (track price drops, save favourites, check if a price is fair), puts Google, Apple and Facebook sign-in first, and makes email the second option. The modal is wider so long German words no longer break. I designed it for three contexts: full page, popup and mobile web.\n\nThe hardest decision was the dealer button. It sat full-width at the top, so every private buyer had to skip past it. I proposed a text link at the bottom; market managers pushed back to protect a key segment. We settled on a secondary outlined button at the bottom: dealers know they have a separate account and look for it, so it stays findable without competing with the main journey. We agreed to monitor dealer login rates and later test the text link. It launched first in Austria. [verify: rollout status and result]",
         image: {
           src: "/images/projects/project-7/detail-1.png",
           alt: "Legacy login modal compared with the redesigned login modal",
@@ -44,8 +83,8 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "The Dealer Button",
-        body: "The legacy design placed a full-width dealer login button at the very top of the screen, directly below the value proposition. It was the first thing every user saw. But the overwhelming majority of our users are private buyers, not dealers. The button created a false fork: buyers had to consciously skip past something irrelevant before they could begin.\n\nMy redesign moved the dealer entry point to the bottom as a text link. Market managers and dealer-side stakeholders pushed back, which was understandable: dealers are a key business segment, and nobody wanted to make their path harder.\n\nAfter several rounds of discussion, we landed on a secondary outlined button at the bottom of the screen. Dealers are professionals who know they have a separate account and actively look for their entry point, so the button gives them a clear affordance without competing with the primary journey. We agreed to monitor dealer login rates closely and act if they dipped, and to later test the text link variant to see whether the button is needed at all.",
+        heading: "Dealer Entry Point: The Trade-off",
+        body: "Text link or outlined button? The text link gave buyers the cleanest path but worried dealer-side stakeholders. The outlined button kept a clear affordance for professionals while dropping it below the primary journey. We shipped the button and kept the text link as a follow-up test.",
         image: {
           src: "/images/projects/project-7/detail-2.png",
           alt: "Dealer entry point as a text link compared with a secondary outlined button",
@@ -54,8 +93,22 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "The Bigger Picture: AutoScout24 Club",
-        body: "The login redesign was step one of a broader vision I developed for logged-in users: the AutoScout24 Club. Automotive culture fits a club model naturally. Cars create identity and long-term relationships, and people enjoy belonging to brand ecosystems. Members are higher-intent users, easier to convert into leads, and their activity generates signals that improve the marketplace for everyone.\n\nThe vision reframes logging in as joining something, with clear membership benefits grouped into three pillars. Insights: price history, price evaluation scores, listing popularity, and a free basic vehicle history report. Exclusive access: early access to new listings, unlimited favourites and search updates, and price estimates for your own car. Trust and status: a verified buyer profile and exclusive content.\n\nI prototyped the Club landing page in Figma Make and presented the vision alongside the login designs, giving the team a clear direction for what logging in could become.",
+        heading: "5. Saved Search: From Soft Sign-up to One Tap",
+        body: "Saving a search is a high-intent moment, so it became our testing ground. The flow went through four versions, each built on what the previous one taught us.\n\nV2 was a soft, email-first sign-up: users subscribed to alerts without feeling blocked by account creation. I explored a one-time code to turn that email into an account without any password, which needed sign-off from Trust & Identity. V3 removed the separate success step and let the login screen carry the confirmation, which only became possible with the new, customisable login dialog. V4 replaced the soft ending with a mandatory sign-in bottom sheet offering Apple and Google, because many iPhone users rely on Google as their main account.\n\nThe hypothesis was that the lower friction of social login would outweigh the added requirement. It did: the login rate in the flow rose from 17% to 32%, an increase of about 90%, and logged-in users grew by about 2% across all platforms.",
+        image: todo("Saved search flow V2 → V3 → V4, one row per version"),
+      },
+      {
+        heading: "Edge Cases & States",
+        body: "Every login moment came with its full set of states, designed for each platform.",
+        image: todo("States grid: wrong password, account already exists, social sign-in cancelled, captcha, code expired, push permission denied, skipped login"),
+      },
+      {
+        heading: "Outcome",
+        body: "Each experiment moved the number on its own: [verify: final onboarding uplift] from the new app launch sequence, about 16% more logins from direct login on price history, 5% of login attempts from popularity, and a near doubling of the login rate in saved search.\n\nTogether they shifted how the company approached login: from a wall to a series of well-timed, low-friction invitations. [verify: overall progress against the OKR, e.g. share of weekly active users logged in]",
+      },
+      {
+        heading: "Where It Was Heading",
+        body: "The work pointed towards a bigger idea I developed for the team: the AutoScout24 Club. Instead of asking users to log in, invite them to join, with member benefits such as price insights, early access to new listings and a verified buyer profile. It stayed a vision rather than a shipped product, but it gave the roadmap a clear direction: make logging in feel like joining something worth belonging to.",
         image: {
           src: "/images/projects/project-7/detail-3.png",
           alt: "AutoScout24 Club landing page concept",
@@ -64,122 +117,8 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "Rollout & Next Steps",
-        body: "The redesign launched first in Austria, with two weeks of monitoring login conversion, dealer login rates, and drop-off to set a baseline before rolling out to further markets.\n\nThe roadmap from there is about compounding small wins: testing icon-only social buttons, creating contextual login variants with purpose-specific messaging, replacing the mandatory click captcha with an invisible one, and introducing passwordless one-time-code login to lower the barrier to signing up even further.",
-      },
-    ],
-  },
-  {
-    id: 6,
-    slug: "app-onboarding-redesign",
-    status: "published",
-    title: "App Onboarding Redesign",
-    subtitle: "Reframing Friction as Value",
-    description:
-      "Rebuilt the app launch sequence around value-driven video and a scalable structure, delivering +40% logged-in users and +20% push opt-in.",
-    company: "AutoScout24",
-    role: "Product Designer",
-    platform: "iOS, Android",
-    tags: ["Onboarding", "Growth", "Mobile", "A/B Testing"],
-    thumbnail: {
-      src: "/images/projects/project-6/thumb.png",
-      alt: "App Onboarding Redesign - AutoScout24",
-      width: 1200,
-      height: 800,
-      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
-    },
-    heroImage: {
-      src: "/images/projects/project-6/hero.png",
-      alt: "App Onboarding Redesign hero - AutoScout24",
-      width: 1920,
-      height: 1080,
-    },
-    overview:
-      "The AutoScout24 app's launch sequence had grown organically over time, with new screens bolted on whenever a need arose, none designed to work together. The result was a fragmented first impression that wasted the most valuable moment in the user journey: the very first open. Growing the registered user base was a core OKR, and the launch sequence was the most natural place to start.",
-    sections: [
-      {
-        heading: "The Problem",
-        body: "The existing flow felt patchy and unintentional. There was no unified structure, no clear value proposition at the moment of launch, and no early prompt for users to register or log in. Users who opened the app for the first time slipped straight into an anonymous session, and staying logged-out became the path of least resistance.\n\nThe data told a different story about what we stood to gain: logged-in users perform significantly better on the actions that matter most, including favouriting vehicles, contacting sellers, and returning to previously viewed listings. More registered users meant more of those behaviours, at scale. We just hadn't given them a reason to register at the right moment.",
-        image: {
-          src: "/images/projects/project-6/detail-1.png",
-          alt: "Original app launch sequence - fragmented flow",
-          width: 1200,
-          height: 800,
-        },
-      },
-      {
-        heading: "Redesigning the First Impression",
-        body: "The goal was specific: get users to register or log in, and to opt in to push notifications. Both actions had outsized downstream impact on engagement and retention, but neither was being asked for at the right moment. I designed a new launch sequence built around four principles: a unified flow to replace the patchwork experience; value-driven communication at every step (telling users why we're asking for something before asking); an early registration moment built into the sequence itself; and a scalable structure that could absorb future steps without breaking the experience.\n\nBefore landing on video, two other directions were explored. The first used static full-bleed images with text below: visually clean, but unworkable at scale. Maintaining readable contrast across light and dark mode, combined with varying text lengths across AutoScout24's markets and languages, made it too fragile. The second direction explicitly showcased app features: screens demonstrating how to favourite a vehicle, save a search, and so on. It solved the contrast problem but felt dated. Modern onboarding earns trust by showing the product in context, not by announcing what it contains before a user has touched it.\n\nVideo solved the scalability problem and added something neither static approach could: an emotional moment at the very start of the experience. A scenic drive with a car on an open road was a deliberate choice. The goal was not to describe the app but to get users excited about the road ahead, to make them feel the possibility before asking anything of them. The registration prompt and push opt-in followed from that foundation, each paired with a clear reason to say yes.",
-        image: {
-          src: "/images/projects/project-6/detail-2.png",
-          alt: "New app launch sequence - unified flow with value-driven prompts",
-          width: 1200,
-          height: 800,
-        },
-      },
-      {
-        heading: "Results",
-        body: "We launched on iOS in Q1 2026 and ran an A/B test against the existing flow. The results validated the core hypothesis: the problem was never that users didn't want to register: we'd never given them a compelling enough reason to, at the right moment.\n\n+40% increase in logged-in user rate. +20% increase in push notification opt-in. Sessions saw a small negative impact, an expected and acceptable trade-off for adding steps at the start of the journey. Detail page views and enquiries, the metrics that matter most, were unaffected.\n\nThe Android rollout followed, with a tailored variation planned for AutoTrader Canada, AutoScout24's sister brand, adapting the sequence to a new market while carrying the core design principles forward.",
-      },
-    ],
-  },
-  {
-    id: 2,
-    slug: "homescreen-recommendations",
-    status: "published",
-    title: "Homescreen Recommendations",
-    subtitle: "Personalizing the Front Door",
-    description:
-      "A disciplined sequence of A/B experiments turned a generic homepage into a personalised entry point, achieving ~48% more recommendation clicks.",
-    company: "AutoScout24",
-    role: "Product Designer",
-    platform: "iOS, Android, Web",
-    tags: ["Personalization", "A/B Testing", "UX Strategy", "Data-informed"],
-    thumbnail: {
-      src: "/images/projects/project-2/thumb.png",
-      alt: "Homescreen Recommendations - AutoScout24",
-      width: 1200,
-      height: 800,
-      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
-    },
-    heroImage: {
-      src: "/images/projects/project-2/hero.png",
-      alt: "Homescreen Recommendations hero - AutoScout24",
-      width: 1920,
-      height: 1080,
-    },
-    overview:
-      "AutoScout24's homepage felt more like a blog than a marketplace: generic, undifferentiated, and disconnected from what individual users actually wanted. We were also behind: a personalized recommender is standard on competing marketplaces. We had the algorithm infrastructure ready to generate multiple recommendation types based on recently viewed vehicles, saved listings, search history, and price drops, but no homepage experience making use of it. With 43% of users saying they couldn't find what they were looking for, the opportunity was clear.",
-    sections: [
-      {
-        heading: "Incremental Experimentation",
-        body: "We approached this through a disciplined sequence of A/B experiments, each building on the last. First, we removed noise: playlists and redundant cards that cluttered the page without adding value. Then we expanded the recommendation pool from 15 to 50 vehicles and decluttered the recommendation cards themselves, simplifying the information displayed so more recommendations fit in the viewport at once.\n\nEach change was validated independently. Expanding the pool drove a ~48% jump in recommendation clicks. Simplifying the card design added another ~17%.",
-        image: {
-          src: "/images/projects/project-2/detail-4.png",
-          alt: "Recommendation card before and after declutter - simplified layout showing model, price, and key attributes",
-          width: 1200,
-          height: 800,
-        },
-      },
-      {
-        heading: "A Calculated Pivot",
-        body: "Encouraged by early results, we pushed further and tested a horizontal scroll layout with categorized recommendation types. The design held up well in user testing: participants found the categorization intuitive and navigation natural. But when we ran the live A/B test, the data told a different story: a ~21% drop in recommendation clicks. User testing and real-world behavior diverged.\n\nRather than forcing the pattern, we treated this as a signal. We pivoted to a tabbed vertical layout that preserved the recommendation categories without the horizontal scroll friction.",
-        image: {
-          src: "/images/projects/project-2/detail-2.png",
-          alt: "Horizontal scroll vs tabbed vertical layout variants",
-          width: 1200,
-          height: 800,
-        },
-      },
-      {
-        heading: "Results",
-        body: "The incremental approach paid off. The ~48% increase in recommendation clicks came from a sequence of validated changes, not a single big redesign.\n\nAnalyzing engagement across recommendation types revealed a clear ranking: 'Based on your last view' and 'Reduced offer' drove the highest click rates, followed closely by 'Based on your last search'. This directly informed how we prioritized and ordered recommendation types in the final experience.\n\nThe project also reinforced a key lesson: user testing validates comprehension and usability, but it doesn't always predict live A/B performance. Both signals matter, and they can point in different directions.",
-        image: {
-          src: "/images/projects/project-2/detail-3.png",
-          alt: "Final recommendation layout and results",
-          width: 1200,
-          height: 800,
-        },
+        heading: "What I Learned",
+        body: "Timing beats persuasion. When users already see the value, the fastest path to login converts best.\n\nSmall experiments compound. None of these changes was dramatic on its own, but each one told us what to try next.\n\nThe right answer can differ per platform. App and web users logged in for different reasons, so a single shared solution would have under-served both.",
       },
     ],
   },
@@ -190,7 +129,7 @@ export const selectedProjects: Project[] = [
     title: "Favourites Redesign",
     subtitle: "Turning a Dead End Into a Decision Hub",
     description:
-      "Turned the most-visited screen on AutoScout24 from a dead end into a conversion surface, delivering ~5.5% more enquiries.",
+      "Turned one of AutoScout24's most-visited screens from a passive list into a conversion surface, delivering ~5.5% more enquiries.",
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android, Web",
@@ -209,11 +148,11 @@ export const selectedProjects: Project[] = [
       height: 1080,
     },
     overview:
-      "Favourites was one of AutoScout24's top five most-visited screens. Users returned to it regularly as they worked through the car-buying journey, treating it as a personal shortlist: a place to gather vehicles they were seriously considering, track prices, and eventually decide who to contact. Despite that high intent, the screen had not been redesigned in years and gave users almost no tools to act.",
+      "Favourites was one of AutoScout24's five most-visited screens. Users came back to it again and again as a personal shortlist, yet it hadn't been redesigned in years and gave them almost no way to act. The goal: turn the screen where buyers make their decision into one that helps them make it.",
     sections: [
       {
-        heading: "The Challenge",
-        body: "The existing experience was a passive list with no hierarchy and no clear path forward. There was no way to understand at a glance whether a price was competitive, no visual structure to guide attention, and no direct way to contact a seller without leaving the screen entirely. Users could not sort their saved vehicles, could not remove them in bulk, and had no recommendations when listings became unavailable. A screen sitting at a critical decision point in the user journey was doing almost nothing to move users forward.",
+        heading: "The Problem",
+        body: "The screen was a passive list with no hierarchy and no clear next step. Users couldn't tell at a glance whether a price was competitive, couldn't contact a seller without leaving the list, couldn't sort or remove vehicles in bulk, and hit a dead end when a listing was sold. A screen sitting at the most important decision point did almost nothing to move users forward.",
         image: {
           src: "/images/projects/project-1/detail-1.png",
           alt: "Original Favourites screen",
@@ -222,12 +161,21 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "Research & Discovery",
-        body: "I ran a large-scale user survey across the German and Austrian markets (1,142 respondents on iOS and Android) to understand how people actually use their watchlist. The findings were clear: users treat Favourites as a shortlist to narrow down their choices. Price is the primary factor they track, they check back regularly for updates, and they want to know how long a car has been listed.\n\nArmed with these insights, I mapped the existing experience against what users actually needed and identified over a dozen improvement opportunities.",
+        heading: "My Role & Team",
+        body: "[verify: team, timeframe and platforms shipped.]\n\nI led the project from research to release: I ran the user survey, mapped the opportunities, designed the new card and screen across iOS, Android and web, and worked with engineering on the A/B test.",
       },
       {
-        heading: "Design Approach",
-        body: "I redesigned the vehicle card from the ground up, starting with information hierarchy. Price became the most prominent element on the card, paired with a clear indicator showing whether the asking price is competitive. The most relevant vehicle attributes were surfaced as scannable pills, replacing a dense block of text. Non-essential information was removed to reduce visual noise.\n\nThe card design did not exist in isolation. We deliberately aligned it with the search result cards used across web, iOS, and Android, so the experience feels consistent wherever a user encounters a vehicle. The attribute pills follow the same recognisable pattern. But Favourites could go further. On a search result card, the goal is to move users to the detail page, where they make an enquiry. On Favourites, the contact button is already on the card, so there is no reason to hold back. We added a swipeable image gallery directly on the Favourites card, letting users browse a vehicle's photos without leaving their shortlist. Same design language as search, but richer in action.\n\nThe most impactful addition was a direct contact button on each card. Favourites is the screen where users gather vehicles they are seriously considering, often side by side. Adding a contact CTA there saves a click and brings the most important action in the buying journey to exactly the right moment, rather than asking users to navigate deeper into a listing first.\n\nBeyond the card, we added sorting by date added, price, mileage, and year. Users can remove vehicles individually or in bulk. At the bottom of the screen, a recommender surfaces vehicles similar to what the user has already saved, keeping discovery alive without pulling them away from their shortlist.",
+        heading: "Research",
+        body: "I ran a survey across the German and Austrian markets with 1,142 respondents on iOS and Android. Users treat Favourites as a shortlist to narrow down their choices. Price is the main thing they track, they check back regularly for updates, and they want to know how long a car has been listed. Mapping these needs against the existing screen surfaced over a dozen improvement opportunities.",
+        image: todo("Survey highlights and the opportunity map"),
+      },
+      {
+        heading: "Constraints",
+        body: "The vehicle card had to stay consistent with the search result cards used across web, iOS and Android, built from the existing design system. A completely new card would have broken recognition and doubled maintenance.\n\nThe question was how far Favourites could depart from search while still feeling like the same product.",
+      },
+      {
+        heading: "Decisions & Trade-offs",
+        body: "Same language, richer actions. I kept the search card's structure and attribute pills, but made price the most prominent element, paired with an indicator showing whether it's a good deal. On search, a card's job is to get users to the detail page. On Favourites, users have already chosen, so the card could go further: a swipeable gallery and a direct contact button, right on the shortlist.\n\nThe contact button was the biggest bet. Putting the main buying action on the card saves a click at exactly the right moment, but it also risked lower-quality leads from quick taps. We chose to test it rather than debate it.\n\nAround the card, I added sorting by date added, price, mileage and year, single and bulk removal, and a recommender of similar vehicles at the end of the list.",
         image: {
           src: "/images/projects/project-1/detail-2.png",
           alt: "Favourites redesign showing new card design with contact CTA and price indicator",
@@ -236,8 +184,18 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "Results",
-        body: "We ran an A/B test with the new card design and contact CTAs. The result: a ~5.5% increase in enquiries, validating the hypothesis that Favourites could become an active conversion surface rather than a passive list. The data confirmed that adding contact buttons directly to the cards was the right call: users were ready to act from the shortlist, they just needed the path made easy.",
+        heading: "Explorations",
+        body: "[verify: card variants explored and why they were rejected.]",
+        image: todo("Card explorations: three or four card variants side by side"),
+      },
+      {
+        heading: "Complete Flow & Edge Cases",
+        body: "The full journey from saving a car to contacting the seller, plus every state the list can be in.",
+        image: todo("End-to-end flow and states: empty list, sold or unavailable listing, sorting sheet, bulk-delete confirmation, contact sheet"),
+      },
+      {
+        heading: "Outcome",
+        body: "The A/B test with the new card and contact buttons increased enquiries by ~5.5%. Users were ready to act from their shortlist; they just needed the path made easy. [verify: test length, platforms and any secondary metrics]",
       },
     ],
   },
@@ -248,7 +206,7 @@ export const selectedProjects: Project[] = [
     title: "Deals Entry Point",
     subtitle: "Making Discounts a First-Class Feature",
     description:
-      "Gave a 3x-converting listing type its own entry point: 50% more deals page views and 10% more leads.",
+      "Gave a 3x-converting listing type its own place in a full bottom navigation: 50% more deals page views and 10% more leads.",
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android",
@@ -267,11 +225,11 @@ export const selectedProjects: Project[] = [
       height: 1080,
     },
     overview:
-      "Price is the single most important factor for AutoScout24 users when buying a car. Super Deals, listings priced at least 3.5% or €300 below market value, convert at 3x the rate of regular listings. Users love a good deal. The problem was that deals were nearly impossible to find: buried in the catalogue with no dedicated entry point and no presence in the navigation.",
+      "Price is the most important factor for AutoScout24 users. Super Deals, listings priced at least 3.5% or €300 below market value, convert at three times the rate of regular listings. But they were nearly impossible to find: buried in the catalogue, with no entry point in the navigation.",
     sections: [
       {
-        heading: "The Opportunity",
-        body: "The internal data made the case quickly. Super Deals made up just 2% of detail page views but drove 13% of all web enquiries. On LeasingMarkt.de, a sister marketplace, deals generated 30% of revenue from only 2% of listings. Users who found deals converted at a dramatically higher rate. The opportunity was to stop treating deals as a side effect and start giving them the prominence they deserved, both in the recommender and in the bottom navigation.",
+        heading: "The Problem",
+        body: "Super Deals made up just 2% of detail page views but drove 13% of all web enquiries. On sister marketplace LeasingMarkt.de, deals generated 30% of revenue from only 2% of listings. Market research pointed the same way: most European consumers rank value for money as their top purchase criterion, and a discount often seals an undecided purchase. Users were already looking for deals; we weren't showing them where.",
         image: {
           src: "/images/projects/project-3/detail-1.png",
           alt: "Super Deals opportunity data",
@@ -280,12 +238,22 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "Building the Business Case",
-        body: "I combined internal data with market research: 59% of European consumers rank good value for money as their top purchase criterion; 60% say a discount can seal the decision on an undecided purchase; and 67% of mobile users are more likely to engage with brands offering in-app deals. The data pointed in one direction: give users easier access to the deals they are already looking for.",
+        heading: "My Role & Team",
+        body: "[verify: team and timeframe.]\n\nI built the business case, designed the navigation restructure, prototyped the variants, and ran the usability test.",
       },
       {
-        heading: "Navigation Redesign",
-        body: "The design challenge was a hard constraint: mobile navigation best practice limits bottom tabs to five items, and AutoScout24 already had five. Adding Deals meant making space, not just adding a tab.\n\nThe solution was a two-part restructure. Profile was moved out of the bottom navigation and into the header: an occasional task did not need a permanent tab. More significantly, Favourites and Saved Searches were consolidated into a single Saved tab, freeing up the slot Deals needed.\n\nMerging two features into one tab introduced its own design problem: how do you present two content types clearly without losing either? I prototyped three versions and ran an unmoderated usability test with seven participants. Version 1 used a bottom slider to reveal the two categories without showing content upfront. Version 2 displayed both on a single screen with vehicle thumbnails for an immediate overview. Version 3 used a tab-based layout with separate pages for each content type. Six out of seven participants preferred Version 2. It gave the clearest picture at a glance, made the combination of favourites and saved searches feel logical rather than confusing, and struck the right balance between information and simplicity. Version 1 felt too minimal and disconnected; Version 3's tabs looked too similar to filter controls and risked being overlooked.\n\nThe testing also confirmed genuine appetite for the Deals tab, while surfacing that users expected the content to be personalised to their search history. That finding went straight into the roadmap.",
+        heading: "Constraint: Five Tabs, No Room",
+        body: "Platform conventions on iOS and Android limit bottom navigation to five tabs, and AutoScout24 already had five. Adding Deals meant making space, not just adding a tab.\n\nProfile moved into the header: an occasional task didn't need a permanent tab. Favourites and Saved Searches were merged into one Saved tab, which freed the slot for Deals. But merging two features raised a new problem: how do you show two content types clearly without losing either?",
+        image: {
+          src: "/images/projects/project-3/detail-2.png",
+          alt: "Restructured bottom navigation with a Deals tab",
+          width: 1200,
+          height: 800,
+        },
+      },
+      {
+        heading: "Three Versions, One Test",
+        body: "I prototyped three versions of the Saved tab and ran an unmoderated usability test with seven participants. Version 1 used a bottom slider to choose a category without showing content upfront. Version 2 showed both on one screen with vehicle thumbnails. Version 3 used tabs with a separate page for each.\n\nSix of seven participants preferred Version 2. It gave the clearest overview and made combining favourites and saved searches feel logical. Version 1 felt too minimal and disconnected, and Version 3's tabs looked too much like filter controls and risked being missed. We chose Version 2.\n\nThe test also confirmed real appetite for a Deals tab, and showed users expected deals to be personalised to their searches. That finding went straight into the roadmap.",
         image: {
           src: "/images/projects/project-3/detail-3.jpg",
           alt: "Three versions of the Saved tab tested in usability research",
@@ -294,66 +262,82 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "Results & Roadmap",
-        body: "In an initial iOS test, 15% of visitors accessed Deals through the new bottom-navigation entry point. Deals detail page views increased by 50% and Super Deal leads rose by 10%.\n\nThe entry point was the foundation for a larger vision: a dedicated Deals hub where all deal types live in one place. The roadmap included personalized deal alerts triggered when a saved search or favourited vehicle drops to Super Deal price, multiple deal categories beyond Super Deals (price drops, exclusive dealer offers, time-limited promotions), and deal badges surfaced directly in the Favourites screen so users never miss when a saved vehicle becomes a bargain.\n\nOn the CRM side, the plan included targeted push notifications and re-engagement emails for deal-prone users, creating a closed loop between discovery, saving, and action.\n\nThe concept was validated and the roadmap was ready. The full Deals hub was not built: the project was deprioritised by management before the next phase could begin. The entry point remains live.",
+        heading: "Complete Flow & Edge Cases",
+        body: "From the new tab to a deal enquiry, and the states around it.",
+        image: todo("Flow and states: Deals tab, deal detail, empty Saved tab, no deals available, first-time user"),
+      },
+      {
+        heading: "Outcome",
+        body: "In the first iOS test, 15% of visitors used the new Deals tab. Deals detail page views rose by 50% and Super Deal leads by 10%.\n\nThe entry point was meant to be the first step towards a full Deals hub, with personalised deal alerts and deal badges in Favourites. That next phase was deprioritised by management before it started. The entry point remains live. [verify: still live today]",
       },
     ],
   },
   {
-    id: 4,
-    slug: "native-referral-flow",
+    id: 2,
+    slug: "homescreen-recommendations",
     status: "published",
-    title: "Native Referral Flow",
-    subtitle: "Turning Users into a Growth Channel",
+    title: "Homescreen Recommendations",
+    subtitle: "Personalising the Front Door",
     description:
-      "7.5x more referral engagement than desktop and conversion rates approaching 9%, reaching ~90% of mobile users in month one.",
-    company: "Marley Spoon",
+      "A sequence of A/B experiments turned a generic homepage into a personalised entry point, including a pivot when live data contradicted user testing.",
+    company: "AutoScout24",
     role: "Product Designer",
-    platform: "iOS, Android",
-    tags: ["Mobile", "Growth", "iOS", "Android", "Referral"],
+    platform: "iOS, Android, Web",
+    tags: ["Personalisation", "A/B Testing", "Experimentation", "Data-informed"],
     thumbnail: {
-      src: "/images/projects/project-4/thumb.png",
-      alt: "Native Referral Flow - Marley Spoon",
+      src: "/images/projects/project-2/thumb.png",
+      alt: "Homescreen Recommendations - AutoScout24",
       width: 1200,
       height: 800,
       background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
     },
     heroImage: {
-      src: "/images/projects/project-4/hero.png",
-      alt: "Native Referral Flow hero - Marley Spoon",
+      src: "/images/projects/project-2/hero.png",
+      alt: "Homescreen Recommendations hero - AutoScout24",
       width: 1920,
       height: 1080,
     },
     overview:
-      "At Marley Spoon, the most engaged users were on the app. They ordered weekly, tracked deliveries, and lived inside iOS and Android. Yet the referral program existed only on desktop and in email, leaving the most active segment of the user base with no native way to share. Designing that mobile experience from scratch was one of my first major projects at the company.",
+      "AutoScout24's homepage felt more like a blog than a marketplace, and 43% of users said they couldn't find what they were looking for. A personalised recommender is standard on competing marketplaces, and we already had the algorithms. What we lacked was a homepage that used them.",
     sections: [
       {
-        heading: "The Challenge",
-        body: "The problem was not that users did not want to refer friends. It was that the flow made it unnecessarily hard. Sharing required switching out of the app entirely, opening a browser, and navigating a separate page. On mobile, that kind of friction kills intent before it becomes action.\n\nThe brief was to build something truly native: easy, immediately clear, and available right where the user already was, under their thumb. And the reward had to land instantly. Invite three friends who place an order and you get a free box. That is a compelling hook for a meal-kit subscriber, but only if it is communicated upfront and unmistakably.",
+        heading: "My Role & Team",
+        body: "[verify: team, e.g. the Audience team in the Growth squad, and timeframe.]\n\nI designed every iteration across iOS, Android and web and worked with the PM and engineers on each test.",
+      },
+      {
+        heading: "Small Steps, Each One Tested",
+        body: "Rather than one big redesign, we ran a sequence of A/B tests. First we removed noise: playlists and redundant cards that took space without adding value. Then we expanded the recommendation pool from 15 to 50 vehicles, which drove a ~48% jump in recommendation clicks. Simplifying the card itself, showing only model, price and key attributes so more fit on screen, added another ~17%.",
         image: {
-          src: "/images/projects/project-4/detail-1.png",
-          alt: "Native Referral Flow - discovery and challenge",
+          src: "/images/projects/project-2/detail-4.png",
+          alt: "Recommendation card before and after simplification",
           width: 1200,
           height: 800,
         },
       },
       {
-        heading: "Discovery",
-        body: "I started with competitor analysis to understand the patterns and conventions users would already recognise, then dug into internal desktop referral data to map what was working and size the mobile opportunity.\n\nFrom this, I defined the user flow and the two core additions the feature needed: a new menu entry point to make the referral program permanently discoverable from anywhere in the app, and a sent invites overview so users could track the status of every referral they had made.",
-      },
-      {
-        heading: "Design",
-        body: "The flow was built around a single promise: invite three friends, get a free box. No noise, no hedging. The reward was front and centre on every screen.\n\nEntry points were placed at the moments of highest engagement: post-delivery, post-checkout, and in account settings, catching users right after a positive experience with the product. Native share sheets handled the sending, making sharing feel instant and familiar. Zero manual link-copying.\n\nThe app was custom rather than fully native, designed on an iOS baseline. Where Android required platform-specific treatment, Material Design guidelines served as the reference for adapting components accordingly, without maintaining a separate Android Figma file. Informed adaptation over duplication.\n\nA sent invites tracker gave users real visibility into every referral they had made. Each invite shows its status at a glance: Redeemed (the friend signed up and placed an order, discount earned), Pending (invite sent, waiting for action), or Expired (the link was never used). No digging, no ambiguity. Users could see exactly where they stood and how close they were to earning that free box, which gave them a reason to come back and a nudge to send more.",
+        heading: "When Testing and Data Disagreed",
+        body: "Next, we tested a horizontal scroll with recommendations grouped by type. In user testing it did well: participants found the categories intuitive. In the live A/B test, recommendation clicks dropped by ~21%.\n\nRather than force the pattern, we treated it as a signal. I designed a tabbed vertical layout that kept the categories but removed the horizontal scroll. The lesson stuck: user testing tells you whether people understand a design, but not always how they'll behave with it.",
         image: {
-          src: "/images/projects/project-4/detail-3.png",
-          alt: "Sent invites tracker showing Redeemed, Pending, and Expired statuses",
+          src: "/images/projects/project-2/detail-2.png",
+          alt: "Horizontal scroll vs tabbed vertical layout",
           width: 1200,
           height: 800,
         },
       },
       {
-        heading: "Results",
-        body: "In the first month after rollout, the feature reached almost 90% of iOS and Android users. The results confirmed that context and friction, not interest, had been the barrier all along.\n\nApp referrals quickly outpaced the desktop program: over 70% of all referrals sent came from mobile, with engagement running approximately 7.5x higher than the existing desktop channel. Conversion rates for native referrals reached almost 9%.",
+        heading: "Iterations",
+        body: "[verify: which iterations shipped, e.g. the tab recommender on Android and the later tab improvements.]",
+        image: todo("Iteration strip: original homepage, decluttered, 50-vehicle pool, horizontal scroll, tabbed vertical, final"),
+      },
+      {
+        heading: "Outcome",
+        body: "Expanding the pool and simplifying the cards each produced a measurable uplift in recommendation clicks. [verify: overall uplift from the final shipped version]\n\nComparing recommendation types also showed a clear ranking: 'Based on your last view' and 'Reduced offers' performed best, followed by 'Based on your last search'. That decided the order of categories in the final design.",
+        image: {
+          src: "/images/projects/project-2/detail-3.png",
+          alt: "Final recommendation layout",
+          width: 1200,
+          height: 800,
+        },
       },
     ],
   },

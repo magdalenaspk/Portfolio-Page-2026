@@ -8,8 +8,8 @@ export default function HomePage() {
     <>
       <Hero />
       <SelectedProjects />
-      <Workshops />
       <AdditionalWork />
+      <Workshops />
     </>
   );
 }

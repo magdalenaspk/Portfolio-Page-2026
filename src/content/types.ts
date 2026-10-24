@@ -15,6 +15,7 @@ export interface CaseStudySection {
   body: string; // Supports \n for paragraphs
   image?: ProjectImage;
   presentation?: string; // Path to PDF in /public
+  media?: "onboarding-video"; // Renders an embedded video instead of the image
 }
 
 export interface Project {

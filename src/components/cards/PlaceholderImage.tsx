@@ -48,7 +48,9 @@ export function PlaceholderImage({ src, alt, label, className }: PlaceholderImag
         >
           {label}
         </div>
-        <p className="text-xs text-neutral-400 mt-1">Image placeholder</p>
+        <p className="text-xs text-neutral-500 mt-1 max-w-xs mx-auto leading-snug">
+          {src.includes("PLACEHOLDER") ? `To add: ${alt}` : "Image placeholder"}
+        </p>
       </div>
     </div>
   );

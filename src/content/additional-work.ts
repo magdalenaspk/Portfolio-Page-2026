@@ -2,6 +2,33 @@ import { AdditionalWorkItem } from "./types";
 
 export const additionalWork: AdditionalWorkItem[] = [
   {
+    id: 5,
+    title: "Native Referral Flow",
+    company: "Marley Spoon",
+    description:
+      "Brought referrals into the iOS and Android apps: over 70% of all referrals moved to mobile, with engagement about 7.5x higher than desktop.",
+    tags: ["Mobile", "Growth", "Referral"],
+    thumbnail: {
+      src: "/images/projects/project-4/thumb.png",
+      alt: "Native Referral Flow - Marley Spoon",
+      width: 1200,
+      height: 800,
+      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+    },
+    overview:
+      "Marley Spoon's most engaged customers lived in the app, but the referral programme only existed on desktop and in email. Sharing meant leaving the app, opening a browser and finding a separate page.",
+    sections: [
+      {
+        heading: "The Design",
+        body: "I designed a native flow built around one promise: invite three friends, get a free box. Entry points sat at the moments of highest engagement (after delivery, after checkout, and in account settings) and native share sheets handled sending. A sent-invites tracker showed each invite as Redeemed, Pending or Expired, so users could see how close they were to their reward. The app was designed on an iOS baseline, with Material guidelines guiding Android adaptations.",
+      },
+      {
+        heading: "Results",
+        body: "Within the first month the feature reached almost 90% of app users. Over 70% of all referrals came from mobile, engagement ran about 7.5x higher than desktop, and native referrals converted at almost 9%.",
+      },
+    ],
+  },
+  {
     id: 1,
     title: "Web Homepage Redesign",
     company: "Marley Spoon",

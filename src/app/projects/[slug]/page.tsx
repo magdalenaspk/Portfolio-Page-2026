@@ -186,7 +186,7 @@ export default function ProjectPage({ params }: PageProps) {
 
                     {/* Section image / animation */}
                     {section.image && (
-                      project.slug === "app-onboarding-redesign" && i === 1 ? (
+                      section.media === "onboarding-video" ? (
                         <div
                           className={`rounded-2xl bg-neutral-100 overflow-hidden flex items-center justify-center p-6 ${
                             i % 2 === 1 ? "order-1 lg:order-2" : ""
