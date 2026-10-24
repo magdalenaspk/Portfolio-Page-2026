@@ -146,27 +146,6 @@ export const aboutContent: AboutContent = {
       description:
         "Landing pages, app visual content, and marketing collateral for a health-tech startup.",
     },
-    {
-      id: 12,
-      type: "work",
-      title: "Visual Marketing Designer",
-      organization: "Tyszkiewicz Nieruchomości",
-      period: "Jan 2015 – Jan 2016",
-    },
-    {
-      id: 13,
-      type: "work",
-      title: "Owner, Visual Designer & Event Planner",
-      organization: "RockOut Pub",
-      period: "Jun 2011 – Jan 2015",
-    },
-    {
-      id: 14,
-      type: "work",
-      title: "Journalist",
-      organization: "Dziennik Bałtycki / Polskapresse",
-      period: "Jun 2009 – May 2011",
-    },
   ],
   education: [
     {
