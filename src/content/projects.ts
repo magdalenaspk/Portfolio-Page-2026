@@ -369,7 +369,7 @@ export const workshops: Project[] = [
     subtitle: "Designing at the Speed of Ideas",
     description:
       "Built a fully interactive prototype using only prompts and presented the methods at UX Camp 2025 and AutoScout24.",
-    company: "UX Camp Berlin",
+    company: "UX Camp Berlin 2025",
     role: "Speaker & Workshop Facilitator",
     platform: "Figma Make, AI tools, prompting",
     tags: ["AI Tools", "Prototyping", "Workshop", "Thought Leadership"],
@@ -418,7 +418,7 @@ export const workshops: Project[] = [
     subtitle: "Teaching Designers to Present Like a Newsroom",
     description:
       "A UX Camp workshop that turns presenting into a newsroom: four roles, two frameworks, and a live 60-second broadcast to practise them.",
-    company: "UX Camp Berlin",
+    company: "UX Camp Berlin 2026",
     role: "Speaker & Workshop Facilitator",
     platform: "Storytelling, presenting, design reviews",
     tags: ["Workshop", "Storytelling", "Presentation Skills", "Facilitation"],
@@ -479,7 +479,7 @@ export const workshops: Project[] = [
     subtitle: "How Figma Decisions Become Frontend Rules",
     description:
       "A UX Camp session teaching designers how Figma maps to HTML, CSS, tokens and component props, for cleaner handoff and better AI-generated code.",
-    company: "UX Camp Berlin",
+    company: "UX Camp Berlin 2026",
     role: "Speaker",
     platform: "HTML, CSS, design tokens, handoff",
     tags: ["Workshop", "Design-to-Code", "Handoff", "Design Systems"],
@@ -497,7 +497,7 @@ export const workshops: Project[] = [
       height: 840,
     },
     overview:
-      "Designers and engineers describe the same interface in different languages. Designers talk about frames, Auto Layout and variants; engineers talk about containers, Flexbox and props. With AI tools now generating code straight from design files, that gap matters more than ever. I put together this UX Camp session to show designers how the decisions they already make in Figma become frontend rules.",
+      "Designers and engineers describe the same interface in different languages. Designers talk about frames, Auto Layout and variants; engineers talk about containers, Flexbox and props. With AI tools now generating code straight from design files, that gap matters more than ever. I put together this session for UX Camp 2026 to show designers how the decisions they already make in Figma become frontend rules.",
     sections: [
       {
         heading: "From Pixels to Structure",
