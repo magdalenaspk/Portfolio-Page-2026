@@ -89,15 +89,11 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "3. Popularity: Finding the Leak",
-        body: "Showing how many people viewed and saved a listing gives buyers social proof, and blurring it for logged-out users creates a natural reason to sign in. Before building anything, we ran a fake-door test: logged-out users saw blurred views and favourites, and tapping them showed a short work-in-progress message. It confirmed the demand, with about 2% better conversion: a small gain, but enough to roll it out. Usability sessions had already shown that people actively looked for this information.\n\nOnce live on web, it drove 5% of all login attempts. But the data also showed a gap: only 2% of logged-in users came through it, so a meaningful share of people who started to log in never finished. The feature worked; the old login screen was losing them. That finding made the case for redesigning the login itself.",
-        image: {
-          src: "/images/projects/project-7/screens/pop-fakedoor.png",
-          alt: "Fake-door test dialog on the vehicle detail page",
-          width: 1440,
-          height: 1024,
-        },
+        body: "Popularity started as a question: does social proof make people more likely to enquire? Before investing in the data, we ran a fake-door test. A \"Popular\" label was assigned at random to 5% of listings, with no logic behind it. Labelled listings converted about 2% better: a small gain, but enough to justify the real build. Only then did the data team run a full analysis to define what actually makes a listing popular, and the label was rolled out.\n\nThe next step turned it into a login moment. The detail page shows how many people viewed and saved a car, but logged-out users see the numbers blurred, with a reason to sign in. Usability sessions confirmed people actively looked for this information.\n\nOnce live on web, it drove 5% of all login attempts. But the data also showed a gap: only 2% of logged-in users came through it, so a meaningful share of people who started to log in never finished. The feature worked; the old login screen was losing them. That finding made the case for redesigning the login itself.",
         gallery: {
           items: [
+            { src: "/images/projects/project-7/screens/pop-0-label-list.png", alt: "Search results with a Sehr beliebt label on listings", caption: "The \"Popular\" label, first tested on random listings" },
+            { src: "/images/projects/project-7/screens/pop-0-label-detail.png", alt: "Detail page with the popular label", caption: "The label on the detail page" },
             { src: "/images/projects/project-7/screens/pop-1-blurred.png", alt: "Popularity section with blurred views and favourites", caption: "Logged out: numbers blurred, with a reason to sign in" },
             { src: "/images/projects/project-7/screens/pop-2-legacy-login.png", alt: "Legacy login screen", caption: "The old login screen, where users dropped off" },
             { src: "/images/projects/project-7/screens/pop-3-revealed.png", alt: "Popularity section showing interactions and favourites", caption: "Logged in: interactions and favourites revealed" },
@@ -254,6 +250,7 @@ export const selectedProjects: Project[] = [
         heading: "One Card, Every Listing",
         body: "A shortlist mixes very different listings, so the card had to hold all of them without breaking. I designed a full set of variants on the same structure: deals with a struck-through price, cars the user has already contacted, listings that are no longer available, private sellers, leasing offers and sponsored placements.\n\nThe two states that mattered most were the ones the old screen ignored. A contacted car now says when the user got in touch, so they don't contact the same seller twice. A sold car is greyed out with a one-tap delete, instead of silently cluttering the list.",
         gallery: {
+          variant: "cards",
           items: [
             { src: "/images/projects/project-1/screens/card-max.png", alt: "Card with deal badges, price drop and financing", caption: "Super Deal with a price drop" },
             { src: "/images/projects/project-1/screens/card-contacted.png", alt: "Card marked as contacted with a date", caption: "Already contacted, with the date" },
@@ -426,6 +423,7 @@ export const selectedProjects: Project[] = [
         heading: "Beyond the Homepage",
         body: "The same recommender also lived on the vehicle detail page, where it sat at the very bottom, below the seller details. I designed an experiment that moved it up, directly after the vehicle description, to catch people who were unsure about the car they were looking at.\n\nRecommender engagement stayed roughly the same, but engagement with everything below it dropped, including the seller details. A higher position didn't create new interest, it only moved attention around, so we rolled it back. It was a useful reminder to measure the whole page, not just the component being tested.",
         gallery: {
+          variant: "cards",
           items: [
             { src: "/images/projects/project-2/screens/dp-before.png", alt: "Detail page with the recommender at the very bottom", caption: "Before: recommender at the very end" },
             { src: "/images/projects/project-2/screens/dp-after.png", alt: "Detail page with the recommender after the vehicle description", caption: "Experiment: right after the description, rolled back" },

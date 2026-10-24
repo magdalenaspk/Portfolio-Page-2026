@@ -17,7 +17,7 @@ export interface GalleryItem {
 }
 
 export interface Gallery {
-  variant?: "phone" | "desktop"; // phone = one row of screens, desktop = two columns
+  variant?: "phone" | "cards" | "desktop"; // phone = framed screens in a row, cards = natural heights, desktop = two columns
   items: GalleryItem[];
   caption?: string;
 }

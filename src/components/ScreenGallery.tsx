@@ -28,7 +28,18 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
   const [open, setOpen] = useState<number | null>(null);
   const items = gallery.items;
   const isPhone = gallery.variant !== "desktop";
-  const narrow = isPhone && items.length <= 3;
+  // Phone screens share one frame so rows line up; "cards" keeps natural heights.
+  const framed = gallery.variant === undefined || gallery.variant === "phone";
+  const width =
+    gallery.variant === "desktop"
+      ? items.length === 1
+        ? "max-w-5xl mx-auto"
+        : ""
+      : items.length <= 2
+        ? "max-w-xl mx-auto"
+        : items.length === 3
+          ? "max-w-3xl mx-auto"
+          : "";
 
   const close = useCallback(() => setOpen(null), []);
   const step = useCallback(
@@ -58,9 +69,7 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
     <figure className="mt-10">
       <div className="rounded-2xl bg-gradient-to-br from-neutral-50 to-neutral-200/70 px-4 py-8 sm:px-8 md:px-10 md:py-12">
         <div
-          className={`gap-4 sm:gap-6 ${layoutClass(gallery)} ${
-            narrow ? "max-w-3xl mx-auto" : ""
-          } items-start`}
+          className={`gap-4 sm:gap-6 ${layoutClass(gallery)} ${width} items-start`}
         >
           {items.map((item, i) => (
             <button
@@ -82,7 +91,9 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
                   src={item.src}
                   alt={item.alt}
                   loading="lazy"
-                  className="block w-full h-auto"
+                  className={`block w-full ${
+                    framed ? "aspect-[375/812] object-cover object-top" : "h-auto"
+                  }`}
                 />
               </span>
               {item.caption && (
