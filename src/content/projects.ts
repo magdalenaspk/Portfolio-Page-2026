@@ -395,11 +395,11 @@ export const selectedProjects: Project[] = [
       {
         heading: "Small Steps, Each One Tested",
         body: "Rather than one big redesign, we ran a sequence of A/B tests. First we removed noise: playlists and redundant cards that took space without adding value. Then we expanded the recommendation pool from 15 to 50 vehicles, which drove a ~48% jump in recommendation clicks. Simplifying the card itself, showing only model, price and key attributes so more fit on screen, added another ~17%.",
-        image: {
-          src: "/images/projects/project-2/detail-4.png",
-          alt: "Recommendation card before and after simplification",
-          width: 1200,
-          height: 800,
+        gallery: {
+          items: [
+            { src: "/images/projects/project-2/screens/hs-0-baseline.png", alt: "Original recommendations with long titles, badges and seller type", caption: "Before: long titles, badges and seller type on every card" },
+            { src: "/images/projects/project-2/screens/hs-2-simplified.png", alt: "Simplified recommendation cards", caption: "After: model, price and key facts only, ~17% more clicks" },
+          ],
         },
       },
       {
@@ -411,7 +411,6 @@ export const selectedProjects: Project[] = [
         body: "Each version answered a question the previous one raised. A simpler two-column grid let more cars fit on screen. Horizontal rows grouped by type were clear in testing but lost clicks live. Two tabs kept the grid and added deals as their own category. The final iteration replaced the tabs with chips, so more recommendation types fit without crowding, and the most clicked types come first. The chips are what shipped.",
         gallery: {
           items: [
-            { src: "/images/projects/project-2/screens/hs-2-simplified.png", alt: "Two-column recommendation grid", caption: "Simplified two-column grid" },
             { src: "/images/projects/project-2/screens/hs-3-horizontal.png", alt: "Horizontal rows grouped by recommendation type", caption: "Horizontal rows: ~21% fewer clicks" },
             { src: "/images/projects/project-2/screens/hs-4-tabs.png", alt: "Tabbed layout, recommended for you", caption: "Tabs: recommended for you" },
             { src: "/images/projects/project-2/screens/hs-4-tabs-deals.png", alt: "Tabbed layout, deals and discounts", caption: "Tabs: deals and discounts" },
