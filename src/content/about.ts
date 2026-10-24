@@ -39,24 +39,34 @@ export const aboutContent: AboutContent = {
   ],
   testimonials: [
     {
-      body: "Magda your presentation skills are very impressive. You excel at clearly and succinctly explaining both the user flow and user interface in an easy-to-understand way. During the last co-design session, you demonstrated the ability to handle challenging questions and effectively explain the rationale behind your design decisions.",
-      author: "Marie",
-      role: "Product Designer",
+      body: "She asks the right questions when things are unclear, challenges assumptions when needed, and consistently keeps the user at the centre of the conversation. Her work actually became a benchmark for how I believe design files should be structured, and I've often referred other designers to her work as an example.",
+      author: "Daan Brink",
+      role: "Lead Product Manager",
     },
     {
-      body: "I love your presentations at our All-Hands, and your Figma Make talk was fantastic as well. You always speak so clearly, structured, to the point, and entertaining. I'm looking forward to working with you in 2026 and listening to more of you presenting your work.",
-      author: "Anja",
+      body: "Magda is a masterful presenter and storyteller - she has a way of making ideas truly stick. Her work is always deeply thought through: she understands the problem, explores different solutions, and makes informed decisions based on facts and insights before testing and bringing the best options to life.",
+      author: "Ann-Christine Fröbel",
+      role: "Team Lead UX Research",
+    },
+    {
+      body: "We collaborated closely on a complex project like the One Marketplace homepage, which involved multiple stakeholder dependencies, significant ambiguity and required attention to detail throughout delivery. I especially valued her ability to bring clarity to complex problems, collaborate openly across product and engineering and turn ideas and feedback into thoughtful, intuitive experiences.",
+      author: "Marija Radoman",
+      role: "Product Manager",
+    },
+    {
+      body: "She works closely with everyone in the team to understand product needs and find practical solutions through clear, simple and user-focused designs. Her collaborative approach has made product discussions smoother and more effective.",
+      author: "Marcelo Puppin",
+      role: "Software Engineering Management",
+    },
+    {
+      body: "I love your presentations at our All-Hands, and your Figma Make talk was fantastic as well. You always speak so clearly, structured, to the point, and entertaining.",
+      author: "Anja Szerdi",
       role: "Content Designer",
     },
     {
       body: "Thank you for your excellent UX review of the favorites page redesign implementation! I like how you highlighted changes side-by-side with the existing design. It opened up a clear dialogue between designer and developers to ensure we deliver a perfect final product.",
-      author: "Christine",
+      author: "Christine Zaytsev",
       role: "Developer",
-    },
-    {
-      body: "You motivate the team every time you share your knowledge. You're a great speaker and an awesome explorer of new things that make our lives easier. Don't let anyone take it away from you!",
-      author: "Tillie",
-      role: "Product Designer",
     },
   ],
   tools: [
