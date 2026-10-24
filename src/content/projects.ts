@@ -2,6 +2,74 @@ import { Project } from "./types";
 
 export const selectedProjects: Project[] = [
   {
+    id: 7,
+    slug: "login-redesign",
+    status: "published",
+    title: "Login Redesign",
+    subtitle: "Converting Intent into Identity",
+    description:
+      "Rebuilt AutoScout24's login around a clear value proposition and social-first hierarchy: the first step of a Club vision for logged-in users.",
+    company: "AutoScout24",
+    role: "Product Designer",
+    platform: "Web, mWeb",
+    tags: ["Growth", "Login & Registration", "Stakeholder Management", "Product Vision"],
+    thumbnail: {
+      src: "/images/projects/project-7/thumb.png",
+      alt: "Login Redesign - AutoScout24",
+      width: 1200,
+      height: 800,
+      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+    },
+    heroImage: {
+      src: "/images/projects/project-7/hero.png",
+      alt: "Redesigned AutoScout24 full-page login with social sign-in options",
+      width: 1920,
+      height: 840,
+    },
+    overview:
+      "Most people use AutoScout24 like a one-off marketplace: they search, browse, and leave without ever logging in. Only 5.4% of users were logged in, and the company set an OKR to lift that by 50%, to 8.1%, by the end of 2026. The login screen is the exact moment where intent turns into identity, yet ours was doing little to earn that step. Fixing it was the foundation for everything else.",
+    sections: [
+      {
+        heading: "Why Login Matters",
+        body: "Logged-in users behave very differently. On web, their enquiry conversion rate was 75% higher than logged-out users, they viewed 40% more vehicle detail pages per week, and they had 33% more sessions coming from CRM channels. Logged-in users meant more personalisation, more return visits, and better leads for dealers.\n\nSo why weren't people registering? They saw no clear benefit, they used the platform infrequently, they had privacy concerns, and the site worked perfectly well without an account.\n\nA login behaviour deep dive with our Buyer Analytics team sharpened the picture. Most logins happened in a user's very first session, and logging in tended to mark a phase where the journey was already intensifying. At the same time, users who delayed logging in still browsed and made enquiries before they did. That ruled out an aggressive login wall. The job was to make the value of logging in obvious at the moment people were ready for it.",
+      },
+      {
+        heading: "Fixing the Basics",
+        body: "Earlier initiatives, including a new app onboarding and gating price history behind login, had already moved the numbers. But the login screen itself still looked outdated next to the rest of the product, and it broke established best practice.\n\nI audited it against guidance from Nielsen Norman Group and Baymard Institute, which comes down to four standards: reduce cognitive load at the point of entry; make social login prominent and place it before the email form; explain what users get by logging in; and give the screen one clear primary action. The old design failed on all four. Its value proposition used non-library styling, the hierarchy was email-first, social options sat below the form where they were easily ignored, and the modal was narrow even though desktop had plenty of room.\n\nThe redesign addressed each one. A clear \"why log in\" message now leads the screen: track price drops on cars you like, save and revisit favourites, check if a price is fair. Google, Apple, and Facebook sign-in sit front and centre, with email as the second option. The modal is wider, so long German words no longer break across lines. I designed it across three contexts: a full page, a popup, and mobile web.",
+        image: {
+          src: "/images/projects/project-7/detail-1.png",
+          alt: "Legacy login modal compared with the redesigned login modal",
+          width: 1200,
+          height: 800,
+        },
+      },
+      {
+        heading: "The Dealer Button",
+        body: "The legacy design placed a full-width dealer login button at the very top of the screen, directly below the value proposition. It was the first thing every user saw. But the overwhelming majority of our users are private buyers, not dealers. The button created a false fork: buyers had to consciously skip past something irrelevant before they could begin.\n\nMy redesign moved the dealer entry point to the bottom as a text link. Market managers and dealer-side stakeholders pushed back, which was understandable: dealers are a key business segment, and nobody wanted to make their path harder.\n\nAfter several rounds of discussion, we landed on a secondary outlined button at the bottom of the screen. Dealers are professionals who know they have a separate account and actively look for their entry point, so the button gives them a clear affordance without competing with the primary journey. We agreed to monitor dealer login rates closely and act if they dipped, and to later test the text link variant to see whether the button is needed at all.",
+        image: {
+          src: "/images/projects/project-7/detail-2.png",
+          alt: "Dealer entry point as a text link compared with a secondary outlined button",
+          width: 1200,
+          height: 800,
+        },
+      },
+      {
+        heading: "The Bigger Picture: AutoScout24 Club",
+        body: "The login redesign was step one of a broader vision I developed for logged-in users: the AutoScout24 Club. Automotive culture fits a club model naturally. Cars create identity and long-term relationships, and people enjoy belonging to brand ecosystems. Members are higher-intent users, easier to convert into leads, and their activity generates signals that improve the marketplace for everyone.\n\nThe vision reframes logging in as joining something, with clear membership benefits grouped into three pillars. Insights: price history, price evaluation scores, listing popularity, and a free basic vehicle history report. Exclusive access: early access to new listings, unlimited favourites and search updates, and price estimates for your own car. Trust and status: a verified buyer profile and exclusive content.\n\nI prototyped the Club landing page in Figma Make and presented the vision alongside the login designs, giving the team a clear direction for what logging in could become.",
+        image: {
+          src: "/images/projects/project-7/detail-3.png",
+          alt: "AutoScout24 Club landing page concept",
+          width: 1200,
+          height: 800,
+        },
+      },
+      {
+        heading: "Rollout & Next Steps",
+        body: "The redesign launched first in Austria, with two weeks of monitoring login conversion, dealer login rates, and drop-off to set a baseline before rolling out to further markets.\n\nThe roadmap from there is about compounding small wins: testing icon-only social buttons, creating contextual login variants with purpose-specific messaging, replacing the mandatory click captcha with an invisible one, and introducing passwordless one-time-code login to lower the barrier to signing up even further.",
+      },
+    ],
+  },
+  {
     id: 6,
     slug: "app-onboarding-redesign",
     status: "published",
@@ -289,6 +357,10 @@ export const selectedProjects: Project[] = [
       },
     ],
   },
+];
+
+// Workshops and talks hosted — shown in their own section on the homepage
+export const workshops: Project[] = [
   {
     id: 5,
     slug: "ai-powered-prototyping",

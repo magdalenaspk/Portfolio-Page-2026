@@ -5,6 +5,7 @@ import {
   getProjectBySlug,
   getPublishedProjects,
   getAdjacentProjects,
+  isWorkshop,
 } from "@/lib/projects";
 import { Container } from "@/components/layout/Container";
 import { Badge } from "@/components/ui/Badge";
@@ -45,6 +46,8 @@ export default function ProjectPage({ params }: PageProps) {
   if (!project) notFound();
 
   const { prev, next } = getAdjacentProjects(params.slug);
+  const workshop = isWorkshop(params.slug);
+  const backHref = workshop ? "/#workshops" : "/#selected-projects";
 
   return (
     <article className="pt-8">
@@ -58,10 +61,10 @@ export default function ProjectPage({ params }: PageProps) {
             </Link>
             <span>/</span>
             <Link
-              href="/#selected-projects"
+              href={backHref}
               className="hover:text-neutral-600 transition-colors"
             >
-              Work
+              {workshop ? "Workshops" : "Work"}
             </Link>
             <span>/</span>
             <span className="text-neutral-600">{project.title}</span>
@@ -284,8 +287,8 @@ export default function ProjectPage({ params }: PageProps) {
         </div>
 
         <div className="mt-8 text-center">
-          <Button href="/#selected-projects" variant="ghost">
-            ← Back to all work
+          <Button href={backHref} variant="ghost">
+            {workshop ? "← Back to workshops" : "← Back to all work"}
           </Button>
         </div>
       </Container>

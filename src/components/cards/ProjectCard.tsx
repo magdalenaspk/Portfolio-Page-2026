@@ -8,9 +8,10 @@ import { PlaceholderImage } from "./PlaceholderImage";
 
 interface ProjectCardProps {
   project: Project;
+  ctaLabel?: string;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, ctaLabel = "View case study" }: ProjectCardProps) {
   return (
     <motion.div variants={itemVariants} className="h-full">
       <Link
@@ -48,7 +49,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Arrow indicator */}
         <div className="px-6 pb-6 flex items-center gap-1 text-sm font-medium text-neutral-500 group-hover:text-lime-700 transition-colors">
-          View case study
+          {ctaLabel}
           <svg
             className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1"
             fill="none"
