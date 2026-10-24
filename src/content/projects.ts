@@ -369,7 +369,7 @@ export const workshops: Project[] = [
     subtitle: "Designing at the Speed of Ideas",
     description:
       "Built a fully interactive prototype using only prompts and presented the methods at UX Camp 2025 and AutoScout24.",
-    company: "UX Camp Berlin · AutoScout24",
+    company: "UX Camp Berlin",
     role: "Speaker & Workshop Facilitator",
     platform: "Figma Make, AI tools, prompting",
     tags: ["AI Tools", "Prototyping", "Workshop", "Thought Leadership"],
@@ -378,7 +378,7 @@ export const workshops: Project[] = [
       alt: "AI-Powered Prototyping - Workshop",
       width: 1200,
       height: 800,
-      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+      background: "#f3f3f3",
     },
     heroImage: {
       src: "/images/projects/project-5/hero.png",
@@ -427,7 +427,7 @@ export const workshops: Project[] = [
       alt: "Broadcasting Your Design - UX Camp workshop",
       width: 1200,
       height: 800,
-      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+      background: "#f3f3f3",
     },
     heroImage: {
       src: "/images/projects/project-8/hero.png",
@@ -478,17 +478,17 @@ export const workshops: Project[] = [
     title: "Code Basics for Designers",
     subtitle: "How Figma Decisions Become Frontend Rules",
     description:
-      "An internal session teaching designers how Figma maps to HTML, CSS, tokens and component props, for cleaner handoff and better AI-generated code.",
-    company: "AutoScout24 UX All Hands",
+      "A UX Camp session teaching designers how Figma maps to HTML, CSS, tokens and component props, for cleaner handoff and better AI-generated code.",
+    company: "UX Camp Berlin",
     role: "Speaker",
     platform: "HTML, CSS, design tokens, handoff",
     tags: ["Workshop", "Design-to-Code", "Handoff", "Design Systems"],
     thumbnail: {
       src: "/images/projects/project-9/thumb.png",
-      alt: "Code Basics for Designers - internal session",
+      alt: "Code Basics for Designers - UX Camp session",
       width: 1200,
       height: 800,
-      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+      background: "#f3f3f3",
     },
     heroImage: {
       src: "/images/projects/project-9/hero.png",
@@ -497,7 +497,7 @@ export const workshops: Project[] = [
       height: 840,
     },
     overview:
-      "Designers and engineers describe the same interface in different languages. Designers talk about frames, Auto Layout and variants; engineers talk about containers, Flexbox and props. With AI tools now generating code straight from design files, that gap matters more than ever. I put together this session for the UX team to show how the decisions we already make in Figma become frontend rules.",
+      "Designers and engineers describe the same interface in different languages. Designers talk about frames, Auto Layout and variants; engineers talk about containers, Flexbox and props. With AI tools now generating code straight from design files, that gap matters more than ever. I put together this UX Camp session to show designers how the decisions they already make in Figma become frontend rules.",
     sections: [
       {
         heading: "From Pixels to Structure",
