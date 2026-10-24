@@ -1,13 +1,6 @@
 import { Project } from "./types";
 
-// V3 note: images whose src contains "PLACEHOLDER" render as a labelled box
-// describing the screen still to add. "[verify: …]" marks figures to confirm.
-const todo = (what: string) => ({
-  src: "PLACEHOLDER",
-  alt: what,
-  width: 1200,
-  height: 900,
-});
+// "[verify: …]" marks figures and facts still to confirm before submitting.
 
 export const selectedProjects: Project[] = [
   {
@@ -229,10 +222,10 @@ export const selectedProjects: Project[] = [
         heading: "The Problem",
         body: "The screen was a passive list with no hierarchy and no clear next step. Users couldn't tell at a glance whether a price was competitive, couldn't contact a seller without leaving the list, couldn't sort or remove vehicles in bulk, and hit a dead end when a listing was sold. A screen sitting at the most important decision point did almost nothing to move users forward.",
         image: {
-          src: "/images/projects/project-1/detail-1.png",
-          alt: "Original Favourites screen",
-          width: 1200,
-          height: 800,
+          src: "/images/projects/project-1/screens/card-before.png",
+          alt: "The previous Favourites card on mobile web",
+          width: 351,
+          height: 659,
         },
       },
       {
@@ -242,7 +235,6 @@ export const selectedProjects: Project[] = [
       {
         heading: "Research",
         body: "I ran a survey across the German and Austrian markets with 1,142 respondents on iOS and Android. Users treat Favourites as a shortlist to narrow down their choices. Price is the main thing they track, they check back regularly for updates, and they want to know how long a car has been listed. Mapping these needs against the existing screen surfaced over a dozen improvement opportunities.",
-        image: todo("Survey highlights and the opportunity map"),
       },
       {
         heading: "Constraints",
@@ -259,14 +251,41 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "Explorations",
-        body: "[verify: card variants explored and why they were rejected.]",
-        image: todo("Card explorations: three or four card variants side by side"),
+        heading: "One Card, Every Listing",
+        body: "A shortlist mixes very different listings, so the card had to hold all of them without breaking. I designed a full set of variants on the same structure: deals with a struck-through price, cars the user has already contacted, listings that are no longer available, private sellers, leasing offers and sponsored placements.\n\nThe two states that mattered most were the ones the old screen ignored. A contacted car now says when the user got in touch, so they don't contact the same seller twice. A sold car is greyed out with a one-tap delete, instead of silently cluttering the list.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-1/screens/card-max.png", alt: "Card with deal badges, price drop and financing", caption: "Super Deal with a price drop" },
+            { src: "/images/projects/project-1/screens/card-contacted.png", alt: "Card marked as contacted with a date", caption: "Already contacted, with the date" },
+            { src: "/images/projects/project-1/screens/card-unavailable.png", alt: "Greyed-out card for a vehicle no longer available", caption: "No longer available, one-tap delete" },
+            { src: "/images/projects/project-1/screens/card-private.png", alt: "Card for a private seller", caption: "Private seller" },
+            { src: "/images/projects/project-1/screens/card-leasing.png", alt: "Leasing offer card with monthly price and terms", caption: "Leasing offer, monthly price first" },
+            { src: "/images/projects/project-1/screens/card-sponsored.png", alt: "Sponsored listing card", caption: "Sponsored, clearly labelled" },
+          ],
+        },
       },
       {
-        heading: "Complete Flow & Edge Cases",
-        body: "The full journey from saving a car to contacting the seller, plus every state the list can be in.",
-        image: todo("End-to-end flow and states: empty list, sold or unavailable listing, sorting sheet, bulk-delete confirmation, contact sheet"),
+        heading: "The Shipped Screens",
+        body: "On iOS the list follows platform conventions: a native sort sheet with options users asked for in the survey, removal confirmed with a snackbar that offers undo instead of a blocking dialog, and full dark mode support. When the list ends, a recommender of similar cars keeps discovery going without pulling users away from their shortlist. [verify: empty state design]",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-1/screens/fav-list.png", alt: "Favourites list on iOS", caption: "The shortlist" },
+            { src: "/images/projects/project-1/screens/fav-sort.png", alt: "Sort bottom sheet", caption: "Sort by what matters to you" },
+            { src: "/images/projects/project-1/screens/fav-removed-undo.png", alt: "Vehicle removed with an undo snackbar", caption: "Remove, with undo" },
+            { src: "/images/projects/project-1/screens/fav-recommender.png", alt: "Similar vehicles recommended below the list", caption: "Similar cars when the list ends" },
+            { src: "/images/projects/project-1/screens/fav-list-dark.png", alt: "Favourites list in dark mode", caption: "Dark mode" },
+          ],
+        },
+      },
+      {
+        heading: "Web",
+        body: "On desktop the same card spreads into a horizontal layout inside the account area, with the photo, price rating and both contact actions visible at once.",
+        gallery: {
+          variant: "desktop",
+          items: [
+            { src: "/images/projects/project-1/screens/fav-desktop.png", alt: "Favourites page on desktop web", caption: "Favourites on desktop" },
+          ],
+        },
       },
       {
         heading: "Outcome",
@@ -319,27 +338,24 @@ export const selectedProjects: Project[] = [
       {
         heading: "Constraint: Five Tabs, No Room",
         body: "Platform conventions on iOS and Android limit bottom navigation to five tabs, and AutoScout24 already had five. Adding Deals meant making space, not just adding a tab.\n\nProfile moved into the header: an occasional task didn't need a permanent tab. Favourites and Saved Searches were merged into one Saved tab, which freed the slot for Deals. But merging two features raised a new problem: how do you show two content types clearly without losing either?",
-        image: {
-          src: "/images/projects/project-3/detail-2.png",
-          alt: "Restructured bottom navigation with a Deals tab",
-          width: 1200,
-          height: 800,
+        gallery: {
+          items: [
+            { src: "/images/projects/project-3/screens/deals-before.png", alt: "Home screen before, with five tabs and no deals", caption: "Before: five tabs, no way to deals" },
+            { src: "/images/projects/project-3/screens/deals-after-dark.png", alt: "Home screen with Deals tab and Deals and discounts recommendations", caption: "After: Deals in the tab bar and on home" },
+            { src: "/images/projects/project-3/screens/deals-list.png", alt: "Deals results list", caption: "A filtered list of Super Deals" },
+          ],
         },
       },
       {
         heading: "Three Versions, One Test",
         body: "I prototyped three versions of the Saved tab and ran an unmoderated usability test with seven participants. Version 1 used a bottom slider to choose a category without showing content upfront. Version 2 showed both on one screen with vehicle thumbnails. Version 3 used tabs with a separate page for each.\n\nSix of seven participants preferred Version 2. It gave the clearest overview and made combining favourites and saved searches feel logical. Version 1 felt too minimal and disconnected, and Version 3's tabs looked too much like filter controls and risked being missed. We chose Version 2.\n\nThe test also confirmed real appetite for a Deals tab, and showed users expected deals to be personalised to their searches. That finding went straight into the roadmap.",
-        image: {
-          src: "/images/projects/project-3/detail-3.jpg",
-          alt: "Three versions of the Saved tab tested in usability research",
-          width: 1512,
-          height: 756,
+        gallery: {
+          items: [
+            { src: "/images/projects/project-3/screens/saved-v1-sheet.png", alt: "Saved as a bottom sheet with two links", caption: "Version 1: a bottom sheet" },
+            { src: "/images/projects/project-3/screens/saved-v2-overview.png", alt: "Saved page showing favourites and saved searches together", caption: "Version 2: one overview, chosen by 6 of 7" },
+            { src: "/images/projects/project-3/screens/saved-v3-tabs.png", alt: "Saved page with two tabs", caption: "Version 3: tabs that read as filters" },
+          ],
         },
-      },
-      {
-        heading: "Complete Flow & Edge Cases",
-        body: "From the new tab to a deal enquiry, and the states around it.",
-        image: todo("Flow and states: Deals tab, deal detail, empty Saved tab, no deals available, first-time user"),
       },
       {
         heading: "Outcome",
@@ -392,17 +408,29 @@ export const selectedProjects: Project[] = [
       {
         heading: "When Testing and Data Disagreed",
         body: "Next, we tested a horizontal scroll with recommendations grouped by type. In user testing it did well: participants found the categories intuitive. In the live A/B test, recommendation clicks dropped by ~21%.\n\nRather than force the pattern, we treated it as a signal. I designed a tabbed vertical layout that kept the categories but removed the horizontal scroll. The lesson stuck: user testing tells you whether people understand a design, but not always how they'll behave with it.",
-        image: {
-          src: "/images/projects/project-2/detail-2.png",
-          alt: "Horizontal scroll vs tabbed vertical layout",
-          width: 1200,
-          height: 800,
-        },
       },
       {
         heading: "Iterations",
-        body: "[verify: which iterations shipped, e.g. the tab recommender on Android and the later tab improvements.]",
-        image: todo("Iteration strip: original homepage, decluttered, 50-vehicle pool, horizontal scroll, tabbed vertical, final"),
+        body: "Each version answered a question the previous one raised. A simpler two-column grid let more cars fit on screen. Horizontal rows grouped by type were clear in testing but lost clicks live. Two tabs kept the grid and added deals as their own category. The final iteration replaced the tabs with chips, so more recommendation types fit without crowding, and the most clicked types come first. [verify: which iterations shipped on iOS and Android]",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-2/screens/hs-2-simplified.png", alt: "Two-column recommendation grid", caption: "Simplified two-column grid" },
+            { src: "/images/projects/project-2/screens/hs-3-horizontal.png", alt: "Horizontal rows grouped by recommendation type", caption: "Horizontal rows: ~21% fewer clicks" },
+            { src: "/images/projects/project-2/screens/hs-4-tabs.png", alt: "Tabbed layout, recommended for you", caption: "Tabs: recommended for you" },
+            { src: "/images/projects/project-2/screens/hs-4-tabs-deals.png", alt: "Tabbed layout, deals and discounts", caption: "Tabs: deals and discounts" },
+            { src: "/images/projects/project-2/screens/hs-5-chips.png", alt: "Recommendation types as chips with load more", caption: "Chips, ordered by performance" },
+          ],
+        },
+      },
+      {
+        heading: "Beyond the Homepage",
+        body: "The same recommender also lived on the vehicle detail page, where it sat at the very bottom, below the seller details. I designed an experiment that moved it up, directly after the vehicle description, to catch people who were unsure about the car they were looking at. [verify: result and whether it shipped]",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-2/screens/dp-before.png", alt: "Detail page with the recommender at the very bottom", caption: "Before: recommender at the very end" },
+            { src: "/images/projects/project-2/screens/dp-after.png", alt: "Detail page with the recommender after the vehicle description", caption: "Experiment: right after the description" },
+          ],
+        },
       },
       {
         heading: "Outcome",
