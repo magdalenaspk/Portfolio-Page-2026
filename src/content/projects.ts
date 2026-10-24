@@ -27,7 +27,7 @@ export const selectedProjects: Project[] = [
       alt: "Growing Logged-in Users - AutoScout24",
       width: 1200,
       height: 800,
-      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+      background: "linear-gradient(135deg, #f9f9fa 0%, #e2e4e8 100%)",
     },
     heroImage: {
       src: "/images/projects/project-7/hero.png",
@@ -139,7 +139,7 @@ export const selectedProjects: Project[] = [
       alt: "Favourites Redesign - AutoScout24",
       width: 1200,
       height: 800,
-      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+      background: "linear-gradient(135deg, #f9f9fa 0%, #e2e4e8 100%)",
     },
     heroImage: {
       src: "/images/projects/project-1/hero.png",
@@ -216,7 +216,7 @@ export const selectedProjects: Project[] = [
       alt: "Deals Entry Point - AutoScout24",
       width: 1200,
       height: 800,
-      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+      background: "linear-gradient(135deg, #f9f9fa 0%, #e2e4e8 100%)",
     },
     heroImage: {
       src: "/images/projects/project-3/hero.png",
@@ -289,7 +289,7 @@ export const selectedProjects: Project[] = [
       alt: "Homescreen Recommendations - AutoScout24",
       width: 1200,
       height: 800,
-      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+      background: "linear-gradient(135deg, #f9f9fa 0%, #e2e4e8 100%)",
     },
     heroImage: {
       src: "/images/projects/project-2/hero.png",

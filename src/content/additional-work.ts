@@ -13,7 +13,7 @@ export const additionalWork: AdditionalWorkItem[] = [
       alt: "Native Referral Flow - Marley Spoon",
       width: 1200,
       height: 800,
-      background: "linear-gradient(135deg, #eefff0 0%, #c8f53a 100%)",
+      background: "#F5F5F5",
     },
     overview:
       "Marley Spoon's most engaged customers lived in the app, but the referral programme only existed on desktop and in email. Sharing meant leaving the app, opening a browser and finding a separate page.",
