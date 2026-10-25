@@ -318,6 +318,7 @@ export const selectedProjects: Project[] = [
         body: "The redesign was a foundation, not a finish line. Over the following months I designed three more releases for web, each building on the new card.\n\nPersonal dealer offers. A car in someone's Favourites is a strong buying signal, so we let dealers send those users a personal offer. It appears on the card as a collapsible panel with the date it arrived, visible without taking over the shortlist.\n\nA recommender on web. Like on iOS, similar cars now appear below the list, so the shortlist keeps feeding discovery.\n\nEmail updates on favourites. We knew users valued emails about their saved cars, with strong open rates. A toggle at the top of Favourites lets users subscribe to updates on price drops, high demand and availability, confirmed with a snackbar and mirrored in their account settings. It gave users a real upgrade, and it grew our email subscribers, which fed the wider goal of growing logged-in users.",
         gallery: {
           variant: "cards",
+          size: "small",
           items: [
             { src: "/images/projects/project-1/screens/offer-collapsed.png", alt: "Card with a collapsed personal dealer offer", caption: "Personal dealer offer, collapsed" },
             { src: "/images/projects/project-1/screens/offer-expanded.png", alt: "Card with an expanded personal dealer offer", caption: "Expanded, with the date it arrived" },
@@ -326,12 +327,11 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Email Updates",
-        body: "One switch, with clear feedback both ways, and the same setting available in the account area.",
+        body: "One switch, with clear feedback both ways. The same setting is also available in the account notification settings.",
         gallery: {
           items: [
             { src: "/images/projects/project-1/screens/toggle-on.png", alt: "Favourites with the email updates toggle on and a confirmation snackbar", caption: "Subscribed, confirmed with a snackbar" },
             { src: "/images/projects/project-1/screens/toggle-off.png", alt: "Favourites with the email updates toggle off", caption: "Unsubscribed, with the same clarity" },
-            { src: "/images/projects/project-1/screens/toggle-account.png", alt: "Account notification settings with the favourites toggle", caption: "The same setting in the account" },
           ],
         },
       },
