@@ -400,7 +400,7 @@ export const selectedProjects: Project[] = [
       "A sequence of A/B experiments turned a generic homepage into a personalised entry point, including a pivot when live data contradicted user testing.",
     company: "AutoScout24",
     role: "Product Designer",
-    platform: "iOS, Android, Web",
+    platform: "iOS, Android",
     tags: ["Personalisation", "A/B Testing", "Experimentation", "Data-informed"],
     thumbnail: {
       src: "/images/projects/project-2/thumb.png",
@@ -420,7 +420,7 @@ export const selectedProjects: Project[] = [
     sections: [
       {
         heading: "My Role & Team",
-        body: "[verify: team, e.g. the Audience team in the Growth squad, and timeframe.]\n\nI designed every iteration across iOS, Android and web and worked with the PM and engineers on each test.",
+        body: "An app-only project, from Q1 to Q3 2025. I worked with a PM and four engineers (two iOS, two Android).\n\nI designed every iteration for iOS and Android and worked with the PM and engineers on each test.",
       },
       {
         heading: "Small Steps, Each One Tested",
@@ -438,7 +438,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Iterations",
-        body: "Each version answered a question the previous one raised. A simpler two-column grid let more cars fit on screen. Horizontal rows grouped by type were clear in testing but lost clicks live. Two tabs kept the grid and added deals as their own category. The final iteration replaced the tabs with chips, so more recommendation types fit without crowding, and the most clicked types come first. The chips are what shipped.",
+        body: "Each version answered a question the previous one raised. A simpler two-column grid let more cars fit on screen. Horizontal rows grouped by type were clear in testing but lost clicks live. Two tabs kept the grid and added deals as their own category. The final iteration replaced the tabs with chips, so more recommendation types fit without crowding, and the most clicked types come first. The chips are what shipped.\n\nThe grid also became an endless feed. Scrolling is one of the most engaging patterns on mobile, and a recommender has no natural end, so there was no reason to stop users after a fixed number of cars. Recommendations load in batches of 24: the first batch comes with the page, and the next one loads in the background as the user scrolls towards the end. That keeps the app smooth and avoids downloading cars nobody will see, while users can keep scrolling for as long as they like.",
         gallery: {
           items: [
             { src: "/images/projects/project-2/screens/hs-3-horizontal.png", alt: "Horizontal rows grouped by recommendation type", caption: "Horizontal rows: ~21% fewer clicks" },
@@ -461,7 +461,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Outcome",
-        body: "Expanding the pool and simplifying the cards each produced a measurable uplift in recommendation clicks. [verify: overall uplift from the final shipped version]\n\nComparing recommendation types also showed a clear ranking: 'Based on your last view' and 'Reduced offers' performed best, followed by 'Based on your last search'. That decided the order of categories in the final design.",
+        body: "Expanding the pool and simplifying the cards each produced a measurable uplift in recommendation clicks, and the final chips layout performs well: users engage with it and keep scrolling through the feed.\n\nComparing recommendation types also showed a clear ranking: 'Based on your last view' and 'Reduced offers' performed best, followed by 'Based on your last search'. That decided the order of categories in the final design.",
         image: {
           src: "/images/projects/project-2/detail-3.png",
           alt: "Final recommendation layout",
