@@ -28,7 +28,7 @@ export const selectedProjects: Project[] = [
       height: 840,
     },
     overview:
-      "AutoScout24 users could search for cars, browse listings and contact sellers without logging in. That made the marketplace easy to use, but it also meant many people had few reasons to create an account or return regularly. Account features such as saved searches, price history and listing popularity offered opportunities to make signing in more useful. I worked on several points in that journey: giving users a timely reason to log in, improving the login experience itself, and exploring how individual benefits could connect into a more coherent long-term proposition.",
+      "AutoScout24 users could search for cars, browse listings and contact sellers without logging in. That made the marketplace easy to use, but it also meant many users had few reasons to create an account or return regularly. Account features such as saved searches, price history and listing popularity offered opportunities to make signing in more useful. I worked on several points in that journey: giving users a timely reason to log in, improving the login experience itself, and exploring how individual benefits could connect into a more coherent long-term proposition.",
     sections: [
       {
         heading: "My Role & Team",
@@ -36,7 +36,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "The Problem",
-        body: "Logged-in users behaved very differently from logged-out users, yet people saw little reason to sign up: they used the platform infrequently, had privacy concerns, saw no clear benefit, and the site worked perfectly well without an account. The company set an OKR to grow the share of logged-in users by 50% by the end of 2026.",
+        body: "Logged-in users behaved very differently from logged-out users, yet users saw little reason to sign up: they used the platform infrequently, had privacy concerns, saw no clear benefit, and the site worked perfectly well without an account. The company set an OKR to grow the share of logged-in users by 50% by the end of 2026.",
         stats: [
           { value: "+75%", label: "higher enquiry conversion rate", context: "Logged-in users · web" },
           { value: "+40%", label: "more vehicle detail pages viewed per week", context: "Logged-in users · web" },
@@ -64,7 +64,7 @@ export const selectedProjects: Project[] = [
         afterPoints: "iOS allows one notification prompt, so the app explains the benefit first and shows Apple's prompt only after a yes, and registration can always be skipped. In the iOS A/B test (Q1 2026), sessions dipped slightly, an accepted trade-off, while detail page views and enquiries were unaffected. Android followed.",
         stats: [
           { value: "+40%", label: "logged-in iOS users within three weeks of release", context: "iOS A/B test" },
-          { value: "+20%", label: "push notification opt-in (approx.)", context: "iOS A/B test" },
+          { value: "+20%", label: "push notification opt-in", context: "iOS A/B test" },
         ],
         image: {
           src: "/images/projects/project-6/detail-2.png",
@@ -122,18 +122,16 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "3. Popularity: From Fake Door to Login Moment",
-        body: "Does social proof make people more likely to enquire? We validated that before building it, then turned it into a reason to log in.",
+        body: "Does social proof make users more likely to enquire? We validated that before building it, then turned it into a reason to log in.",
         points: [
           { icon: "beaker", title: "Fake-door test", body: "A \"Popular\" label assigned at random to 5% of listings, before investing in the data." },
           { icon: "chat", title: "Usability evidence", body: "People actively looked for popularity information and said it helped them decide." },
           { icon: "eye", title: "Gated for logged-out users", body: "Views, gallery swipes and Favourites adds are blurred behind a sign-in prompt, at the moment of interest." },
         ],
-        afterPoints: "The live figures use different denominators: the feature created login intent, but some users dropped out before finishing login. That drop-off made the case for redesigning the login itself.",
+        afterPoints: "Once live on web, popularity drove 5% of login attempts, but some users dropped out before finishing login. That drop-off made the case for redesigning the login itself.",
         stats: [
           { value: "+2%", label: "conversion on randomly labelled listings", context: "Fake-door test" },
           { value: "5%", label: "of login attempts driven by popularity", context: "Live on web" },
-          { value: "2%", label: "of total logged-in users came through it", context: "Live on web" },
-          { value: "+1%", label: "registrations (reported)", context: "Live on web" },
         ],
         gallery: {
           items: [
@@ -154,7 +152,7 @@ export const selectedProjects: Project[] = [
           { icon: "sparkle", title: "Explain what users get by logging in" },
           { icon: "cursor", title: "Give the screen one clear primary action" },
         ],
-        afterPoints: "The redesign fixes all four. It leads with why to log in (track price drops, save Favourites, check if a price is fair), puts Google, Apple and Facebook above email, and widens the desktop modal so long German words don't break. It works in three contexts: full page, popup and mobile web.",
+        afterPoints: "The redesign fixes all four. It leads with why to log in (track price drops, save Favourites, check if a price is fair), puts Google, Apple and Facebook above email, and widens the desktop modal so long German words don't break. It works in three contexts: full page, popup and mobile web.\n\nWe launched it in Austria first and monitored it for two weeks. Logins rose slightly, dealer login rates didn't dip and there were no security issues, so it was rolled out to all markets.",
         image: {
           src: "/images/projects/project-7/detail-1.png",
           alt: "Legacy login modal compared with the redesigned login modal",
@@ -257,24 +255,11 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Outcome",
-        body: "Each experiment moved the number on its own, measured on its own platform and metric.",
+        body: "Each experiment moved its own number, measured on its own platform and metric. Together, they lifted the share of logged-in users by close to 40%.",
         stats: [
-          { value: "+40%", label: "logged-in iOS users", context: "App launch sequence" },
-          { value: "+16%", label: "logins with direct login vs teaser", context: "Price history" },
-          { value: "5%", label: "of all login attempts", context: "Popularity" },
-          { value: "~2×", label: "login rate in the flow", context: "Saved search" },
           { value: "~40%", label: "growth in the share of logged-in users, against a 50% target", context: "All initiatives together" },
         ],
         afterPoints: "That fell short of the very ambitious 50% target, but it was a significant improvement, and enough for the company to close the OKR and move its focus to the next priority. The bigger change was in approach: from a login wall to a series of well-timed, low-friction invitations.",
-      },
-      {
-        heading: "Planned Next Steps",
-        body: "Follow-ups that were planned, not yet shipped:",
-        points: [
-          { icon: "layers", title: "Contextual login variants", tag: "Planned" },
-          { icon: "tag", title: "Social buttons without labels", tag: "Planned" },
-          { icon: "beaker", title: "Dealer text-link test", tag: "Planned" },
-        ],
       },
       {
         heading: "AutoScout24 Club: The Vision",
@@ -293,10 +278,6 @@ export const selectedProjects: Project[] = [
           height: 800,
         },
         imageCaption: "Vision — not confirmed as shipped",
-      },
-      {
-        heading: "In Summary",
-        body: "The work connected immediate UX improvements with a broader product direction: give users a clear reason to sign in, make the step easier, and build toward an account experience that keeps delivering value over time.",
       },
     ],
   },
@@ -335,7 +316,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Research",
-        body: "I ran a survey across the German and Austrian markets, on Android and iOS, to understand how people used Favourites and what they needed from it.",
+        body: "I ran a survey across the German and Austrian markets, on Android and iOS, to understand how users used Favourites and what they needed from it.",
         points: [
           { icon: "chart", title: "Price is what they track most", body: "Users compare prices across their saved cars." },
           { icon: "eye", title: "They check back regularly", body: "Looking for listing changes and updates." },
@@ -370,6 +351,7 @@ export const selectedProjects: Project[] = [
         body: "At page level, users needed better ways to organise and manage saved vehicles, and the card itself needed to support the next action.",
         points: [
           { icon: "chat", title: "Contact from the card", body: "The biggest bet: it saves a click at the right moment, but risked lower-quality leads from quick taps. We tested it rather than debated it." },
+          { icon: "chart", title: "Price first", body: "Price is the most prominent element, paired with an indicator showing whether it's a good deal, plus a swipeable gallery on the card." },
           { icon: "sort", title: "Sorting", body: "By date, price, mileage and year, in a native sort sheet." },
           { icon: "trash", title: "Single and bulk removal", body: "Remove individual or multiple vehicles." },
           { icon: "undo", title: "Undo, not a blocking dialog", body: "A snackbar confirms removal and offers undo." },
@@ -388,13 +370,13 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Listing States",
-        body: "The card needed to communicate more than vehicle details. Different states help users understand whether a listing is still available, has been sold, or what kind of listing it is.",
+        body: "The card needed to communicate more than vehicle details. Different states help users understand whether a listing is still available, has been sold, or what kind of listing it is.\n\nThe edge cases mattered most. A contacted car says when the user got in touch, so they don't contact the same seller twice. A car that is no longer available is greyed out with a one-tap delete, instead of silently cluttering the list.",
         gallery: {
           variant: "cards",
           items: [
             { src: "/images/projects/project-1/screens/card-max.png", alt: "Card with deal badge and price drop", caption: "Super Deal, price drop" },
-            { src: "/images/projects/project-1/screens/card-contacted.png", alt: "Card marked as contacted", caption: "Contacted" },
-            { src: "/images/projects/project-1/screens/card-unavailable.png", alt: "Greyed-out card for a vehicle no longer available", caption: "No longer available" },
+            { src: "/images/projects/project-1/screens/card-contacted.png", alt: "Card marked as contacted", caption: "Contacted, with the date" },
+            { src: "/images/projects/project-1/screens/card-unavailable.png", alt: "Greyed-out card for a vehicle no longer available", caption: "No longer available, one-tap delete" },
             { src: "/images/projects/project-1/screens/card-private.png", alt: "Card for a private seller", caption: "Private seller" },
             { src: "/images/projects/project-1/screens/card-leasing.png", alt: "Leasing offer card", caption: "Leasing offer" },
             { src: "/images/projects/project-1/screens/card-sponsored.png", alt: "Sponsored listing card", caption: "Sponsored" },
@@ -424,7 +406,7 @@ export const selectedProjects: Project[] = [
       {
         heading: "Outcome",
         body: "The A/B test with the new card and contact buttons increased enquiries across all platforms combined. Enquiries are the metric that matters most on a marketplace, because they turn browsing into leads for dealers.",
-        stats: [{ value: "+5.5%", label: "enquiries (approx.)", context: "A/B test · all platforms combined" }],
+        stats: [{ value: "+5.5%", label: "enquiries", context: "A/B test · all platforms combined" }],
         afterPoints: "Users were ready to act from Favourites; they just needed the path made easy. And they did.",
       },
       {
@@ -498,8 +480,8 @@ export const selectedProjects: Project[] = [
           { icon: "layers", title: "Simpler cards", body: "Only model, price and key facts, so more cars fit on screen." },
         ],
         stats: [
-          { value: "+48%", label: "recommendation clicks (approx.)", context: "Pool 15 → 50" },
-          { value: "+17%", label: "recommendation clicks (approx.)", context: "Card simplification" },
+          { value: "+48%", label: "recommendation clicks", context: "Pool 15 → 50" },
+          { value: "+17%", label: "recommendation clicks", context: "Card simplification" },
         ],
         afterPoints: "Success was evaluated against the team's habit metric: users reaching more than six detail-page views in their first week.",
         gallery: {
@@ -508,10 +490,6 @@ export const selectedProjects: Project[] = [
             { src: "/images/projects/project-2/screens/hs-2-simplified.png", alt: "Simplified recommendation cards", caption: "After: model, price and key facts, ~17% more clicks" },
           ],
         },
-      },
-      {
-        heading: "Variety in Recommendations",
-        body: "A further planned phase explored adding variety to the feed by mixing higher- and lower-scoring recommendations and showing a broader range of vehicle visuals. This remained a hypothesis.",
       },
       {
         heading: "When Testing and Live Data Disagreed",
@@ -529,7 +507,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "From Tabs to Chips",
-        body: "I designed a tabbed layout that kept the categories but removed the horizontal scroll. A later iteration replaced the tabs with chips, so more recommendation types fit without crowding. Recommender engagement was evaluated separately from downstream seller interest.",
+        body: "I designed a tabbed layout that kept the categories but removed the horizontal scroll. The final iteration replaced the tabs with chips, so more recommendation types fit without crowding, with the most-clicked types first. The chips are what's live today. Recommender engagement was evaluated separately from downstream seller interest.",
         stats: [
           { value: "+7%", label: "clicks (reported)", context: "Tabs" },
           { value: "+12%", label: "overall engagement (reported)", context: "Tabs" },
@@ -537,7 +515,7 @@ export const selectedProjects: Project[] = [
         gallery: {
           items: [
             { src: "/images/projects/project-2/screens/hs-4-tabs.png", alt: "Recommendations organised in tabs", caption: "Tabs" },
-            { src: "/images/projects/project-2/screens/hs-5-chips.png", alt: "Recommendation types as chips", caption: "Chips: more types, no crowding" },
+            { src: "/images/projects/project-2/screens/hs-5-chips.png", alt: "Recommendation types as chips", caption: "Live: chips, most-clicked types first" },
           ],
         },
       },
@@ -546,6 +524,7 @@ export const selectedProjects: Project[] = [
         body: "The same recommender also lived on the vehicle detail page, at the very bottom, below the seller details. I designed an experiment that moved it up, directly after the vehicle description, to catch users who were unsure about the car they were looking at.\n\nRecommender engagement stayed roughly the same, but engagement with everything below it dropped, including the seller details. A higher position didn't create new interest, it only moved attention around, so we rolled it back: a reminder to measure the whole page, not just the component being tested.",
         gallery: {
           variant: "cards",
+          itemWidth: 200,
           items: [
             { src: "/images/projects/project-2/screens/dp-before.png", alt: "Detail page with the recommender at the very bottom", caption: "Before: recommender at the very end" },
             { src: "/images/projects/project-2/screens/dp-after.png", alt: "Detail page with the recommender after the vehicle description", caption: "Experiment: right after the description, rolled back" },
@@ -655,6 +634,11 @@ export const selectedProjects: Project[] = [
           height: 800,
         },
         imageCaption: "Deals in the iOS home-screen recommender",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-3/screens/rec-superdeals-promo.png", alt: "Super Deals promotion on the app home screen", caption: "Super Deals promoted further down the app home screen" },
+          ],
+        },
       },
     ],
   },

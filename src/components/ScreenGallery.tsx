@@ -4,24 +4,15 @@ import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { Gallery } from "@/content/types";
 
-// Phone flows: one row on tablet and desktop so a journey reads left to right,
-// a swipeable row on phones so nothing wraps into uneven rows.
-const phoneCols: Record<number, string> = {
-  1: "md:grid-cols-1",
-  2: "md:grid-cols-2",
-  3: "md:grid-cols-3",
-  4: "md:grid-cols-4",
-  5: "md:grid-cols-5",
-  6: "md:grid-cols-6",
-};
+// Every screen in a row gets the same width, whatever the count, so a single
+// screen is never blown up. Phone rows swipe on small viewports.
+const ITEM_WIDTH = { phone: 200, cards: 260 } as const;
 
 function layoutClass(g: Gallery) {
   if (g.variant === "desktop") {
-    return `grid ${g.items.length === 1 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"}`;
+    return `grid ${g.items.length === 1 ? "grid-cols-1 md:w-1/2 md:mx-auto" : "grid-cols-1 md:grid-cols-2"}`;
   }
-  return `flex overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-2 sm:-mx-8 sm:px-8 md:mx-auto md:px-0 md:pb-0 md:overflow-visible md:grid ${
-    phoneCols[Math.min(g.items.length, 6)]
-  }`;
+  return "flex overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-2 sm:-mx-8 sm:px-8 md:mx-0 md:px-0 md:pb-0 md:overflow-visible md:grid md:justify-center";
 }
 
 export function ScreenGallery({ gallery }: { gallery: Gallery }) {
@@ -30,20 +21,12 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
   const isPhone = gallery.variant !== "desktop";
   // Phone screens share one frame so rows line up; "cards" keeps natural heights.
   const framed = gallery.variant === undefined || gallery.variant === "phone";
-  const width =
-    gallery.variant === "desktop"
-      ? items.length === 1
-        ? "max-w-5xl mx-auto"
-        : ""
-      : gallery.size === "small"
-        ? "max-w-lg mx-auto"
-        : items.length <= 2
-        ? gallery.variant === "cards"
-          ? "max-w-3xl mx-auto"
-          : "max-w-xl mx-auto"
-        : items.length === 3
-          ? "max-w-3xl mx-auto"
-          : "";
+  const colW =
+    gallery.itemWidth ??
+    (gallery.variant === "cards" ? (gallery.size === "small" ? 220 : ITEM_WIDTH.cards) : ITEM_WIDTH.phone);
+  const gridStyle = isPhone
+    ? { gridTemplateColumns: `repeat(${items.length}, minmax(0, ${colW}px))` }
+    : undefined;
 
   const close = useCallback(() => setOpen(null), []);
   const step = useCallback(
@@ -73,7 +56,8 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
     <figure className="mt-10">
       <div className="rounded-2xl bg-gradient-to-br from-neutral-50 to-neutral-200/70 px-4 py-8 sm:px-8 md:px-10 md:py-12">
         <div
-          className={`gap-4 sm:gap-6 ${layoutClass(gallery)} ${width} items-start`}
+          className={`gap-4 sm:gap-6 ${layoutClass(gallery)} items-start`}
+          style={gridStyle}
         >
           {items.map((item, i) => (
             <button
@@ -81,7 +65,7 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
               type="button"
               onClick={() => setOpen(i)}
               className={`group text-left focus:outline-none ${
-                isPhone ? "shrink-0 w-[58%] sm:w-[40%] snap-start md:w-auto" : ""
+                isPhone ? "shrink-0 w-[58%] sm:w-[34%] snap-start md:w-auto" : ""
               }`}
               aria-label={`Enlarge: ${item.caption ?? item.alt}`}
             >

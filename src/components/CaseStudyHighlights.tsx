@@ -1,3 +1,4 @@
+import type React from "react";
 import type { IconName, Point, Stat } from "@/content/types";
 
 // Outline icons on a 24px grid, drawn with the same stroke style as the rest of the site.
@@ -30,28 +31,20 @@ const ICONS: Record<IconName, string> = {
 };
 
 
-// Spread n items over rows of at most `max`, as evenly as possible, so no row
-// ends with a lone item. Returns how many items share each item's row.
-function rowSizes(n: number, max: number): number[] {
-  const rows = Math.ceil(n / max);
-  const base = Math.floor(n / rows);
-  const extra = n % rows;
-  const sizes: number[] = [];
-  for (let r = 0; r < rows; r++) {
-    const k = base + (r < extra ? 1 : 0);
-    for (let i = 0; i < k; i++) sizes.push(k);
-  }
-  return sizes;
+// Equal-width columns. Four items go two by two; any shorter last row is
+// centred, so nothing sits alone at the edge.
+function colsFor(n: number, max: number): number {
+  if (n <= max) return n;
+  if (n === 4) return 2;
+  return max;
 }
 
-// 6-column grid: a row of k items gives each item 6/k columns.
-const SPAN: Record<number, string> = { 1: "col-span-6", 2: "col-span-3", 3: "col-span-2" };
-const MD_SPAN: Record<number, string> = { 1: "md:col-span-6", 2: "md:col-span-3", 3: "md:col-span-2" };
+// Flex-wrap grid: --cm columns on phones, --cd from md up, 1.5rem gaps.
+const ITEM =
+  "basis-[calc((100%_-_(var(--cm)_-_1)*1.5rem)/var(--cm))] md:basis-[calc((100%_-_(var(--cd)_-_1)*1.5rem)/var(--cd))] grow-0 shrink-0";
 
-function spanClasses(n: number, mobileMax: number, desktopMax: number): string[] {
-  const m = rowSizes(n, mobileMax);
-  const d = rowSizes(n, desktopMax);
-  return m.map((k, i) => `${SPAN[k]} ${MD_SPAN[d[i]]}`);
+function gridVars(n: number, mobileMax: number, desktopMax: number) {
+  return { "--cm": colsFor(n, mobileMax), "--cd": colsFor(n, desktopMax) } as React.CSSProperties;
 }
 
 function Icon({ name }: { name: IconName }) {
@@ -63,20 +56,23 @@ function Icon({ name }: { name: IconName }) {
 }
 
 export function StatRow({ stats, narrow }: { stats: Stat[]; narrow?: boolean }) {
-  const spans = spanClasses(stats.length, 2, narrow ? 2 : 3);
   return (
-    <dl className="grid grid-cols-6 gap-x-6 gap-y-8 pt-2">
-      {stats.map((s, i) => (
-        <div key={s.value + s.label} className={`${spans[i]} border-t-2 border-lime-300 pt-4`}>
+    <dl
+      className="flex flex-wrap justify-center gap-x-6 gap-y-8 pt-2"
+      style={gridVars(stats.length, 2, narrow ? 2 : 3)}
+    >
+      {stats.map((s) => (
+        <div key={s.value + s.label} className={`${ITEM} flex flex-col border-t-2 border-lime-300 pt-4`}>
           {s.context && (
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-neutral-500 mb-2">
+            <p className="order-1 text-xs font-semibold uppercase tracking-wider text-neutral-600 mb-2">
               {s.context}
             </p>
           )}
-          <dd className="font-sans font-bold text-4xl md:text-5xl tracking-tight tabular-nums text-neutral-900 leading-none">
+          {/* Label first in reading order, shown under the number. */}
+          <dt className="order-3 mt-2 text-sm leading-snug text-neutral-600">{s.label}</dt>
+          <dd className="order-2 font-sans font-bold text-4xl md:text-5xl tracking-tight tabular-nums text-neutral-900 leading-none">
             {s.value}
           </dd>
-          <dt className="mt-2 text-sm leading-snug text-neutral-600">{s.label}</dt>
         </div>
       ))}
     </dl>
@@ -84,12 +80,21 @@ export function StatRow({ stats, narrow }: { stats: Stat[]; narrow?: boolean }) 
 }
 
 export function PointList({ points, narrow }: { points: Point[]; narrow?: boolean }) {
-  // One column on phones and beside images; up to three columns otherwise.
-  const spans = spanClasses(points.length, 1, narrow ? 1 : 3);
+  // Beside an image: a single list, icon left. Otherwise: columns with the
+  // icon on top from md up, and a list with the icon left on phones.
+  const columns = !narrow;
   return (
-    <ul className="grid grid-cols-6 gap-x-8 gap-y-6 pt-2">
-      {points.map((p, i) => (
-        <li key={p.title} className={`${spans[i]} flex items-center gap-4`}>
+    <ul
+      className="flex flex-wrap justify-center gap-x-6 gap-y-8 pt-2"
+      style={gridVars(points.length, 1, columns ? 3 : 1)}
+    >
+      {points.map((p) => (
+        <li
+          key={p.title}
+          className={`${ITEM} flex gap-4 ${
+            columns ? "items-center md:flex-col md:items-start md:gap-3" : "items-center"
+          }`}
+        >
           <span className="shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-neutral-100 text-lime-600">
             <Icon name={p.icon} />
           </span>
@@ -97,7 +102,7 @@ export function PointList({ points, narrow }: { points: Point[]; narrow?: boolea
             <p className="font-semibold text-neutral-900 text-base leading-snug">
               {p.title}
               {p.tag && (
-                <span className="ml-2 align-middle inline-block rounded-full border border-neutral-300 px-2 py-0.5 text-[11px] font-medium uppercase tracking-wider text-neutral-500">
+                <span className="ml-2 align-middle inline-block rounded-full border border-neutral-300 px-2 py-0.5 text-xs font-medium uppercase tracking-wider text-neutral-600">
                   {p.tag}
                 </span>
               )}
