@@ -36,7 +36,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "The Problem",
-        body: "Logged-in users behaved very differently from logged-out users, yet users saw little reason to sign up: they used the platform infrequently, had privacy concerns, saw no clear benefit, and the site worked perfectly well without an account. The company set an OKR to grow the share of logged-in users by 50% by the end of 2026.",
+        body: "Logged-in users behaved very differently from logged-out users, yet users saw little reason to sign up: they used the platform infrequently, had privacy concerns, saw no clear benefit, and the site worked perfectly well without an account. The company set an OKR to grow the share of logged-in users.",
         stats: [
           { value: "+75%", label: "higher enquiry conversion rate", context: "Logged-in users · web" },
           { value: "+40%", label: "more vehicle detail pages viewed per week", context: "Logged-in users · web" },
@@ -57,8 +57,8 @@ export const selectedProjects: Project[] = [
         heading: "1. The First App Open",
         body: "The app's launch sequence had grown screen by screen, with no clear value proposition and no moment to register, so users slipped straight into an anonymous session. I rebuilt it as one scalable sequence: tell users why before asking for anything, put registration early, and leave room to add steps later.",
         points: [
-          { icon: "grid", title: "Static full-bleed images", body: "Broke down across light and dark mode and varying text lengths.", tag: "Rejected" },
-          { icon: "layers", title: "Feature walkthrough", body: "Solved contrast, but felt dated.", tag: "Rejected" },
+          { icon: "grid", title: "Static full-bleed images", body: "Broke down across light and dark mode and varying text lengths.", tag: "Ruled out" },
+          { icon: "layers", title: "Feature walkthrough", body: "Solved contrast, but felt dated.", tag: "Ruled out" },
           { icon: "sparkle", title: "Video", body: "Handled both, and gave the first open an emotional moment.", tag: "Chosen" },
         ],
         afterPoints: "iOS allows one notification prompt, so the app explains the benefit first and shows Apple's prompt only after a yes, and registration can always be skipped. In the iOS A/B test (Q1 2026), sessions dipped slightly, an accepted trade-off, while detail page views and enquiries were unaffected. Android followed.",
@@ -214,10 +214,10 @@ export const selectedProjects: Project[] = [
         heading: "5. From Passwords to One-Time Codes",
         body: "After the rollout, the next source of friction was the password itself. With Trust & Identity, we replaced passwords for email users with a six-digit code sent by email.",
         points: [
-          { icon: "key", title: "No password to create or forget" },
-          { icon: "layers", title: "One flow for sign-in and registration", body: "Users don't need to know whether they already have an account." },
-          { icon: "shield", title: "Codes expire after ten minutes" },
-          { icon: "cursor", title: "Clear feedback when a code is incomplete" },
+          { icon: "key", title: "No password", body: "Nothing to create, meet rules for, or forget." },
+          { icon: "layers", title: "One flow", body: "Sign-in and registration together, so users don't need to know if they have an account." },
+          { icon: "shield", title: "Ten-minute codes", body: "Each code expires after ten minutes." },
+          { icon: "chat", title: "Clear feedback", body: "The input says when a code is incomplete." },
         ],
         afterPoints: "The one-time code flow is what's live today.",
         gallery: {
@@ -255,11 +255,10 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Outcome",
-        body: "Each experiment moved its own number, measured on its own platform and metric. Together, they lifted the share of logged-in users by close to 40%.",
+        body: "Each experiment moved its own number, measured on its own platform and metric, and together they made a significant difference. The bigger change was in approach: from a login wall to a series of well-timed, low-friction invitations.",
         stats: [
-          { value: "~40%", label: "growth in the share of logged-in users, against a 50% target", context: "All initiatives together" },
+          { value: "~40%", label: "growth in the share of logged-in users", context: "All initiatives together" },
         ],
-        afterPoints: "That fell short of the very ambitious 50% target, but it was a significant improvement, and enough for the company to close the OKR and move its focus to the next priority. The bigger change was in approach: from a login wall to a series of well-timed, low-friction invitations.",
       },
       {
         heading: "AutoScout24 Club: The Vision",
@@ -270,14 +269,12 @@ export const selectedProjects: Project[] = [
           { icon: "gift", title: "Exclusive benefits", body: "Early access to new listings, exclusive dealer offers" },
           { icon: "shield", title: "Trust & membership", body: "A verified buyer profile, exclusive content" },
         ],
-        afterPoints: "The vision was intended to make the value exchange clearer: users would have practical reasons to maintain an account, while AutoScout24 could build a more continuous relationship with them. I left the company before I could confirm what happened to the concept afterward, so it is a vision, not a launched product.",
         image: {
           src: "/images/projects/project-7/detail-3.png",
           alt: "AutoScout24 Club landing page concept",
           width: 1200,
           height: 800,
         },
-        imageCaption: "Vision — not confirmed as shipped",
       },
     ],
   },
@@ -413,9 +410,9 @@ export const selectedProjects: Project[] = [
         heading: "After Launch: Three More Iterations",
         body: "The redesign was a foundation, not a finish line. Over the following months I designed three more releases for web, each building on the new card.",
         points: [
-          { icon: "gift", title: "Personal dealer offers", body: "A car in Favourites is a strong buying signal, so dealers can send those users a personal offer. It appears on the card as a collapsible panel with the date it arrived.", tag: "Web" },
-          { icon: "grid", title: "A recommender on web", body: "Like on iOS, similar cars appear below the list, so Favourites keeps feeding discovery.", tag: "Web" },
-          { icon: "mail", title: "Email updates", body: "Users valued emails about their saved cars, with strong open rates. A toggle subscribes them to price drops, high demand and availability.", tag: "Web" },
+          { icon: "gift", title: "Personal dealer offers", body: "A car in Favourites is a strong buying signal, so dealers can send those users a personal offer. It appears on the card as a collapsible panel with the date it arrived." },
+          { icon: "grid", title: "A recommender on web", body: "Like on iOS, similar cars appear below the list, so Favourites keeps feeding discovery." },
+          { icon: "mail", title: "Email updates", body: "Users valued emails about their saved cars, with strong open rates. A toggle subscribes them to price drops, high demand and availability." },
         ],
         gallery: {
           variant: "cards",
@@ -581,7 +578,7 @@ export const selectedProjects: Project[] = [
         body: "Price is the most important factor for AutoScout24 users, and market research pointed the same way: most European consumers rank value for money as their top purchase criterion. Users were already looking for deals; the app wasn't showing them where.",
         stats: [
           { value: "3×", label: "conversion rate of Super Deals vs regular listings" },
-          { value: "2% → 13%", label: "Super Deals: 2% of detail-page views, but 13% of web enquiries" },
+          { value: "13%", label: "of web enquiries from Super Deals, only 2% of detail-page views" },
           { value: "30%", label: "of LeasingMarkt.de revenue from deals, only 2% of listings", context: "Sister marketplace" },
         ],
       },
@@ -622,11 +619,10 @@ export const selectedProjects: Project[] = [
         heading: "What Happened Next",
         body: "Deals found other discovery surfaces without relying on the proposed navigation change.",
         points: [
-          { icon: "x", title: "Deals bottom-navigation tab", tag: "Not shipped" },
-          { icon: "phone", title: "Deals in the iOS home-screen recommender", tag: "Later" },
-          { icon: "globe", title: "Deals on the web homepage", tag: "Later" },
+          { icon: "x", title: "Deals bottom-navigation tab", tag: "Dropped" },
+          { icon: "phone", title: "Deals in the iOS home-screen recommender", tag: "Live" },
+          { icon: "globe", title: "Deals on the web homepage", tag: "Live" },
         ],
-        afterPoints: "These outcomes are distinct. The prototype test does not establish that the bottom-navigation concept increased detail-page views or enquiries, and the later placements are not proof that the tab shipped.",
         image: {
           src: "/images/projects/project-3/detail-1.png",
           alt: "iOS home-screen recommender with Reduced offers selected",
@@ -634,11 +630,6 @@ export const selectedProjects: Project[] = [
           height: 800,
         },
         imageCaption: "Deals in the iOS home-screen recommender",
-        gallery: {
-          items: [
-            { src: "/images/projects/project-3/screens/rec-superdeals-promo.png", alt: "Super Deals promotion on the app home screen", caption: "Super Deals promoted further down the app home screen" },
-          ],
-        },
       },
     ],
   },

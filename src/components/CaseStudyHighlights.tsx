@@ -83,6 +83,8 @@ export function PointList({ points, narrow }: { points: Point[]; narrow?: boolea
   // Beside an image: a single list, icon left. Otherwise: columns with the
   // icon on top from md up, and a list with the icon left on phones.
   const columns = !narrow;
+  // Icon on top only when items carry a description; short titles stay inline.
+  const stacked = columns && points.some((p) => p.body);
   return (
     <ul
       className="flex flex-wrap justify-center gap-x-6 gap-y-8 pt-2"
@@ -92,7 +94,7 @@ export function PointList({ points, narrow }: { points: Point[]; narrow?: boolea
         <li
           key={p.title}
           className={`${ITEM} flex gap-4 ${
-            columns ? "items-center md:flex-col md:items-start md:gap-3" : "items-center"
+            stacked ? "items-center md:flex-col md:items-start md:gap-3" : "items-center"
           }`}
         >
           <span className="shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-neutral-100 text-lime-600">
