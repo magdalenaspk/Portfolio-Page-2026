@@ -113,6 +113,7 @@ export interface AboutContent {
   competencies: string[];
   education: TimelineEntry[];
   experience: TimelineEntry[];
+  earlierWork?: string;
   portraitImage: ProjectImage;
 }
 

@@ -138,6 +138,11 @@ export default function AboutPage() {
             <SectionHeading title="Experience" />
           </FadeIn>
           <Timeline entries={aboutContent.experience} />
+          {aboutContent.earlierWork && (
+            <p className="mt-6 sm:pl-12 text-sm text-neutral-500">
+              {aboutContent.earlierWork}
+            </p>
+          )}
         </Container>
       </section>
 

@@ -114,10 +114,10 @@ export const aboutContent: AboutContent = {
       id: 2,
       type: "work",
       title: "Senior Product Designer",
-      organization: "Atolls (Pepper.com)",
+      organization: "Atolls",
       period: "Feb 2024 – Jul 2024",
       description:
-        "Designed user engagement and loyalty features for the world's largest deal community, with 25M+ monthly users across 12 countries.",
+        "Engagement and loyalty features, including the Creator Program, for Pepper, mydealz and hotukdeals, some of the world's largest deal-sharing communities, with 25M+ monthly users across 12 countries.",
     },
     {
       id: 3,
@@ -146,7 +146,17 @@ export const aboutContent: AboutContent = {
       description:
         "Landing pages, app visual content, and marketing collateral for a health-tech startup.",
     },
+    {
+      id: 12,
+      type: "work",
+      title: "Visual Designer",
+      organization: "Tyszkiewicz",
+      period: "Jan 2015 – Jan 2016",
+      description:
+        "Visual design for blogs, landing pages, newsletters and print, alongside content marketing, copywriting and social media.",
+    },
   ],
+  earlierWork: "Earlier and alongside design: pub owner, event planner and journalist.",
   education: [
     {
       id: 15,
@@ -167,12 +177,12 @@ export const aboutContent: AboutContent = {
       type: "education",
       title: "12-week Cross-functional UX Design Course",
       organization: "Growth Tribe",
-      period: "2021 – 2022",
+      period: "Nov 2021 – Feb 2022",
     },
     {
       id: 9,
       type: "education",
-      title: "Master's Degree in Communication",
+      title: "Master's Degree in Communication and Journalism",
       organization: "University of Gdansk",
       period: "2006 – 2011",
     },
