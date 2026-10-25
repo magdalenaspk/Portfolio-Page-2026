@@ -76,6 +76,7 @@ export const aboutContent: AboutContent = {
     "Confluence",
     "Lovable",
     "Cursor",
+    "Codex",
     "v0",
     "Claude Code",
     "WordPress",
