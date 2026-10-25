@@ -240,7 +240,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "My Role & Team",
-        body: "A cross-functional team across apps and web: one PM, four app engineers (two iOS, two Android) and five web engineers (three frontend, two backend), with a data analyst when we needed one. UX Research supported the survey and testing.\n\nI led the project from research to release: I ran the user survey, mapped the opportunities, designed the new card and screen across iOS, Android and web, and worked with engineering on the A/B test.",
+        body: "Q1 2025. A cross-functional team across apps and web: one PM, four app engineers (two iOS, two Android) and five web engineers (three frontend, two backend), with a data analyst when we needed one. UX Research supported the survey and testing.\n\nI led the project from research to release: I ran the user survey, mapped the opportunities, designed the new card and screen across iOS, Android and web, and worked with engineering on the A/B test.",
       },
       {
         heading: "Research",
@@ -436,7 +436,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "My Role & Team",
-        body: "An app-only project. I worked with a PM and four engineers (two iOS, two Android), with UX Research and a UX writer joining when needed.\n\nI built the business case, designed the navigation restructure, prototyped the variants, and ran the usability test.",
+        body: "An app-only project in Q2 2025. I worked with a PM and four engineers (two iOS, two Android), with UX Research and a UX writer joining when needed.\n\nI built the business case, designed the navigation restructure, prototyped the variants, and ran the usability test.",
       },
       {
         heading: "Constraint: Five Tabs, No Room",
