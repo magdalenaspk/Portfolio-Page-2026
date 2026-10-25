@@ -12,7 +12,7 @@ import { PlaceholderImage } from "@/components/cards/PlaceholderImage";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn more about Magdalena Sapkowska — Product Designer based in Berlin with 10+ years of experience.",
+    "Learn more about Magdalena Sapkowska — Senior Product Designer based in Berlin with 10+ years in design.",
 };
 
 export default function AboutPage() {

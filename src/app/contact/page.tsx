@@ -7,7 +7,7 @@ import ContactTriangleStage from "@/components/ContactTriangleStage";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Magdalena Sapkowska — Product Designer based in Berlin.",
+    "Get in touch with Magdalena Sapkowska — Senior Product Designer based in Berlin.",
 };
 
 interface ContactCardProps {

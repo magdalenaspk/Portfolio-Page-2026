@@ -7,7 +7,7 @@ export const aboutContent: AboutContent = {
     "I believe great product design starts with asking the right question before reaching for a solution. I take a step back to understand what's really driving user behavior, where the value gap is, and what the problem actually is, not just what it looks like on the surface. Complexity doesn't intimidate me; it's where I do my best work.\n\nI'm motivated by impact that's visible and measurable. When my work makes a system clearer, an experience more intuitive, or a product decision easier to make, that's what success looks like to me.\n\nOutside of work, you'll usually find me lost in a fantasy novel, digging through record shops to grow my vinyl collection, or hunting down the next great coffee spot or neighbourhood restaurant in Berlin.",
   portraitImage: {
     src: "/images/about/portrait.png",
-    alt: "Magdalena Sapkowska, Product Designer",
+    alt: "Magdalena Sapkowska, Senior Product Designer",
     width: 800,
     height: 1000,
   },
@@ -109,7 +109,7 @@ export const aboutContent: AboutContent = {
       organization: "AutoScout24",
       period: "Aug 2024 – Sep 2026",
       description:
-        "Designed growth and engagement initiatives on Europe's largest car marketplace: login and onboarding, homescreen personalization, favourites redesign, deals strategy, and cross-platform feature rollouts.",
+        "Growth and engagement on Europe's largest car marketplace: +40% logged-in iOS users, login rate up from 17% to 32% and +5.5% enquiries, across iOS, Android and web.",
     },
     {
       id: 2,
@@ -127,7 +127,7 @@ export const aboutContent: AboutContent = {
       organization: "Marley Spoon",
       period: "Aug 2022 – Feb 2024",
       description:
-        "Full-stack product design across two meal-kit brands (Marley Spoon & Dinnerly). Shipped native referral flows, churn-reduction features, and unified the design system color palette.",
+        "Mobile and web for Marley Spoon and Dinnerly: native referrals with 7.5x the engagement of desktop, and a colour palette cut from 127 to 31 shades.",
     },
     {
       id: 4,
@@ -136,7 +136,7 @@ export const aboutContent: AboutContent = {
       organization: "Friendsurance",
       period: "Jul 2018 – Jul 2022",
       description:
-        "Designed UX and UI for insurance management web applications in close collaboration with multiple development teams. Key projects included bespoke tools for Deutsche Bank and Volksbank, balancing regulatory requirements with intuitive, user-friendly interfaces.",
+        "Insurance management web apps, including bespoke tools for Deutsche Bank and Volksbank, balancing regulatory requirements with usability.",
     },
     {
       id: 6,
@@ -145,7 +145,7 @@ export const aboutContent: AboutContent = {
       organization: "HUMANOO",
       period: "Apr 2016 – Jun 2018",
       description:
-        "Landing pages, app visual content, and marketing collateral for a health-tech startup.",
+        "Visual identity for a health management app: landing pages, newsletters, presentations and print collateral.",
     },
     {
       id: 12,
