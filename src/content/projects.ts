@@ -45,7 +45,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "1. The First App Open",
-        body: "The app's launch sequence had grown screen by screen, with no clear value proposition and no moment to register. Users slipped straight into an anonymous session.\n\nI rebuilt it as one unified, scalable sequence: tell users why before asking for anything, put registration early, and leave room to add steps later. I explored three directions. Static full-bleed images broke down across light and dark mode and varying text lengths in different languages. A feature walkthrough solved contrast but felt dated. Video handled both and gave the first open an emotional moment, so that's what we chose.\n\nPlatform conventions shaped the details. iOS only allows one system notification prompt, so the app explains the benefit first and shows Apple's prompt only after a yes. Registration always offers a clear way to continue without an account.\n\nWe A/B tested it on iOS in Q1 2026. Logged-in users on iOS grew by 40%, and push opt-in rose by about 20%. Sessions dipped slightly, an accepted trade-off for adding steps up front, while detail page views and enquiries were unaffected. Android followed.",
+        body: "The app's launch sequence had grown screen by screen, with no clear value proposition and no moment to register. Users slipped straight into an anonymous session.\n\nI rebuilt it as one unified, scalable sequence: tell users why before asking for anything, put registration early, and leave room to add steps later. I explored three directions. Static full-bleed images broke down across light and dark mode and varying text lengths in different languages. A feature walkthrough solved contrast but felt dated. Video handled both and gave the first open an emotional moment, so that's what we chose.\n\nPlatform conventions shaped the details. iOS only allows one system notification prompt, so the app explains the benefit first and shows Apple's prompt only after a yes. Registration always offers a clear way to continue without an account.\n\nWe A/B tested it on iOS in Q1 2026. Within three weeks of release, logged-in users on iOS grew by 40%, and push opt-in rose by about 20%. Sessions dipped slightly, an accepted trade-off for adding steps up front, while detail page views and enquiries were unaffected. Android followed.",
         image: {
           src: "/images/projects/project-6/detail-2.png",
           alt: "New app launch sequence with video and value-driven prompts",
@@ -316,81 +316,6 @@ export const selectedProjects: Project[] = [
     ],
   },
   {
-    id: 3,
-    slug: "deals-entry-point",
-    status: "published",
-    title: "Deals Entry Point",
-    subtitle: "Making Discounts a First-Class Feature",
-    description:
-      "Gave a 3x-converting listing type its own place in a full bottom navigation: 50% more deals page views and 10% more leads.",
-    company: "AutoScout24",
-    role: "Product Designer",
-    platform: "iOS, Android",
-    tags: ["Product Strategy", "Navigation Design", "Usability Testing", "Growth"],
-    thumbnail: {
-      src: "/images/projects/project-3/thumb.png",
-      alt: "Deals Entry Point - AutoScout24",
-      width: 1200,
-      height: 800,
-      background: "linear-gradient(135deg, #f9f9fa 0%, #e2e4e8 100%)",
-    },
-    heroImage: {
-      src: "/images/projects/project-3/hero.png",
-      alt: "Deals Entry Point hero - AutoScout24",
-      width: 1920,
-      height: 1080,
-    },
-    overview:
-      "Price is the most important factor for AutoScout24 users. Super Deals, listings priced at least 3.5% or €300 below market value, convert at three times the rate of regular listings. But they were nearly impossible to find: buried in the catalogue, with no entry point in the navigation.",
-    sections: [
-      {
-        heading: "The Problem",
-        body: "Super Deals made up just 2% of detail page views but drove 13% of all web enquiries. On sister marketplace LeasingMarkt.de, deals generated 30% of revenue from only 2% of listings. Market research pointed the same way: most European consumers rank value for money as their top purchase criterion, and a discount often seals an undecided purchase. Users were already looking for deals; we weren't showing them where.",
-        image: {
-          src: "/images/projects/project-3/detail-1.png",
-          alt: "Super Deals opportunity data",
-          width: 1200,
-          height: 800,
-        },
-      },
-      {
-        heading: "My Role & Team",
-        body: "I worked with a PM and a cross-functional team of four app engineers (two iOS, two Android) and five web engineers (three frontend, two backend), with UX Research and a UX writer joining when needed.\n\nI built the business case, designed the navigation restructure, prototyped the variants, and ran the usability test.",
-      },
-      {
-        heading: "Constraint: Five Tabs, No Room",
-        body: "Platform conventions on iOS and Android limit bottom navigation to five tabs, and AutoScout24 already had five. Adding Deals meant making space, not just adding a tab.\n\nProfile moved into the header: an occasional task didn't need a permanent tab. Favourites and Saved Searches were merged into one Saved tab, which freed the slot for Deals. But merging two features raised a new problem: how do you show two content types clearly without losing either?",
-        gallery: {
-          items: [
-            { src: "/images/projects/project-3/screens/deals-before.png", alt: "Home screen before, with five tabs and no deals", caption: "Before: five tabs, no way to deals" },
-            { src: "/images/projects/project-3/screens/deals-list.png", alt: "Deals results list", caption: "A filtered list of Super Deals" },
-          ],
-        },
-      },
-      {
-        heading: "Three Versions, One Test",
-        body: "I prototyped three versions of the Saved tab and ran an unmoderated usability test with seven participants. Version 1 used a bottom slider to choose a category without showing content upfront. Version 2 showed both on one screen with vehicle thumbnails. Version 3 used tabs with a separate page for each.\n\nSix of seven participants preferred Version 2. It gave the clearest overview and made combining favourites and saved searches feel logical. Version 1 felt too minimal and disconnected, and Version 3's tabs looked too much like filter controls and risked being missed. We chose Version 2.\n\nThe test also confirmed real appetite for a Deals tab, and showed users expected deals to be personalised to their searches. That finding went straight into the roadmap.",
-        gallery: {
-          items: [
-            { src: "/images/projects/project-3/screens/saved-v1-sheet.png", alt: "Saved as a bottom sheet with two links", caption: "Version 1: a bottom sheet" },
-            { src: "/images/projects/project-3/screens/saved-v2-overview.png", alt: "Saved page showing favourites and saved searches together", caption: "Version 2: one overview, chosen by 6 of 7" },
-            { src: "/images/projects/project-3/screens/saved-v3-tabs.png", alt: "Saved page with two tabs", caption: "Version 3: tabs that read as filters" },
-          ],
-        },
-      },
-      {
-        heading: "Outcome",
-        body: "In the first iOS test, 15% of visitors used the new Deals tab. Deals detail page views rose by 50% and Super Deal leads by 10%.\n\nThe tab itself didn't make it into production: the project was deprioritised and the entry point was rolled back before the wider rollout. But the test proved a clear appetite for deals, and that finding lived on. Deals became part of the homepage recommender instead: \"Reduced offers\" is one of the recommendation types users can choose, and Super Deals are promoted further down the homepage. A different route, but users can still reach deals straight from the homepage.",
-        gallery: {
-          items: [
-            { src: "/images/projects/project-3/screens/rec-reduced-offers.png", alt: "Homepage recommendations with Reduced offers selected", caption: "Reduced offers in the homepage recommender" },
-            { src: "/images/projects/project-3/screens/rec-superdeals-promo.png", alt: "Super Deals promotion further down the homepage", caption: "Super Deals promoted on the homepage" },
-          ],
-        },
-      },
-    ],
-  },
-  {
     id: 2,
     slug: "homescreen-recommendations",
     status: "published",
@@ -438,7 +363,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Iterations",
-        body: "Each version answered a question the previous one raised. A simpler two-column grid let more cars fit on screen. Horizontal rows grouped by type were clear in testing but lost clicks live. Two tabs kept the grid and added deals as their own category. The final iteration replaced the tabs with chips, so more recommendation types fit without crowding, and the most clicked types come first. The chips are what shipped.\n\nThe grid also became an endless feed. Scrolling is one of the most engaging patterns on mobile, and a recommender has no natural end, so there was no reason to stop users after a fixed number of cars. Recommendations load in batches of 24: the first batch comes with the page, and the next one loads in the background as the user scrolls towards the end. That keeps the app smooth and avoids downloading cars nobody will see, while users can keep scrolling for as long as they like.",
+        body: "Each version answered a question the previous one raised. A simpler two-column grid let more cars fit on screen. Horizontal rows grouped by type were clear in testing but lost clicks live. Two tabs kept the grid and added deals as their own category. The final iteration replaced the tabs with chips, so more recommendation types fit without crowding, and the most clicked types come first. The chips are what shipped.\n\nThe grid also became an endless feed. Scrolling is one of the most engaging patterns on mobile, and a recommender has no natural end, so there was no reason to stop users after a fixed number of cars. In the earlier tests the pool was a fixed 50 cars; the final version removed that limit. Recommendations load in batches of 25: the first batch comes with the page, and the next one loads in the background as the user scrolls towards the end. That keeps the app smooth and avoids downloading cars nobody will see, while users can keep scrolling for as long as they like.",
         gallery: {
           items: [
             { src: "/images/projects/project-2/screens/hs-3-horizontal.png", alt: "Horizontal rows grouped by recommendation type", caption: "Horizontal rows: ~21% fewer clicks" },
@@ -467,6 +392,81 @@ export const selectedProjects: Project[] = [
           alt: "Final recommendation layout",
           width: 1200,
           height: 800,
+        },
+      },
+    ],
+  },
+  {
+    id: 3,
+    slug: "deals-entry-point",
+    status: "published",
+    title: "Deals Entry Point",
+    subtitle: "Making Discounts a First-Class Feature",
+    description:
+      "Gave a 3x-converting listing type its own place in a full bottom navigation: 50% more deals page views and 10% more leads.",
+    company: "AutoScout24",
+    role: "Product Designer",
+    platform: "iOS, Android",
+    tags: ["Product Strategy", "Navigation Design", "Usability Testing", "Growth"],
+    thumbnail: {
+      src: "/images/projects/project-3/thumb.png",
+      alt: "Deals Entry Point - AutoScout24",
+      width: 1200,
+      height: 800,
+      background: "linear-gradient(135deg, #f9f9fa 0%, #e2e4e8 100%)",
+    },
+    heroImage: {
+      src: "/images/projects/project-3/hero.png",
+      alt: "Deals Entry Point hero - AutoScout24",
+      width: 1920,
+      height: 1080,
+    },
+    overview:
+      "Price is the most important factor for AutoScout24 users. Super Deals, listings priced at least 3.5% or €300 below market value, convert at three times the rate of regular listings. But they were nearly impossible to find: buried in the catalogue, with no entry point in the navigation.",
+    sections: [
+      {
+        heading: "The Problem",
+        body: "Super Deals made up just 2% of detail page views but drove 13% of all web enquiries. On sister marketplace LeasingMarkt.de, deals generated 30% of revenue from only 2% of listings. Market research pointed the same way: most European consumers rank value for money as their top purchase criterion, and a discount often seals an undecided purchase. Users were already looking for deals; we weren't showing them where.",
+        image: {
+          src: "/images/projects/project-3/detail-1.png",
+          alt: "Super Deals opportunity data",
+          width: 1200,
+          height: 800,
+        },
+      },
+      {
+        heading: "My Role & Team",
+        body: "An app-only project. I worked with a PM and four engineers (two iOS, two Android), with UX Research and a UX writer joining when needed.\n\nI built the business case, designed the navigation restructure, prototyped the variants, and ran the usability test.",
+      },
+      {
+        heading: "Constraint: Five Tabs, No Room",
+        body: "Platform conventions on iOS and Android limit bottom navigation to five tabs, and AutoScout24 already had five. Adding Deals meant making space, not just adding a tab.\n\nProfile moved into the header: an occasional task didn't need a permanent tab. Favourites and Saved Searches were merged into one Saved tab, which freed the slot for Deals. But merging two features raised a new problem: how do you show two content types clearly without losing either?",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-3/screens/deals-before.png", alt: "Home screen before, with five tabs and no deals", caption: "Before: five tabs, no way to deals" },
+            { src: "/images/projects/project-3/screens/deals-list.png", alt: "Deals results list", caption: "A filtered list of Super Deals" },
+          ],
+        },
+      },
+      {
+        heading: "Three Versions, One Test",
+        body: "I prototyped three versions of the Saved tab and ran an unmoderated usability test with seven participants. Version 1 used a bottom slider to choose a category without showing content upfront. Version 2 showed both on one screen with vehicle thumbnails. Version 3 used tabs with a separate page for each.\n\nSix of seven participants preferred Version 2. It gave the clearest overview and made combining favourites and saved searches feel logical. Version 1 felt too minimal and disconnected, and Version 3's tabs looked too much like filter controls and risked being missed. We chose Version 2.\n\nThe test also confirmed real appetite for a Deals tab, and showed users expected deals to be personalised to their searches. That finding went straight into the roadmap.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-3/screens/saved-v1-sheet.png", alt: "Saved as a bottom sheet with two links", caption: "Version 1: a bottom sheet" },
+            { src: "/images/projects/project-3/screens/saved-v2-overview.png", alt: "Saved page showing favourites and saved searches together", caption: "Version 2: one overview, chosen by 6 of 7" },
+            { src: "/images/projects/project-3/screens/saved-v3-tabs.png", alt: "Saved page with two tabs", caption: "Version 3: tabs that read as filters" },
+          ],
+        },
+      },
+      {
+        heading: "Outcome",
+        body: "In the first iOS test, 15% of visitors used the new Deals tab. Deals detail page views rose by 50% and Super Deal leads by 10%.\n\nThe tab itself didn't make it into production: the project was deprioritised and the entry point was rolled back before the wider rollout. But the test proved a clear appetite for deals, and that finding lived on. Deals became part of the homepage recommender instead: \"Reduced offers\" is one of the recommendation types users can choose, and Super Deals are promoted further down the homepage. A different route, but users can still reach deals straight from the homepage.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-3/screens/rec-reduced-offers.png", alt: "Homepage recommendations with Reduced offers selected", caption: "Reduced offers in the homepage recommender" },
+            { src: "/images/projects/project-3/screens/rec-superdeals-promo.png", alt: "Super Deals promotion further down the homepage", caption: "Super Deals promoted on the homepage" },
+          ],
         },
       },
     ],
