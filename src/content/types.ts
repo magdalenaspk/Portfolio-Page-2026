@@ -27,6 +27,7 @@ export interface CaseStudySection {
   heading: string;
   body: string; // Supports \n for paragraphs
   image?: ProjectImage;
+  imageCaption?: string; // Small caption under the side image, e.g. a status label
   presentation?: string; // Path to PDF in /public
   media?: "onboarding-video"; // Renders an embedded video instead of the image
   gallery?: Gallery; // Full-width row of screens below the text

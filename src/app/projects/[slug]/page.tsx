@@ -196,18 +196,21 @@ export default function ProjectPage({ params }: PageProps) {
                           <OnboardingAnimation />
                         </div>
                       ) : (
-                        <div
-                          className={`rounded-2xl aspect-[4/3] bg-neutral-100 p-4 ${
-                            i % 2 === 1 ? "order-1 lg:order-2" : ""
-                          }`}
-                        >
-                          <PlaceholderImage
-                            src={section.image.src}
-                            alt={section.image.alt}
-                            label={`${project.id}.${i + 1}`}
-                            className="w-full h-full rounded-xl overflow-hidden"
-                          />
-                        </div>
+                        <figure className={i % 2 === 1 ? "order-1 lg:order-2" : ""}>
+                          <div className="rounded-2xl aspect-[4/3] bg-neutral-100 p-4">
+                            <PlaceholderImage
+                              src={section.image.src}
+                              alt={section.image.alt}
+                              label={`${project.id}.${i + 1}`}
+                              className="w-full h-full rounded-xl overflow-hidden"
+                            />
+                          </div>
+                          {section.imageCaption && (
+                            <figcaption className="mt-3 text-sm text-neutral-500 text-center">
+                              {section.imageCaption}
+                            </figcaption>
+                          )}
+                        </figure>
                       )
                     )}
                   </div>
