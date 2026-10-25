@@ -371,8 +371,7 @@ export const selectedProjects: Project[] = [
           { icon: "sort", title: "Sorting", body: "By date, price, mileage and year, in a native sort sheet." },
           { icon: "trash", title: "Single and bulk removal", body: "Remove individual or multiple vehicles." },
           { icon: "undo", title: "Undo, not a blocking dialog", body: "A snackbar confirms removal and offers undo." },
-          { icon: "x", title: "A clear sold state", body: "Distinguish sold listings from cars still available." },
-          { icon: "grid", title: "Recommender below", body: "Sits under the saved vehicles so it doesn't interrupt the primary task." },
+          { icon: "grid", title: "Recommender below", body: "Similar cars appear underneath the saved vehicles, so discovery continues without interrupting the primary task." },
         ],
         afterPoints: "On iOS the screen follows platform conventions, including full dark mode support.",
         gallery: {
@@ -380,7 +379,7 @@ export const selectedProjects: Project[] = [
             { src: "/images/projects/project-1/screens/fav-list.png", alt: "Favourites page on iOS", caption: "Favourites on iOS" },
             { src: "/images/projects/project-1/screens/fav-sort.png", alt: "Native sort sheet", caption: "Native sort sheet" },
             { src: "/images/projects/project-1/screens/fav-removed-undo.png", alt: "Vehicle removed with an undo snackbar", caption: "Removed, with undo" },
-            { src: "/images/projects/project-1/screens/fav-recommender.png", alt: "Recommender below the saved vehicles", caption: "Recommender below Favourites" },
+            { src: "/images/projects/project-1/screens/fav-one-card-recommender.png", alt: "One saved vehicle with similar cars recommended underneath", caption: "Recommender below the saved cars" },
             { src: "/images/projects/project-1/screens/fav-list-dark.png", alt: "Favourites in dark mode", caption: "Dark mode" },
           ],
         },

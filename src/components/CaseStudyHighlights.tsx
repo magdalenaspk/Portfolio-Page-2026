@@ -63,7 +63,7 @@ export function PointList({ points, narrow }: { points: Point[]; narrow?: boolea
     <ul className={`grid grid-cols-1 ${narrow ? "" : "sm:grid-cols-2"} gap-x-8 gap-y-6 pt-2`}>
       {points.map((p) => (
         <li key={p.title} className="flex items-center gap-4">
-          <span className="shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-lime-100 text-lime-800">
+          <span className="shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-neutral-100 text-lime-600">
             <Icon name={p.icon} />
           </span>
           <div className="min-w-0">
