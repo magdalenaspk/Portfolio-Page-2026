@@ -355,7 +355,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "My Role & Team",
-        body: "[verify: team and timeframe.]\n\nI built the business case, designed the navigation restructure, prototyped the variants, and ran the usability test.",
+        body: "I worked with a PM and a cross-functional team of four app engineers (two iOS, two Android) and five web engineers (three frontend, two backend), with UX Research and a UX writer joining when needed.\n\nI built the business case, designed the navigation restructure, prototyped the variants, and ran the usability test.",
       },
       {
         heading: "Constraint: Five Tabs, No Room",
@@ -363,7 +363,6 @@ export const selectedProjects: Project[] = [
         gallery: {
           items: [
             { src: "/images/projects/project-3/screens/deals-before.png", alt: "Home screen before, with five tabs and no deals", caption: "Before: five tabs, no way to deals" },
-            { src: "/images/projects/project-3/screens/deals-after-dark.png", alt: "Home screen with Deals tab and Deals and discounts recommendations", caption: "After: Deals in the tab bar and on home" },
             { src: "/images/projects/project-3/screens/deals-list.png", alt: "Deals results list", caption: "A filtered list of Super Deals" },
           ],
         },
@@ -381,7 +380,13 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Outcome",
-        body: "In the first iOS test, 15% of visitors used the new Deals tab. Deals detail page views rose by 50% and Super Deal leads by 10%.\n\nThe entry point was meant to be the first step towards a full Deals hub, with personalised deal alerts and deal badges in Favourites. That next phase was deprioritised by management before it started. The entry point remains live. [verify: still live today]",
+        body: "In the first iOS test, 15% of visitors used the new Deals tab. Deals detail page views rose by 50% and Super Deal leads by 10%.\n\nThe tab itself didn't make it into production: the project was deprioritised and the entry point was rolled back before the wider rollout. But the test proved a clear appetite for deals, and that finding lived on. Deals became part of the homepage recommender instead: \"Reduced offers\" is one of the recommendation types users can choose, and Super Deals are promoted further down the homepage. A different route, but users can still reach deals straight from the homepage.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-3/screens/rec-reduced-offers.png", alt: "Homepage recommendations with Reduced offers selected", caption: "Reduced offers in the homepage recommender" },
+            { src: "/images/projects/project-3/screens/rec-superdeals-promo.png", alt: "Super Deals promotion further down the homepage", caption: "Super Deals promoted on the homepage" },
+          ],
+        },
       },
     ],
   },
