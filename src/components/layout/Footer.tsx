@@ -20,7 +20,7 @@ export function Footer() {
           </span>
         </div>
         <p className="mt-6 text-xs text-neutral-500 text-center">
-          All metrics are approximations used for illustrative purposes and do not represent official company data.
+          Some figures have been rounded or anonymised to respect confidentiality and company data policies.
         </p>
       </Container>
     </footer>
