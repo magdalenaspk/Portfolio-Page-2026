@@ -150,7 +150,7 @@ export const aboutContent: AboutContent = {
     {
       id: 12,
       type: "work",
-      title: "Visual Marketing Designer",
+      title: "Visual Designer",
       organization: "Tyszkiewicz Nieruchomości",
       period: "Jan 2015 – Jan 2016",
       description:
