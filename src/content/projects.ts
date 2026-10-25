@@ -8,7 +8,7 @@ export const selectedProjects: Project[] = [
     slug: "growing-logged-in-users",
     status: "published",
     title: "Growing Logged-in Users",
-    subtitle: "Five Experiments, One OKR",
+    subtitle: "Six Steps, One OKR",
     description:
       "A year-long programme to turn anonymous browsers into members, from the first app open to the login screen itself. One experiment nearly doubled the login rate.",
     company: "AutoScout24",
@@ -29,7 +29,7 @@ export const selectedProjects: Project[] = [
       height: 840,
     },
     overview:
-      "Most people use AutoScout24 like a one-off marketplace: they search, browse and leave without ever logging in. Logged-in users enquire more, come back more and give dealers better leads, so the company set an OKR to grow the share of logged-in users by 50% by the end of 2026. I designed most of the experiments behind that goal, across apps and web, over [verify: timeframe, e.g. mid-2025 to autumn 2026].",
+      "Most people use AutoScout24 like a one-off marketplace: they search, browse and leave without ever logging in. Logged-in users enquire more, come back more and give dealers better leads, so the company set an OKR to grow the share of logged-in users by 50% by the end of 2026. I designed most of the experiments behind that goal, across apps and web, from Q3 2025 to Q2 2026.",
     sections: [
       {
         heading: "The Problem",
@@ -37,7 +37,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "My Role & Team",
-        body: "[verify: who was on the team, e.g. PM, engineers per platform, Buyer Analytics, Trust & Identity, and how the work was split.]\n\nI owned the end-to-end design of every experiment in this case study: framing the hypotheses with the PM, designing all states across iOS, Android, web and mWeb, preparing test variants, and presenting results and next steps to the wider design and product organisation at UX All Hands.",
+        body: "The work spanned three teams. The app team was a PM, a designer and four engineers (two iOS, two Android). The web team, where I sat, was a PM, two designers and four engineers. Trust & Identity, a PM and three engineers, owned the login logic, kept everything within our Okta setup and made sure each change met our security standards. One data analyst supported all the teams.\n\nI owned the end-to-end design of every experiment in this case study: framing the hypotheses with the PM, designing all states across iOS, Android, web and mWeb, preparing test variants, and presenting results and next steps to the wider design and product organisation at UX All Hands.",
       },
       {
         heading: "Constraints",
@@ -66,7 +66,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "2. Price History: Teaser or Direct Login?",
-        body: "Price history was already behind a login wall on mobile, and the wall caused no significant drop in leads. The next step was bringing it to web.\n\nMy first web version showed the entry point and went straight to login. It felt like the login was doing all the work before the value was clear, so I designed a teaser: the Price Insights dialog showed the price rating and asked users to log in to unlock the history. That made the flow heavier: entry point, teaser, login, then feature.\n\nWe tested both. Users who went straight to a dedicated, purpose-specific login were about 16% more likely to log in than those who saw the teaser. The value was already obvious at the point of intent, and extra persuasion behaved like friction.\n\nThat result became the principle for every later experiment: communicate the value at the point of intent, then keep authentication as direct as possible.",
+        body: "Price history shows how a car's price has changed since it was listed. For buyers it answers an important question: is this really a good deal, or has the price been creeping up? That made it one of the most valuable things we could offer in exchange for logging in.\n\nOn mobile it was already behind a login wall, and the wall caused no significant drop in leads. The next step was bringing it to web.\n\nMy first web version showed the entry point and went straight to login. It felt like the login was doing all the work before the value was clear, so I designed a teaser: the Price Insights dialog showed the price rating and asked users to log in to unlock the history. That made the flow heavier: entry point, teaser, login, then feature.\n\nWe tested both. Users who went straight to a dedicated, purpose-specific login were about 16% more likely to log in than those who saw the teaser. The value was already obvious at the point of intent, and extra persuasion behaved like friction.\n\nThat result became the principle for every later experiment: communicate the value at the point of intent, then keep authentication as direct as possible.",
         gallery: {
           variant: "desktop",
           items: [
@@ -77,7 +77,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "The Shipped Flow",
-        body: "After login, users land back on the listing with the full insight open. I redesigned the view to do the maths for them: where the price sits against the market, the total price reduction, and every change shown in euros rather than percentages. Each price rating (below, at or above market, or no data) has its own state. I then aligned web, iOS and Android on this one pattern. [verify: headline outcome, e.g. web logins and registrations]",
+        body: "After login, users land back on the listing with the full insight open. I redesigned the view to do the maths for them: where the price sits against the market, the total price reduction, and every change shown in euros rather than percentages. Each price rating (below, at or above market, or no data) has its own state. I then aligned web, iOS and Android on this one pattern.",
         gallery: {
           items: [
             { src: "/images/projects/project-7/screens/ph-1-detail.png", alt: "Vehicle detail page with a good price rating", caption: "The price rating is visible to everyone" },
@@ -102,7 +102,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "4. Fixing the Login Screen",
-        body: "I audited the login screen against guidance from Nielsen Norman Group and Baymard Institute. It failed all four standards: reduce cognitive load at the point of entry, make social login prominent and place it before the email form, explain what users get by logging in, and give the screen one clear primary action.\n\nThe redesign leads with why to log in (track price drops, save favourites, check if a price is fair), puts Google, Apple and Facebook sign-in first, and makes email the second option. The modal is wider so long German words no longer break. I designed it for three contexts: a full page, a popup over the page the user came from, and mobile web. It launched first in Austria. [verify: rollout status and result]",
+        body: "I audited the login screen against guidance from Nielsen Norman Group and Baymard Institute. It failed all four standards: reduce cognitive load at the point of entry, make social login prominent and place it before the email form, explain what users get by logging in, and give the screen one clear primary action.\n\nThe redesign leads with why to log in (track price drops, save favourites, check if a price is fair), puts Google, Apple and Facebook sign-in first, and makes email the second option. The modal is wider so long German words no longer break. I designed it for three contexts: a full page, a popup over the page the user came from, and mobile web.\n\nWe launched it in Austria first and monitored it for two weeks. Logins rose slightly, dealer login rates didn't dip, and there were no security issues, so it was rolled out to all markets.",
         image: {
           src: "/images/projects/project-7/detail-1.png",
           alt: "Legacy login modal compared with the redesigned login modal",
@@ -142,7 +142,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Edge Cases & Recovery",
-        body: "Every error tells users what went wrong and how to fix it, right where it happened. A wrong password puts recovery one tap away, and password reset uses a six-digit code instead of a link, so users never have to leave the flow.",
+        body: "Every error tells users what went wrong and how to fix it, right where it happened. A wrong password puts recovery one tap away, and password reset uses a six-digit code instead of a link, so users never have to leave the flow. That code pattern later became the basis for removing passwords altogether.",
         gallery: {
           items: [
             { src: "/images/projects/project-7/screens/err-email.png", alt: "Invalid email error", caption: "Invalid email" },
@@ -155,7 +155,21 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "5. Saved Search: From Soft Sign-up to One Tap",
+        heading: "5. From Passwords to One-Time Codes",
+        body: "After the rollout, the next source of friction was the password itself: creating one, meeting the rules, and forgetting it later. Working with Trust & Identity, we replaced passwords for email users with a six-digit code sent by email. The same flow now handles both sign-in and registration, so users don't need to know whether they already have an account. The code expires after ten minutes, and the input gives clear feedback when it's incomplete. The one-time code flow is what's live today.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-7/screens/otp-1-email.png", alt: "Sign in or register with an email address entered", caption: "One entry point for sign-in and registration" },
+            { src: "/images/projects/project-7/screens/otp-2-new-account.png", alt: "New account screen with consent and continue", caption: "New users only confirm consent" },
+            { src: "/images/projects/project-7/screens/otp-3-code.png", alt: "Enter the six-digit code", caption: "A six-digit code instead of a password" },
+            { src: "/images/projects/project-7/screens/otp-4-filled.png", alt: "Code entered", caption: "Code entered" },
+            { src: "/images/projects/project-7/screens/otp-5-error.png", alt: "Incomplete code error", caption: "Clear feedback when it's incomplete" },
+            { src: "/images/projects/project-7/screens/reg-5-welcome.png", alt: "Homepage with a welcome message", caption: "Signed in, back where they started" },
+          ],
+        },
+      },
+      {
+        heading: "6. Saved Search: From Soft Sign-up to One Tap",
         body: "Saving a search is a high-intent moment, so it became our testing ground. The flow went through several versions, each built on what the previous one taught us.\n\nV2 was a soft, email-first sign-up: users subscribed to alerts without feeling blocked by account creation. I explored a one-time code to turn that email into an account without any password, which needed sign-off from Trust & Identity. V3 removed the separate success step and let the login screen carry the confirmation, which only became possible with the new, customisable login dialog. V4 replaced the soft ending with a mandatory sign-in bottom sheet. We tested Apple only, Google only and both, because many iPhone users rely on Google as their main account. Even so, Apple alone performed best on iPhones, so we shipped one button per platform: Apple on iOS, Google on Android.\n\nThe hypothesis was that the lower friction of social login would outweigh the added requirement. It did: the login rate in the flow rose from 17% to 32%, an increase of about 90%, and logged-in users grew by about 2% across all platforms.",
         gallery: {
           items: [
@@ -168,11 +182,11 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Outcome",
-        body: "Each experiment moved the number on its own: 40% more logged-in iOS users from the new app launch sequence, about 16% more logins from direct login on price history, 5% of login attempts from popularity, and a near doubling of the login rate in saved search.\n\nTogether they shifted how the company approached login: from a wall to a series of well-timed, low-friction invitations. [verify: overall progress against the OKR, e.g. share of weekly active users logged in]",
+        body: "Each experiment moved the number on its own: 40% more logged-in iOS users from the new app launch sequence, about 16% more logins from direct login on price history, 5% of login attempts from popularity, and a near doubling of the login rate in saved search.\n\nTogether they lifted the share of logged-in users by close to 40%. That fell short of the very ambitious 50% target, but it was a significant improvement, and enough for the company to close the OKR and move its focus to the next priority.\n\nThe bigger change was in approach: from a login wall to a series of well-timed, low-friction invitations.",
       },
       {
         heading: "Where It Was Heading",
-        body: "The work pointed towards a bigger idea I developed for the team: the AutoScout24 Club. Instead of asking users to log in, invite them to join, with member benefits such as price insights, early access to new listings and a verified buyer profile. It stayed a vision rather than a shipped product, but it gave the roadmap a clear direction: make logging in feel like joining something worth belonging to.",
+        body: "The work pointed towards a bigger idea I developed for the team: the AutoScout24 Club. Instead of asking users to log in, invite them to join, with member benefits such as price insights, early access to new listings and a verified buyer profile. Instead of a collection of login moments spread across the product, users would get one coherent story about everything that comes with an account. It stayed a vision rather than a shipped product, but it gave the roadmap a clear direction: make logging in feel like joining something worth belonging to.",
         image: {
           src: "/images/projects/project-7/detail-3.png",
           alt: "AutoScout24 Club landing page concept",
