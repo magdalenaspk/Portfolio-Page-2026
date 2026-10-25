@@ -29,7 +29,7 @@ export const selectedProjects: Project[] = [
       height: 840,
     },
     overview:
-      "Most people use AutoScout24 like a one-off marketplace: they search, browse and leave without ever logging in. Logged-in users enquire more, come back more and give dealers better leads, so the company set an OKR to grow the share of logged-in users by 50% by the end of 2026. I designed most of the experiments behind that goal, across apps and web, from Q3 2025 to Q2 2026.",
+      "Most people use AutoScout24 like a one-off marketplace: they search, browse and leave without ever logging in. Logged-in users enquire more, come back more and give dealers better leads, so the company set an OKR to grow the share of logged-in users by 50% by the end of 2026. I designed most of the experiments behind that goal, across apps and web, from Q2 2025 to Q3 2026.",
     sections: [
       {
         heading: "The Problem",
@@ -345,7 +345,7 @@ export const selectedProjects: Project[] = [
     sections: [
       {
         heading: "My Role & Team",
-        body: "An app-only project, from Q1 to Q3 2025. I worked with a PM and four engineers (two iOS, two Android).\n\nI designed every iteration for iOS and Android and worked with the PM and engineers on each test.",
+        body: "An app-only project, from Q4 2024 to Q3 2025. I worked with a PM and four engineers (two iOS, two Android).\n\nI designed every iteration for iOS and Android and worked with the PM and engineers on each test.",
       },
       {
         heading: "Small Steps, Each One Tested",
