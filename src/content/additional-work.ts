@@ -16,7 +16,7 @@ export const additionalWork: AdditionalWorkItem[] = [
       background: "#F5F5F5",
     },
     overview:
-      "Atolls runs some of the largest deal communities in Europe, including Pepper, mydealz in Germany and hotukdeals in the UK, and the best deals come from a small group of dedicated posters. A points and levels programme already rewarded them for posting and referrals, and it worked well. The Creator Program was the next step: keep the top contributors posting great deals by letting them share in the ad revenue their deal pages generate.",
+      "Atolls runs some of the largest deal communities in Europe, including Pepper, mydealz in Germany and hotukdeals in the UK, and the best deals come from a small group of dedicated posters. A points and levels programme (Silver, Gold, Platinum) already rewarded them for posting and referrals, and it worked well. In user interviews, though, top contributors kept saying the same thing: they spend real time finding and writing up deals, and they wanted that effort recognised in a way that mattered. The Creator Program was the next step: keep the top contributors posting great deals by letting them share in the ad revenue their deal pages generate. The success metric was a 3% increase in contributed deals.",
     sections: [
       {
         heading: "My Role",
@@ -31,8 +31,12 @@ export const additionalWork: AdditionalWorkItem[] = [
         body: "Paying people is high-stakes, so the first version was deliberately manual. Only established posters with a history of good deals were accepted: Platinum contributors who had been members for at least six months and followed the community guidelines. Applications were reviewed by hand, and payouts were handled manually at first, with automation planned once the programme proved itself.\n\nStatus also had to be earned continuously. Points expire after twelve months, so I designed a warning that tells creators they are about to lose their level and Creator status, and what to do to keep it. I explored a fixed message and a countdown showing exactly how many days are left.",
       },
       {
+        heading: "Making Money Feel Rewarding",
+        body: "Payouts, tax numbers and eligibility rules can make a feature feel like paperwork. To keep it feeling like a reward, I carried the custom Platinum app icon, already one of the perks of the top level, into the Creator entry points and submission cards on iOS, Android and web, so the programme read as an exclusive next step rather than a form. I reviewed the concepts in design critiques and with product and design leadership, and iterated with the engineers before handover.",
+      },
+      {
         heading: "Outcome",
-        body: "The Creator Program launched across iOS, Android and web, and it is still live across Atolls' communities, including hotukdeals.",
+        body: "The programme was released gradually, starting with 0.5% of members in Germany and the UK, with qualitative sessions planned alongside to see how creators used it before a wider rollout. It launched across iOS, Android and web, and it is still live across Atolls' communities, including hotukdeals.",
       },
     ],
   },
@@ -86,7 +90,7 @@ export const additionalWork: AdditionalWorkItem[] = [
       },
       {
         heading: "Building the Case",
-        body: "I helped build the case for a full redesign rather than a patch. The argument rested on five pillars: analytics showing mobile converted ~20% better and had ~15% less drop-off despite being only ~40% of traffic; user research surfacing consistent pain points with the current page; a competitor benchmark; high-fidelity prototypes to make the vision tangible; and a tech debt assessment showing the outdated codebase was slowing down development and affecting loading times.\n\nThe stakeholders were convinced.",
+        body: "I helped build the case for a full redesign rather than a patch. The argument rested on five pillars: analytics showing the mobile homepage converted better and lost fewer users, even though mobile was the smaller share of traffic; user research surfacing consistent pain points with the current page; a competitor benchmark; high-fidelity prototypes to make the vision tangible; and a tech debt assessment showing the outdated codebase was slowing down development and affecting loading times.\n\nThe stakeholders were convinced.",
       },
       {
         heading: "Results",
@@ -113,7 +117,7 @@ export const additionalWork: AdditionalWorkItem[] = [
     sections: [
       {
         heading: "The Challenge",
-        body: "Two brands, multiple platforms, and a colour system that had grown organically rather than intentionally. The gap between web and mobile meant new features often looked inconsistent across surfaces, and developers worked from hardcoded HEX values rather than a shared token system.",
+        body: "Two brands, multiple platforms, and a colour system that had grown organically rather than intentionally. Every screen I delivered came in 12 versions: Marley Spoon and Dinnerly, each across mobile app, tablet portrait and landscape, desktop, web tablet and web app, all built on an 8px grid with a shared component library. The gap between web and mobile meant new features often looked inconsistent across surfaces, and developers worked from hardcoded HEX values rather than a shared token system.",
       },
       {
         heading: "The Solution",
@@ -127,32 +131,36 @@ export const additionalWork: AdditionalWorkItem[] = [
   },
   {
     id: 3,
-    title: "Flexible Order Frequency",
+    title: "Skip & Churn Deflection",
     company: "Marley Spoon",
     description:
-      "Gave subscribers a middle ground between their schedule and cancellation: 2% chose to reduce frequency rather than leave.",
-    tags: ["Retention", "Subscriptions", "Churn Reduction"],
+      "Found out why subscribers skipped and cancelled, then gave them a middle ground: 2% of users about to cancel reduced their order frequency instead.",
+    tags: ["Retention", "Subscriptions", "Research", "Mobile", "Web"],
     thumbnail: {
       src: "/images/additional-work/work-3.png",
-      alt: "Flexible Order Frequency - Marley Spoon",
+      alt: "Skip and Churn Deflection - Marley Spoon",
       width: 800,
       height: 600,
       background: "#F5F5F5",
     },
     overview:
-      "Reducing churn was one of my team's key priorities in the first half of 2023. Analysis showed that 18% of cancellations were driven by frequency: users didn't want to cancel outright, they just wanted more flexibility. There was no middle ground between the current schedule and cancelling entirely.",
+      "Meal kits arrive every week unless a customer skips a delivery or cancels. In early 2023 skip rates rose noticeably, and reducing skips and churn became my team's top priority for the first half of the year. The goal was to bring skips down without pushing more people into cancelling, since the two rates move together.",
     sections: [
       {
-        heading: "The Problem",
-        body: "The churn flow offered users no options between their current delivery frequency and full cancellation. 18% of churning users cited frequency as their primary reason, a significant share that was addressable through design rather than pricing or product changes.",
+        heading: "Understanding Why",
+        body: "We didn't know why people skipped, so we asked. I designed a short skip-reasons survey for app and web, with automatic, animated transitions so answering took seconds. We A/B tested it on 10% of users to make sure it didn't increase skips or churn by itself, then expanded it to 50% in each market: enough for reliable data without asking everyone.\n\nBudget was the most common reason, and order flexibility came second. Frequency also showed up in cancellations, where 18% of churn was linked to it. Many people didn't want to leave; they just didn't want a box every week.",
       },
       {
-        heading: "The Design",
-        body: "I introduced a Flexible Order Frequency option within the churn flow on both the app and desktop. At the moment a user indicated they wanted to cancel, they were offered the ability to reduce their delivery frequency instead, keeping the relationship alive with less friction than a full re-signup later.",
+        heading: "Choosing What to Build",
+        body: "In a workshop with the team we turned the findings into options (fixed-length pauses, incentivised order streaks, rescheduling deliveries and flexible frequency) and weighed each by expected value and effort. Flexible frequency, letting customers switch to a box every 2, 3 or 4 weeks, answered a real need and protected revenue better than a pause, so it went first.\n\nI benchmarked beyond meal kits, looking at how other subscription services handle frequency, agreed acceptance criteria with the PM, and explored several directions from paper wireframes onwards, refining them in design critiques. Icons made the frequency options quick to understand.",
+      },
+      {
+        heading: "Edge Cases and Delivery",
+        body: "Before development I walked the engineers through the prototype and screens for every platform and breakpoint, and we settled the remaining edge cases together. I stayed close during the build through stand-ups and Jira, and ran design QA before release to catch any gaps between design and implementation.\n\nThe same work fed a new Manage Account page that gathered every option in one place: change frequency, pause, contact customer support, or cancel and delete the account. I also designed a ribbon banner showing incentives attached to an upcoming order, and a rescheduling feature for more control over delivery times.",
       },
       {
         heading: "Results",
-        body: "2% of users who would have cancelled chose to reduce their frequency instead, staying with Marley Spoon.",
+        body: "Flexible frequency launched behind a feature flag to 10% of users, placed inside the cancellation flow where it mattered most. 2% of users who were about to cancel chose to reduce their frequency and stay instead. Because it worked, we rolled it out to everyone and added an entry point in account settings, where it remains part of the product.",
       },
     ],
   },
@@ -161,7 +169,7 @@ export const additionalWork: AdditionalWorkItem[] = [
     title: "Insurance Manager Dashboard",
     company: "Friendsurance / Deutsche Bank",
     description:
-      "Redesigned the Deutsche Bank insurance dashboard with clearer hierarchy and social proof, driving higher Add Insurance conversions.",
+      "Redesigned the Deutsche Bank insurance dashboard for higher Add Insurance conversion, and reshaped the insurance needs analysis results around a clear score.",
     tags: ["Dashboard", "Fintech", "B2B", "Deutsche Bank"],
     thumbnail: {
       src: "/images/additional-work/work-4.png",
@@ -184,6 +192,14 @@ export const additionalWork: AdditionalWorkItem[] = [
       {
         heading: "Results",
         body: "Higher conversions on the Add Insurance action and increased user engagement across the dashboard.",
+      },
+      {
+        heading: "Insurance Needs Analysis Results",
+        body: "The insurance manager also offered a needs analysis: a survey that tells users which insurance they should have. Its results came as one long feed sorted by internal logic, which felt overwhelming and gave people little reason to act.\n\nI redesigned the results page and the detail pages for each insurance category. Results were split into two groups: Must-Haves, a fixed standard recommended by the company's experts, and Other Insurances, personalised from the user's answers. A Must-Have Score rated the user's current coverage in a familiar, easy-to-read format and gave them a clear way to improve it by adding what was missing.\n\nOn the detail pages I cut text to a minimum, since users were already deep in a complex flow, and focused each page on one next step: add an existing contract, get a new insurance, or contact an advisor. These actions appeared as cards with matching icons, and the layout switched between two and three columns depending on how many applied to that user's result. Social proof stayed, because earlier testing showed it mattered to these users.",
+      },
+      {
+        heading: "What Happened",
+        body: "The redesign was finished and handed over, but it never shipped: Deutsche Bank ended its partnership with Friendsurance before release. It remains a good example of how I approach complex financial products: reduce the noise, give people one clear measure of where they stand, and make the next step obvious.",
       },
     ],
   },

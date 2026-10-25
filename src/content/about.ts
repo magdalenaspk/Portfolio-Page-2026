@@ -134,7 +134,7 @@ export const aboutContent: AboutContent = {
       organization: "Friendsurance",
       period: "Jul 2018 – Jul 2022",
       description:
-        "Insurance management web apps, including bespoke tools for Deutsche Bank and Volksbank, balancing regulatory requirements with usability.",
+        "Insurance management web apps, including bespoke tools for Deutsche Bank and Volksbank, balancing regulatory requirements with usability. Ran design sprints and user interviews in German.",
     },
     {
       id: 6,
