@@ -4,19 +4,19 @@ export const additionalWork: AdditionalWorkItem[] = [
   {
     id: 6,
     title: "Creator Program",
-    company: "Pepper (hotukdeals)",
+    company: "Atolls (Pepper, mydealz, hotukdeals)",
     description:
       "Gave the community's top posters a way to earn ad revenue from their deals, live today across iOS, Android and web.",
     tags: ["Community", "Monetisation", "Mobile", "Web"],
     thumbnail: {
       src: "/images/additional-work/work-6.png",
-      alt: "Creator Program screens - Pepper",
+      alt: "Creator Program screens - Atolls",
       width: 800,
       height: 600,
       background: "#F5F5F5",
     },
     overview:
-      "Pepper runs some of the largest deal communities in Europe, including hotukdeals in the UK, and the best deals come from a small group of dedicated posters. A points and levels programme already rewarded them for posting and referrals, and it worked well. The Creator Program was the next step: keep the top contributors posting great deals by letting them share in the ad revenue their deal pages generate.",
+      "Atolls runs some of the largest deal communities in Europe, including Pepper, mydealz in Germany and hotukdeals in the UK, and the best deals come from a small group of dedicated posters. A points and levels programme already rewarded them for posting and referrals, and it worked well. The Creator Program was the next step: keep the top contributors posting great deals by letting them share in the ad revenue their deal pages generate.",
     sections: [
       {
         heading: "My Role",
@@ -32,7 +32,7 @@ export const additionalWork: AdditionalWorkItem[] = [
       },
       {
         heading: "Outcome",
-        body: "The Creator Program launched across iOS, Android and web, and it is still live on hotukdeals and other Pepper communities.",
+        body: "The Creator Program launched across iOS, Android and web, and it is still live across Atolls' communities, including hotukdeals.",
       },
     ],
   },
