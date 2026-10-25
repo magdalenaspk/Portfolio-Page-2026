@@ -6,10 +6,10 @@ export const aboutContent: AboutContent = {
   intro:
     "I believe great product design starts with asking the right question before reaching for a solution. I take a step back to understand what's really driving user behavior, where the value gap is, and what the problem actually is, not just what it looks like on the surface. Complexity doesn't intimidate me; it's where I do my best work.\n\nI'm motivated by impact that's visible and measurable. When my work makes a system clearer, an experience more intuitive, or a product decision easier to make, that's what success looks like to me.\n\nOutside of work, you'll usually find me lost in a fantasy novel, digging through record shops to grow my vinyl collection, or hunting down the next great coffee spot or neighbourhood restaurant in Berlin.",
   portraitImage: {
-    src: "/images/about/portrait.png",
+    src: "/images/about/portrait.jpg",
     alt: "Magdalena Sapkowska, Senior Product Designer",
-    width: 800,
-    height: 1000,
+    width: 1086,
+    height: 1358,
   },
   strengths: [
     {

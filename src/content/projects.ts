@@ -395,7 +395,7 @@ const allSelectedProjects: Project[] = [
     title: "Homescreen Recommendations",
     subtitle: "Personalising the Home Screen",
     description:
-      "Helping users discover more relevant cars on the app home screen: which vehicles to recommend, and how to browse them.",
+      "Personalised recommendations on the app home screen: +48% recommendation clicks from a bigger pool of cars, and +17% from simpler cards.",
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android",
