@@ -29,6 +29,31 @@ const ICONS: Record<IconName, string> = {
   globe: "M12 21a9 9 0 0 0 8.72-6.75M12 21a9 9 0 0 1-8.72-6.75M12 21c2.49 0 4.5-4.03 4.5-9S14.49 3 12 3m0 18c-2.49 0-4.5-4.03-4.5-9S9.51 3 12 3m0 0a9 9 0 0 1 7.84 4.58M12 3a9 9 0 0 0-7.84 4.58m15.68 0A11.95 11.95 0 0 1 12 10.5c-2.9 0-5.56-1.03-7.84-2.92m15.68 0A8.96 8.96 0 0 1 21 12c0 .78-.1 1.53-.28 2.25m0 0A17.92 17.92 0 0 1 12 16.5c-3.16 0-6.13-.82-8.72-2.25m0 0A9 9 0 0 1 3 12c0-1.61.42-3.12 1.16-4.42",
 };
 
+
+// Spread n items over rows of at most `max`, as evenly as possible, so no row
+// ends with a lone item. Returns how many items share each item's row.
+function rowSizes(n: number, max: number): number[] {
+  const rows = Math.ceil(n / max);
+  const base = Math.floor(n / rows);
+  const extra = n % rows;
+  const sizes: number[] = [];
+  for (let r = 0; r < rows; r++) {
+    const k = base + (r < extra ? 1 : 0);
+    for (let i = 0; i < k; i++) sizes.push(k);
+  }
+  return sizes;
+}
+
+// 6-column grid: a row of k items gives each item 6/k columns.
+const SPAN: Record<number, string> = { 1: "col-span-6", 2: "col-span-3", 3: "col-span-2" };
+const MD_SPAN: Record<number, string> = { 1: "md:col-span-6", 2: "md:col-span-3", 3: "md:col-span-2" };
+
+function spanClasses(n: number, mobileMax: number, desktopMax: number): string[] {
+  const m = rowSizes(n, mobileMax);
+  const d = rowSizes(n, desktopMax);
+  return m.map((k, i) => `${SPAN[k]} ${MD_SPAN[d[i]]}`);
+}
+
 function Icon({ name }: { name: IconName }) {
   return (
     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
@@ -38,11 +63,11 @@ function Icon({ name }: { name: IconName }) {
 }
 
 export function StatRow({ stats, narrow }: { stats: Stat[]; narrow?: boolean }) {
-  const cols = narrow || stats.length < 3 ? "grid-cols-2" : "grid-cols-2 md:grid-cols-3";
+  const spans = spanClasses(stats.length, 2, narrow ? 2 : 3);
   return (
-    <dl className={`grid ${cols} gap-x-6 gap-y-8 pt-2`}>
-      {stats.map((s) => (
-        <div key={s.value + s.label} className="border-t-2 border-lime-300 pt-4">
+    <dl className="grid grid-cols-6 gap-x-6 gap-y-8 pt-2">
+      {stats.map((s, i) => (
+        <div key={s.value + s.label} className={`${spans[i]} border-t-2 border-lime-300 pt-4`}>
           {s.context && (
             <p className="text-[11px] font-semibold uppercase tracking-wider text-neutral-500 mb-2">
               {s.context}
@@ -59,10 +84,12 @@ export function StatRow({ stats, narrow }: { stats: Stat[]; narrow?: boolean }) 
 }
 
 export function PointList({ points, narrow }: { points: Point[]; narrow?: boolean }) {
+  // One column on phones and beside images; up to three columns otherwise.
+  const spans = spanClasses(points.length, 1, narrow ? 1 : 3);
   return (
-    <ul className={`grid grid-cols-1 ${narrow ? "" : "sm:grid-cols-2"} gap-x-8 gap-y-6 pt-2`}>
-      {points.map((p) => (
-        <li key={p.title} className="flex items-center gap-4">
+    <ul className="grid grid-cols-6 gap-x-8 gap-y-6 pt-2">
+      {points.map((p, i) => (
+        <li key={p.title} className={`${spans[i]} flex items-center gap-4`}>
           <span className="shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-neutral-100 text-lime-600">
             <Icon name={p.icon} />
           </span>
