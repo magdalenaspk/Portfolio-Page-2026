@@ -37,7 +37,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "My Role & Team",
-        body: "The work spanned three teams. The app team was a PM, a designer and four engineers (two iOS, two Android). The web team, where I sat, was a PM, two designers and four engineers. Trust & Identity, a PM and three engineers, owned the login logic, kept everything within our Okta setup and made sure each change met our security standards. One data analyst supported all the teams.\n\nI owned the end-to-end design of every experiment in this case study: framing the hypotheses with the PM, designing all states across iOS, Android, web and mWeb, preparing test variants, and presenting results and next steps to the wider design and product organisation at UX All Hands.",
+        body: "The work spanned three teams. The app team was a PM, a designer and four engineers (two iOS, two Android). The web team, where I sat, was a PM, two designers and four engineers. Trust & Identity, a PM and three engineers, owned the login logic, kept everything within our Okta setup and made sure each change met our security standards. One data analyst supported all the teams, and we worked with UX Research on testing and with content writers on the copy for every login moment.\n\nI owned the end-to-end design of every experiment in this case study: framing the hypotheses with the PM, designing all states across iOS, Android, web and mWeb, preparing test variants, and presenting results and next steps to the wider design and product organisation at UX All Hands.",
       },
       {
         heading: "Constraints",
@@ -226,25 +226,25 @@ export const selectedProjects: Project[] = [
       height: 1080,
     },
     overview:
-      "Favourites was one of AutoScout24's five most-visited screens. Users came back to it again and again as a personal shortlist, yet it hadn't been redesigned in years and gave them almost no way to act. The goal: turn the screen where buyers make their decision into one that helps them make it.",
+      "Favourites was one of AutoScout24's key engagement screens: the third most active in the apps and on web, after search results and vehicle detail pages. Users came back to it again and again as a personal shortlist, yet it hadn't been redesigned in years and gave them almost no way to act. The goal: turn the screen where buyers make their decision into one that helps them make it.",
     sections: [
       {
         heading: "The Problem",
         body: "The screen was a passive list with no hierarchy and no clear next step. Users couldn't tell at a glance whether a price was competitive, couldn't contact a seller without leaving the list, couldn't sort or remove vehicles in bulk, and hit a dead end when a listing was sold. A screen sitting at the most important decision point did almost nothing to move users forward.",
         image: {
-          src: "/images/projects/project-1/screens/card-before.png",
-          alt: "The previous Favourites card on mobile web",
-          width: 351,
-          height: 659,
+          src: "/images/projects/project-1/detail-1.png",
+          alt: "Original Favourites screen",
+          width: 1200,
+          height: 800,
         },
       },
       {
         heading: "My Role & Team",
-        body: "[verify: team, timeframe and platforms shipped.]\n\nI led the project from research to release: I ran the user survey, mapped the opportunities, designed the new card and screen across iOS, Android and web, and worked with engineering on the A/B test.",
+        body: "A cross-functional team across apps and web: one PM, four app engineers (two iOS, two Android) and five web engineers (three frontend, two backend), with a data analyst when we needed one. UX Research supported the survey and testing.\n\nI led the project from research to release: I ran the user survey, mapped the opportunities, designed the new card and screen across iOS, Android and web, and worked with engineering on the A/B test.",
       },
       {
         heading: "Research",
-        body: "I ran a survey across the German and Austrian markets with 1,142 respondents on iOS and Android. Users treat Favourites as a shortlist to narrow down their choices. Price is the main thing they track, they check back regularly for updates, and they want to know how long a car has been listed. Mapping these needs against the existing screen surfaced over a dozen improvement opportunities.",
+        body: "To understand how people actually use their shortlist, I ran a survey across the German and Austrian markets with 1,142 respondents on iOS and Android. Users treat Favourites as a shortlist to narrow down their choices. Price is the main thing they track, they check back regularly for updates, and they want to know how long a car has been listed. Mapping these needs against the existing screen surfaced over a dozen improvement opportunities.",
       },
       {
         heading: "Constraints",
@@ -253,16 +253,17 @@ export const selectedProjects: Project[] = [
       {
         heading: "Decisions & Trade-offs",
         body: "Same language, richer actions. I kept the search card's structure and attribute pills, but made price the most prominent element, paired with an indicator showing whether it's a good deal. On search, a card's job is to get users to the detail page. On Favourites, users have already chosen, so the card could go further: a swipeable gallery and a direct contact button, right on the shortlist.\n\nThe contact button was the biggest bet. Putting the main buying action on the card saves a click at exactly the right moment, but it also risked lower-quality leads from quick taps. We chose to test it rather than debate it.\n\nAround the card, I added sorting by date added, price, mileage and year, single and bulk removal, and a recommender of similar vehicles at the end of the list.",
-        image: {
-          src: "/images/projects/project-1/detail-2.png",
-          alt: "Favourites redesign showing new card design with contact CTA and price indicator",
-          width: 1200,
-          height: 800,
+        gallery: {
+          variant: "cards",
+          items: [
+            { src: "/images/projects/project-1/screens/card-search.png", alt: "Search results card", caption: "Search results card: built to get users to the detail page" },
+            { src: "/images/projects/project-1/screens/card-favourites.png", alt: "Favourites card with email and call buttons", caption: "Favourites card: same language, with contact actions on the card" },
+          ],
         },
       },
       {
         heading: "One Card, Every Listing",
-        body: "A shortlist mixes very different listings, so the card had to hold all of them without breaking. I designed a full set of variants on the same structure: deals with a struck-through price, cars the user has already contacted, listings that are no longer available, private sellers, leasing offers and sponsored placements.\n\nThe two states that mattered most were the ones the old screen ignored. A contacted car now says when the user got in touch, so they don't contact the same seller twice. A sold car is greyed out with a one-tap delete, instead of silently cluttering the list.",
+        body: "A shortlist mixes very different listings, so the card had to hold all of them without breaking. The cards below are the iOS versions. I designed a full set of variants on the same structure: deals with a struck-through price, cars the user has already contacted, listings that are no longer available, private sellers, leasing offers and sponsored placements.\n\nThe two states that mattered most were the ones the old screen ignored. A contacted car now says when the user got in touch, so they don't contact the same seller twice. A sold car is greyed out with a one-tap delete, instead of silently cluttering the list.\n\nImage size follows each platform's search card. On iOS the photo is small, matching the iOS search results; on mobile web it is large, so the car itself does more of the selling. Those search card layouts had been established through a series of A/B tests over half a year, so instead of running our own tests on card structure, we built on what they had proven.",
         gallery: {
           variant: "cards",
           items: [
@@ -277,7 +278,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "The Shipped Screens",
-        body: "On iOS the list follows platform conventions: a native sort sheet with options users asked for in the survey, removal confirmed with a snackbar that offers undo instead of a blocking dialog, and full dark mode support. When the list ends, a recommender of similar cars keeps discovery going without pulling users away from their shortlist. [verify: empty state design]",
+        body: "On iOS the list follows platform conventions: a native sort sheet with options users asked for in the survey, removal confirmed with a snackbar that offers undo instead of a blocking dialog, and full dark mode support. When the list ends, a recommender of similar cars keeps discovery going without pulling users away from their shortlist.",
         gallery: {
           items: [
             { src: "/images/projects/project-1/screens/fav-list.png", alt: "Favourites list on iOS", caption: "The shortlist" },
@@ -289,7 +290,17 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "Web",
+        heading: "Mobile Web",
+        body: "On mobile web the card leads with a large, swipeable photo, following the mobile web search card. An empty list is not a dead end: it explains what Favourites is for, offers a way to start searching, and shows recommendations straight away.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-1/screens/fav-mweb-list.png", alt: "Favourites on mobile web with a large photo card", caption: "Large photos on mobile web" },
+            { src: "/images/projects/project-1/screens/fav-mweb-empty.png", alt: "Empty Favourites state with benefits and a search button", caption: "Empty state: why to save, and where to start" },
+          ],
+        },
+      },
+      {
+        heading: "Desktop",
         body: "On desktop the same card spreads into a horizontal layout inside the account area, with the photo, price rating and both contact actions visible at once.",
         gallery: {
           variant: "desktop",
@@ -300,7 +311,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Outcome",
-        body: "The A/B test with the new card and contact buttons increased enquiries by ~5.5%. Users were ready to act from their shortlist; they just needed the path made easy. [verify: test length, platforms and any secondary metrics]",
+        body: "The A/B test with the new card and contact buttons increased enquiries by ~5.5% across all platforms combined. Enquiries are the metric that matters most on a marketplace, because they turn browsing into leads for dealers.\n\nUsers were ready to act from their shortlist; they just needed the path made easy. Favourites stopped being a passive collection and became a place where users could act, and did.",
       },
     ],
   },

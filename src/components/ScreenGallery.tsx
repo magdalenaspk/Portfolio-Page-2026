@@ -36,7 +36,9 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
         ? "max-w-5xl mx-auto"
         : ""
       : items.length <= 2
-        ? "max-w-xl mx-auto"
+        ? gallery.variant === "cards"
+          ? "max-w-3xl mx-auto"
+          : "max-w-xl mx-auto"
         : items.length === 3
           ? "max-w-3xl mx-auto"
           : "";
