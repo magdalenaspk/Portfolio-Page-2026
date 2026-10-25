@@ -8,7 +8,7 @@ const allSelectedProjects: Project[] = [
     title: "Growing Logged-in Users",
     subtitle: "Timely Reasons to Log In",
     description:
-      "Giving users a timely reason to log in, improving the login experience itself, and a longer-term vision for an AutoScout24 Club.",
+      "Well-timed reasons to log in and a simpler login: +40% logged-in iOS users from the new app launch, and ~40% growth in the share of logged-in users.",
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android, Web, mWeb",
