@@ -131,7 +131,7 @@ export const aboutContent: AboutContent = {
     {
       id: 4,
       type: "work",
-      title: "UI UX Designer",
+      title: "UX UI Designer",
       organization: "Friendsurance",
       period: "Jul 2018 – Jul 2022",
       description:
@@ -149,14 +149,14 @@ export const aboutContent: AboutContent = {
     {
       id: 12,
       type: "work",
-      title: "Visual Designer",
-      organization: "Tyszkiewicz",
+      title: "Visual Marketing Designer",
+      organization: "Tyszkiewicz Nieruchomości",
       period: "Jan 2015 – Jan 2016",
       description:
         "Visual design for blogs, landing pages, newsletters and print, alongside content marketing, copywriting and social media.",
     },
   ],
-  earlierWork: "Earlier and alongside design: pub owner, event planner and journalist.",
+  earlierWork: "Earlier: owner and event planner at RockOut Pub (2011–2015), journalist at Dziennik Bałtycki (2009–2011).",
   education: [
     {
       id: 15,
@@ -190,7 +190,7 @@ export const aboutContent: AboutContent = {
       id: 10,
       type: "education",
       title: "Photography & Graphic Design Diploma",
-      organization: "Fotomedia Photography",
+      organization: "Fotomedia School of Photography",
       period: "2004 – 2006",
     },
   ],
