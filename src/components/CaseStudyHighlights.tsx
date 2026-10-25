@@ -35,7 +35,7 @@ const ICONS: Record<IconName, string> = {
 // centred, so nothing sits alone at the edge.
 function colsFor(n: number, max: number): number {
   if (n <= max) return n;
-  if (n === 4) return 2;
+  if (n === 4 && max >= 2) return 2;
   return max;
 }
 
