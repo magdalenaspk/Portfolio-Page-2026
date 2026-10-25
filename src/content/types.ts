@@ -68,7 +68,8 @@ export interface Project {
   company: string;
   role?: string;
   platform?: string;
-  timeframe?: string; // e.g. "Q2 2025 – Q3 2026", shown as the first tag
+  timeframe?: string; // e.g. "Q2 2025 – Q3 2026"
+  team?: string; // Short team line for the info row
   hidden?: boolean; // Keep the case in the file but leave it off this site
   tags: string[];
   thumbnail: ProjectImage;

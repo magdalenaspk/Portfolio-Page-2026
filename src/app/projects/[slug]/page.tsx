@@ -103,6 +103,26 @@ export default function ProjectPage({ params }: PageProps) {
                   </span>
                 </div>
               )}
+              {project.team && (
+                <div>
+                  <span className="block text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-0.5">
+                    Team
+                  </span>
+                  <span className="font-medium text-neutral-700">
+                    {project.team}
+                  </span>
+                </div>
+              )}
+              {project.timeframe && (
+                <div>
+                  <span className="block text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-0.5">
+                    Timeframe
+                  </span>
+                  <span className="font-medium text-neutral-700">
+                    {project.timeframe}
+                  </span>
+                </div>
+              )}
               {project.platform && (
                 <div>
                   <span className="block text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-0.5">
@@ -117,9 +137,6 @@ export default function ProjectPage({ params }: PageProps) {
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
-              {project.timeframe && (
-                <Badge variant="outline">{project.timeframe}</Badge>
-              )}
               {project.tags.map((tag) => (
                 <Badge key={tag} variant="outline">
                   {tag}

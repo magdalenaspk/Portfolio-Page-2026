@@ -13,6 +13,7 @@ const allSelectedProjects: Project[] = [
     role: "Product Designer",
     platform: "iOS, Android, Web, mWeb",
     timeframe: "Q2 2025 – Q3 2026",
+    team: "3 product teams, each a PM and 3–4 engineers",
     tags: ["Growth", "Login & Registration", "A/B Testing", "Cross-platform"],
     thumbnail: {
       src: "/images/projects/project-7/thumb.png",
@@ -31,8 +32,8 @@ const allSelectedProjects: Project[] = [
       "AutoScout24 users could search for cars, browse listings and contact sellers without logging in. That made the marketplace easy to use, but it also meant many users had few reasons to create an account or return regularly. Account features such as saved searches, price history and listing popularity offered opportunities to make signing in more useful. I worked on several points in that journey: giving users a timely reason to log in, improving the login experience itself, and exploring how individual benefits could connect into a more coherent long-term proposition.",
     sections: [
       {
-        heading: "My Role & Team",
-        body: "I was the product designer working across three teams, each with a product manager and three to four engineers. I designed the experiences and presented the work at a company-wide all-hands.",
+        heading: "My Role",
+        body: "I was the product designer across all three teams: I designed the experiences end to end and presented the work at a company-wide all-hands.",
       },
       {
         heading: "The Problem",
@@ -250,6 +251,7 @@ const allSelectedProjects: Project[] = [
     role: "Product Designer",
     platform: "iOS, Android, Web",
     timeframe: "Q1 – Q2 2025",
+    team: "PM, 9 engineers, data analyst, UX Research",
     tags: ["UX Design", "A/B Testing", "User Research", "Cross-platform"],
     thumbnail: {
       src: "/images/projects/project-1/thumb.png",
@@ -268,7 +270,7 @@ const allSelectedProjects: Project[] = [
       "Favourites is where car shoppers keep track of vehicles they may want to come back to. It was one of AutoScout24's key engagement screens, the third most active in the apps and on web after search results and vehicle detail pages, yet it hadn't been redesigned in years. Contacting a seller required opening a detail page, managing several saved vehicles was cumbersome, and sold listings could be difficult to distinguish from available ones. The redesign made Favourites a working space for a buyer, not just a place to store vehicle links.",
     sections: [
       {
-        heading: "My Role & Team",
+        heading: "My Role",
         body: "I led the Favourites redesign, using user research and experiment results to prioritise improvements to the saved-vehicle experience across platforms.",
       },
       {
@@ -398,6 +400,7 @@ const allSelectedProjects: Project[] = [
     role: "Product Designer",
     platform: "iOS, Android",
     timeframe: "Q4 2024 – Q3 2025",
+    team: "PM, 4 engineers (iOS and Android)",
     tags: ["Personalisation", "A/B Testing", "Experimentation", "Data-informed"],
     thumbnail: {
       src: "/images/projects/project-2/thumb.png",
@@ -416,8 +419,8 @@ const allSelectedProjects: Project[] = [
       "AutoScout24's home screen didn't feel like a marketplace. It highlighted the newest vehicles, but the selection wasn't tailored to individual users, and 43% of users said they couldn't find what they were looking for. A personalised recommender is standard on competing marketplaces, and we already had the algorithms. The opportunity was to help users discover more relevant cars through recommendations shaped by their behaviour and interests.",
     sections: [
       {
-        heading: "My Role & Team",
-        body: "I worked with the app team across iOS and Android, a PM and four engineers, to explore both sides of the experience: which vehicles to recommend, and how the interface should help users browse those recommendations.",
+        heading: "My Role",
+        body: "I designed every iteration across iOS and Android, exploring both sides of the experience: which vehicles to recommend, and how the interface should help users browse those recommendations.",
       },
       {
         heading: "More Vehicles, Less Clutter",
