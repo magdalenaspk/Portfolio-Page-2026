@@ -14,7 +14,7 @@ export const aboutContent: AboutContent = {
   strengths: [
     {
       title: "Problem Framing",
-      body: "I question assumptions early and reframe around root causes, not symptoms. On a recent app onboarding project, shifting the focus from login friction to perceived value was associated with a 25% increase in app logged-in users.",
+      body: "I question assumptions early and reframe around root causes, not symptoms. On a recent app onboarding project, shifting the focus from login friction to perceived value resulted in a 40% increase in logged-in iOS users within three weeks of release.",
     },
     {
       title: "Systems Thinking",
@@ -107,7 +107,7 @@ export const aboutContent: AboutContent = {
       organization: "AutoScout24",
       period: "Aug 2024 – Sep 2026",
       description:
-        "Growth and engagement on Europe's largest car marketplace: +25% app logged-in users after new onboarding and +5.53% enquiries from a Favourites contact-CTA test, across iOS, Android and web.",
+        "Growth and engagement on Europe's largest car marketplace: +40% logged-in iOS users, login rate up from 17% to 32% and +5.5% enquiries, across iOS, Android and web.",
     },
     {
       id: 2,

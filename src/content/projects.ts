@@ -306,7 +306,7 @@ export const selectedProjects: Project[] = [
     title: "Favourites Redesign",
     subtitle: "A Working Space for Buyers",
     description:
-      "Making Favourites a working space for car buyers, not just a place to store vehicle links. +5.53% enquiries in the contact-CTA experiment.",
+      "Made Favourites a working space for car buyers: contact from the card, page-level sorting and bulk actions, clearer states. ~5.5% more enquiries.",
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android, Web",
@@ -325,7 +325,7 @@ export const selectedProjects: Project[] = [
       height: 1080,
     },
     overview:
-      "Favourites is where car shoppers keep track of vehicles they may want to come back to. But the existing experience made important next steps harder than they needed to be: contacting a seller required opening a detail page, managing several saved vehicles was cumbersome, and sold listings could be difficult to distinguish from available ones. The redesign focused on making Favourites more useful as a working space for a buyer, not just a place to store vehicle links.",
+      "Favourites is where car shoppers keep track of vehicles they may want to come back to. It was one of AutoScout24's key engagement screens, the third most active in the apps and on web after search results and vehicle detail pages, yet it hadn't been redesigned in years. Contacting a seller required opening a detail page, managing several saved vehicles was cumbersome, and sold listings could be difficult to distinguish from available ones. The redesign made Favourites a working space for a buyer, not just a place to store vehicle links.",
     sections: [
       {
         heading: "My Role & Team",
@@ -333,8 +333,17 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Research",
-        body: "I ran a survey with 1,142 respondents across Android and iOS to better understand how people used Favourites and what they needed from it. The research explored behaviours such as reviewing saved cars, comparing prices, checking for listing changes and understanding how long a vehicle had been online.\n\nThe findings helped focus the redesign on practical tasks: make seller contact easier, make saved listings easier to manage, and surface useful listing information without forcing users to open every detail page.",
-        stats: [{ value: "1,142", label: "survey respondents across Android and iOS" }],
+        body: "I ran a survey across the German and Austrian markets, on Android and iOS, to understand how people used Favourites and what they needed from it.",
+        points: [
+          { icon: "chart", title: "Price is what they track most", body: "Users compare prices across their saved cars." },
+          { icon: "eye", title: "They check back regularly", body: "Looking for listing changes and updates." },
+          { icon: "sort", title: "They want listing age", body: "How long a vehicle has been online." },
+        ],
+        afterPoints: "Mapping these needs against the existing screen focused the redesign on practical tasks: make seller contact easier, make saved listings easier to manage, and surface useful information without opening every detail page.",
+        stats: [
+          { value: "1,142", label: "survey respondents, DE and AT, Android and iOS" },
+          { value: "12+", label: "improvement opportunities mapped" },
+        ],
         image: {
           src: "/images/projects/project-1/detail-1.png",
           alt: "Favourites before the redesign",
@@ -345,12 +354,12 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Constraints",
-        body: "Favourites cards needed to match the established search-result card. Search cards had already been refined through A/B testing, so reusing that pattern kept vehicle information and actions consistent across the journey. The main opportunity was not to invent a new card style, but to improve the controls and states around saved vehicles.",
+        body: "Favourites cards needed to match the established search-result card. Search cards had already been refined through A/B testing, so reusing that pattern kept vehicle information and actions consistent across the journey.\n\nBut the two cards have different jobs. On search, a card's job is to get users to the detail page. On Favourites, users have already chosen, so the card could go further and let them act.",
         gallery: {
           variant: "cards",
           items: [
-            { src: "/images/projects/project-1/screens/card-search.png", alt: "Search-result card", caption: "Search-result card" },
-            { src: "/images/projects/project-1/screens/card-favourites.png", alt: "Favourites card with contact buttons", caption: "Favourites card, with a contact button" },
+            { src: "/images/projects/project-1/screens/card-search.png", alt: "Search-result card", caption: "Search card: gets users to the detail page" },
+            { src: "/images/projects/project-1/screens/card-favourites.png", alt: "Favourites card with contact buttons", caption: "Favourites card: same pattern, lets users act" },
           ],
         },
       },
@@ -358,25 +367,27 @@ export const selectedProjects: Project[] = [
         heading: "Design Decisions",
         body: "At page level, users needed better ways to organise and manage saved vehicles, and the card itself needed to support the next action.",
         points: [
-          { icon: "chat", title: "Contact from the card", body: "Reach the seller directly from Favourites instead of opening the detail page first." },
-          { icon: "sort", title: "Sorting", body: "By date, price, mileage and year." },
+          { icon: "chat", title: "Contact from the card", body: "The biggest bet: it saves a click at the right moment, but risked lower-quality leads from quick taps. We tested it rather than debated it." },
+          { icon: "sort", title: "Sorting", body: "By date, price, mileage and year, in a native sort sheet." },
           { icon: "trash", title: "Single and bulk removal", body: "Remove individual or multiple vehicles." },
-          { icon: "undo", title: "Undo", body: "Recover from an accidental removal, reducing the cost of a mistake." },
+          { icon: "undo", title: "Undo, not a blocking dialog", body: "A snackbar confirms removal and offers undo." },
           { icon: "x", title: "A clear sold state", body: "Distinguish sold listings from cars still available." },
           { icon: "grid", title: "Recommender below", body: "Sits under the saved vehicles so it doesn't interrupt the primary task." },
         ],
+        afterPoints: "On iOS the screen follows platform conventions, including full dark mode support.",
         gallery: {
           items: [
-            { src: "/images/projects/project-1/screens/fav-list.png", alt: "Favourites page", caption: "Favourites" },
-            { src: "/images/projects/project-1/screens/fav-sort.png", alt: "Page-level sorting options", caption: "Page-level sorting" },
-            { src: "/images/projects/project-1/screens/fav-removed-undo.png", alt: "Vehicle removed with an undo option", caption: "Removal, with undo" },
+            { src: "/images/projects/project-1/screens/fav-list.png", alt: "Favourites page on iOS", caption: "Favourites on iOS" },
+            { src: "/images/projects/project-1/screens/fav-sort.png", alt: "Native sort sheet", caption: "Native sort sheet" },
+            { src: "/images/projects/project-1/screens/fav-removed-undo.png", alt: "Vehicle removed with an undo snackbar", caption: "Removed, with undo" },
             { src: "/images/projects/project-1/screens/fav-recommender.png", alt: "Recommender below the saved vehicles", caption: "Recommender below Favourites" },
+            { src: "/images/projects/project-1/screens/fav-list-dark.png", alt: "Favourites in dark mode", caption: "Dark mode" },
           ],
         },
       },
       {
         heading: "Listing States",
-        body: "The card needed to communicate more than vehicle details. Different states helped users understand whether a listing was still available, had been sold, or what kind of listing it was.",
+        body: "The card needed to communicate more than vehicle details. Different states help users understand whether a listing is still available, has been sold, or what kind of listing it is.",
         gallery: {
           variant: "cards",
           items: [
@@ -390,32 +401,55 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "Empty State",
-        body: "The mobile-web empty state explained the value of saving vehicles and encouraged users to save their first one. It shows how the experience communicates the purpose of Favourites before a user has added any vehicles. The message stays consistent across platforms while adapting to each layout.",
+        heading: "Mobile Web & Empty State",
+        body: "On mobile web the card leads with a large, swipeable photo, following the mobile web search card.\n\nThe empty state explains the value of saving vehicles and encourages users to save their first one, so the purpose of Favourites is clear before anything has been added.",
         gallery: {
           items: [
-            { src: "/images/projects/project-1/screens/fav-mweb-empty.png", alt: "Empty Favourites state on mobile web", caption: "Mobile-web empty state" },
+            { src: "/images/projects/project-1/screens/fav-mweb-list.png", alt: "Favourites on mobile web with a large photo card", caption: "Large, swipeable photos" },
+            { src: "/images/projects/project-1/screens/fav-mweb-empty.png", alt: "Empty Favourites state on mobile web", caption: "Empty state: why to save, and where to start" },
           ],
         },
       },
       {
-        heading: "Outcome: +5.53% Enquiries",
-        body: "The contact-CTA experiment was a 7-day Android test across all users and all markets. The result belongs to the contact CTA; the experiment did not isolate the other parts of the redesign.",
-        stats: [{ value: "+5.53%", label: "enquiries", context: "Contact-CTA experiment · Android" }],
+        heading: "Desktop",
+        body: "On desktop the same card spreads into a horizontal layout inside the account area, with the photo, price rating and both contact actions visible at once.",
+        gallery: {
+          variant: "desktop",
+          items: [
+            { src: "/images/projects/project-1/screens/fav-desktop.png", alt: "Favourites page on desktop web", caption: "Favourites on desktop" },
+          ],
+        },
       },
       {
-        heading: "Further Exploration",
-        body: "Further ideas explored how Favourites could support the buying journey over time. These were explorations, separate from the contact-CTA result.",
+        heading: "Outcome",
+        body: "The A/B test with the new card and contact buttons increased enquiries across all platforms combined. Enquiries are the metric that matters most on a marketplace, because they turn browsing into leads for dealers.",
+        stats: [{ value: "+5.5%", label: "enquiries (approx.)", context: "A/B test · all platforms combined" }],
+        afterPoints: "Users were ready to act from Favourites; they just needed the path made easy. And they did.",
+      },
+      {
+        heading: "After Launch: Three More Iterations",
+        body: "The redesign was a foundation, not a finish line. Over the following months I designed three more releases for web, each building on the new card.",
         points: [
-          { icon: "mail", title: "Email updates", tag: "Exploration" },
-          { icon: "users", title: "Personalised dealer and buyer recommendations", tag: "Exploration" },
+          { icon: "gift", title: "Personal dealer offers", body: "A car in Favourites is a strong buying signal, so dealers can send those users a personal offer. It appears on the card as a collapsible panel with the date it arrived.", tag: "Web" },
+          { icon: "grid", title: "A recommender on web", body: "Like on iOS, similar cars appear below the list, so Favourites keeps feeding discovery.", tag: "Web" },
+          { icon: "mail", title: "Email updates", body: "Users valued emails about their saved cars, with strong open rates. A toggle subscribes them to price drops, high demand and availability.", tag: "Web" },
         ],
         gallery: {
           variant: "cards",
-          caption: "Exploration",
+          size: "small",
           items: [
-            { src: "/images/projects/project-1/screens/offer-expanded.png", alt: "Card with a personal dealer offer", caption: "Personalised dealer offer" },
-            { src: "/images/projects/project-1/screens/toggle-on.png", alt: "Favourites with an email updates toggle", caption: "Email updates" },
+            { src: "/images/projects/project-1/screens/offer-collapsed.png", alt: "Card with a collapsed personal dealer offer", caption: "Dealer offer, collapsed" },
+            { src: "/images/projects/project-1/screens/offer-expanded.png", alt: "Card with an expanded personal dealer offer", caption: "Expanded, with the date it arrived" },
+          ],
+        },
+      },
+      {
+        heading: "Email Updates",
+        body: "One switch at the top of Favourites, with clear feedback both ways and the same setting mirrored in the account notification settings. It gave users a real upgrade, and it grew email subscribers, feeding the wider goal of growing logged-in users.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-1/screens/toggle-on.png", alt: "Favourites with the email updates toggle on and a confirmation snackbar", caption: "Subscribed, confirmed with a snackbar" },
+            { src: "/images/projects/project-1/screens/toggle-off.png", alt: "Favourites with the email updates toggle off", caption: "Unsubscribed, with the same clarity" },
           ],
         },
       },
