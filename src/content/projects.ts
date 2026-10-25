@@ -291,7 +291,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Mobile Web",
-        body: "On mobile web the card leads with a large, swipeable photo, following the mobile web search card. An empty list is not a dead end: it explains what Favourites is for, offers a way to start searching, and shows recommendations straight away.",
+        body: "On mobile web the card leads with a large, swipeable photo, following the mobile web search card. An empty list is not a dead end: it explains what Favourites is for and offers a clear way to start searching.",
         gallery: {
           items: [
             { src: "/images/projects/project-1/screens/fav-mweb-list.png", alt: "Favourites on mobile web with a large photo card", caption: "Large photos on mobile web" },

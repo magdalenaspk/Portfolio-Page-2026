@@ -19,7 +19,7 @@ function layoutClass(g: Gallery) {
   if (g.variant === "desktop") {
     return `grid ${g.items.length === 1 ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"}`;
   }
-  return `flex overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-2 sm:-mx-8 sm:px-8 md:mx-0 md:px-0 md:pb-0 md:overflow-visible md:grid ${
+  return `flex overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-2 sm:-mx-8 sm:px-8 md:mx-auto md:px-0 md:pb-0 md:overflow-visible md:grid ${
     phoneCols[Math.min(g.items.length, 6)]
   }`;
 }
