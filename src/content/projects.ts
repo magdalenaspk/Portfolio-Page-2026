@@ -1,12 +1,12 @@
 import { Project } from "./types";
 
-export const selectedProjects: Project[] = [
+const allSelectedProjects: Project[] = [
   {
     id: 7,
     slug: "growing-logged-in-users",
     status: "published",
     title: "Growing Logged-in Users",
-    subtitle: "Login Moments and the AutoScout24 Club Vision",
+    subtitle: "Timely Reasons to Log In",
     description:
       "Giving users a timely reason to log in, improving the login experience itself, and a longer-term vision for an AutoScout24 Club.",
     company: "AutoScout24",
@@ -38,9 +38,9 @@ export const selectedProjects: Project[] = [
         heading: "The Problem",
         body: "Logged-in users behaved very differently from logged-out users, yet users saw little reason to sign up: they used the platform infrequently, had privacy concerns, saw no clear benefit, and the site worked perfectly well without an account. The company set an OKR to grow the share of logged-in users.",
         stats: [
-          { value: "+75%", label: "higher enquiry conversion rate", context: "Logged-in users · web" },
-          { value: "+40%", label: "more vehicle detail pages viewed per week", context: "Logged-in users · web" },
-          { value: "+33%", label: "more sessions from CRM channels", context: "Logged-in users · web" },
+          { value: "75%", label: "higher enquiry conversion rate", context: "Logged-in users · web" },
+          { value: "40%", label: "more vehicle detail pages viewed per week", context: "Logged-in users · web" },
+          { value: "33%", label: "more sessions from CRM channels", context: "Logged-in users · web" },
         ],
       },
       {
@@ -86,7 +86,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "2. Price History: Teaser or Direct Login?",
-        body: "Price history answers a key buyer question: is this really a good deal? On mobile it already sat behind a login wall with no significant drop in leads, so the next step was web. I tested two ways in:",
+        body: "Price history answers a key buyer question: is this really a good deal? In the apps it already sat behind a login wall with no significant drop in leads, so the next step was web. I tested two ways in:",
         points: [
           { icon: "eye", title: "Teaser first", body: "Show the price rating, then ask users to log in to unlock the history.", tag: "Tested" },
           { icon: "key", title: "Direct login", body: "Go straight to a login framed around the insight.", tag: "Winner" },
@@ -95,6 +95,7 @@ export const selectedProjects: Project[] = [
         stats: [
           { value: "+16%", label: "more likely to log in with direct login than with the teaser", context: "A/B test · web" },
         ],
+        galleryAt: "afterBody",
         gallery: {
           variant: "desktop",
           items: [
@@ -104,38 +105,22 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "The Price History Flow",
-        body: "After login, users land back on the listing with the full insight open. The view does the maths for them: where the price sits against the market, the total reduction, and every change in euros rather than percentages. Each price rating has its own state, and web, iOS and Android share one pattern.",
-        stats: [
-          { value: "+3%", label: "logged-in iOS users", context: "Price-history login" },
-          { value: "+14.5%", label: "web logins", context: "Price-history login" },
-          { value: "+24.6%", label: "web registrations", context: "Price-history login" },
-        ],
-        gallery: {
-          items: [
-            { src: "/images/projects/project-7/screens/ph-1-detail.png", alt: "Vehicle detail page with a good price rating", caption: "The price rating is visible to everyone" },
-            { src: "/images/projects/project-7/screens/ph-2-login.png", alt: "Login screen titled See how this car is priced", caption: "Login framed around the insight" },
-            { src: "/images/projects/project-7/screens/ph-3-listed.png", alt: "Price Insights with market position and listed price", caption: "Market position, unlocked" },
-            { src: "/images/projects/project-7/screens/ph-4-history.png", alt: "Price Insights with full price history and total reduction", caption: "Full history, with the total reduction calculated" },
-          ],
-        },
-      },
-      {
         heading: "3. Popularity: From Fake Door to Login Moment",
         body: "Does social proof make users more likely to enquire? We validated that before building it, then turned it into a reason to log in.",
         points: [
-          { icon: "beaker", title: "Fake-door test", body: "A \"Popular\" label assigned at random to 5% of listings, before investing in the data." },
-          { icon: "chat", title: "Usability evidence", body: "People actively looked for popularity information and said it helped them decide." },
+          { icon: "beaker", title: "Fake-door test", body: "A \"Popular\" label shown on around 5% of listings, before investing in the data." },
+          { icon: "chat", title: "Usability test evidence", body: "Users actively looked for popularity information and said it helped them decide." },
           { icon: "eye", title: "Gated for logged-out users", body: "Views, gallery swipes and Favourites adds are blurred behind a sign-in prompt, at the moment of interest." },
         ],
         afterPoints: "Once live on web, popularity drove 5% of login attempts, but some users dropped out before finishing login. That drop-off made the case for redesigning the login itself.",
         stats: [
-          { value: "+2%", label: "conversion on randomly labelled listings", context: "Fake-door test" },
+          { value: "+2%", label: "conversion on labelled listings", context: "Fake-door test" },
           { value: "5%", label: "of login attempts driven by popularity", context: "Live on web" },
         ],
+        galleryAt: "beforeStats",
         gallery: {
           items: [
-            { src: "/images/projects/project-7/screens/pop-0-label-list.png", alt: "Search results with a Sehr beliebt label on listings", caption: "The \"Popular\" label, first tested on random listings" },
+            { src: "/images/projects/project-7/screens/pop-0-label-list.png", alt: "Search results with a Sehr beliebt label on listings", caption: "The \"Popular\" label, first tested as a fake door" },
             { src: "/images/projects/project-7/screens/pop-0-label-detail.png", alt: "Detail page with the popular label", caption: "The label on the detail page" },
             { src: "/images/projects/project-7/screens/pop-1-blurred.png", alt: "Popularity section with blurred views and favourites", caption: "Logged out: numbers blurred, with a reason to sign in" },
             { src: "/images/projects/project-7/screens/pop-2-legacy-login.png", alt: "Legacy login screen", caption: "The old login screen" },
@@ -145,14 +130,14 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "4. Fixing the Login Screen",
-        body: "The existing login screen felt outdated and its hierarchy didn't follow established login patterns. I audited it against guidance from Nielsen Norman Group and Baymard Institute, and it failed all four standards:",
+        body: "The existing login screen felt outdated and its hierarchy didn't follow established login patterns. I redesigned it following four standards from Nielsen Norman Group:",
         points: [
           { icon: "layers", title: "Reduce cognitive load at the point of entry" },
           { icon: "users", title: "Make social login prominent, before the email form" },
           { icon: "sparkle", title: "Explain what users get by logging in" },
           { icon: "cursor", title: "Give the screen one clear primary action" },
         ],
-        afterPoints: "The redesign fixes all four. It leads with why to log in (track price drops, save Favourites, check if a price is fair), puts Google, Apple and Facebook above email, and widens the desktop modal so long German words don't break. It works in three contexts: full page, popup and mobile web.\n\nWe launched it in Austria first and monitored it for two weeks. Logins rose slightly, dealer login rates didn't dip and there were no security issues, so it was rolled out to all markets.",
+        afterPoints: "The redesign leads with why to log in (track price drops, save Favourites, check if a price is fair), puts Google, Apple and Facebook above email, and widens the desktop modal so long German words don't break. It works in three contexts: full page, popup and mobile web.\n\nWe launched it in Austria first and monitored it for two weeks. Logins rose slightly, dealer login rates didn't dip and there were no security issues, so it was rolled out to all markets.",
         image: {
           src: "/images/projects/project-7/detail-1.png",
           alt: "Legacy login modal compared with the redesigned login modal",
@@ -185,7 +170,7 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "The Registration Flow",
-        body: "On mobile web, the whole journey takes a few steps. Social sign-in comes first. Email users get password rules checked as they type, so errors are prevented rather than reported. Consent and captcha share one screen, and users land back where they started.",
+        body: "The whole journey takes several steps; the screens below are from mobile web. Social sign-in comes first. Email users get password rules checked as they type, so errors are prevented rather than reported. Consent and captcha share one screen, and users land back where they started.",
         gallery: {
           items: [
             { src: "/images/projects/project-7/screens/reg-1-start.png", alt: "Sign in or register screen", caption: "Social first, email second" },
@@ -212,14 +197,11 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "5. From Passwords to One-Time Codes",
-        body: "After the rollout, the next source of friction was the password itself. With Trust & Identity, we replaced passwords for email users with a six-digit code sent by email.",
+        body: "After the rollout, the next source of friction was the password itself. With Trust & Identity, we replaced passwords for email users with a six-digit code sent by email. The one-time code flow is what's live today.",
         points: [
           { icon: "key", title: "No password", body: "Nothing to create, meet rules for, or forget." },
           { icon: "layers", title: "One flow", body: "Sign-in and registration together, so users don't need to know if they have an account." },
-          { icon: "shield", title: "Ten-minute codes", body: "Each code expires after ten minutes." },
-          { icon: "chat", title: "Clear feedback", body: "The input says when a code is incomplete." },
         ],
-        afterPoints: "The one-time code flow is what's live today.",
         gallery: {
           items: [
             { src: "/images/projects/project-7/screens/otp-1-email.png", alt: "Sign in or register with an email address entered", caption: "One entry point for sign-in and registration" },
@@ -228,28 +210,6 @@ export const selectedProjects: Project[] = [
             { src: "/images/projects/project-7/screens/otp-4-filled.png", alt: "Code entered", caption: "Code entered" },
             { src: "/images/projects/project-7/screens/otp-5-error.png", alt: "Incomplete code error", caption: "Clear feedback when it's incomplete" },
             { src: "/images/projects/project-7/screens/reg-5-welcome.png", alt: "Homepage with a welcome message", caption: "Signed in, back where they started" },
-          ],
-        },
-      },
-      {
-        heading: "6. Saved Search: From Soft Sign-up to One Tap",
-        body: "Saving a search is a high-intent moment, so it became our testing ground. Each version built on what the previous one taught us.",
-        points: [
-          { icon: "mail", title: "V2: soft, email-first sign-up", body: "Users subscribed to alerts without feeling blocked by account creation." },
-          { icon: "bolt", title: "V3: the login screen is the confirmation", body: "Possible only with the new, customisable login dialog." },
-          { icon: "key", title: "V4: one-tap social sign-in", body: "Apple only, Google only and both were tested. Apple alone won on iPhones, so we shipped Apple on iOS and Google on Android." },
-        ],
-        afterPoints: "The hypothesis was that the lower friction of social login would outweigh the added requirement. It did.",
-        stats: [
-          { value: "17% → 32%", label: "login rate in the saved-search flow (about +90%)", context: "V4 · social sign-in" },
-          { value: "+2%", label: "logged-in users across all platforms", context: "V4 · social sign-in" },
-        ],
-        gallery: {
-          items: [
-            { src: "/images/projects/project-7/screens/sase-v2-soft.png", alt: "Search saved dialog asking for an email address", caption: "V2: soft sign-up, email only" },
-            { src: "/images/projects/project-7/screens/sase-v3-login.png", alt: "Login screen confirming matching vehicles will be sent by email", caption: "V3: the login screen is the confirmation" },
-            { src: "/images/projects/project-7/screens/sase-v4-apple.png", alt: "Bottom sheet with Continue with Apple", caption: "V4 shipped on iOS: Apple only" },
-            { src: "/images/projects/project-7/screens/sase-v4-both.png", alt: "Bottom sheet with Apple and Google sign-in", caption: "V4 test: both, which lost to Apple only" },
           ],
         },
       },
@@ -319,10 +279,9 @@ export const selectedProjects: Project[] = [
           { icon: "eye", title: "They check back regularly", body: "Looking for listing changes and updates." },
           { icon: "sort", title: "They want listing age", body: "How long a vehicle has been online." },
         ],
-        afterPoints: "Mapping these needs against the existing screen focused the redesign on practical tasks: make seller contact easier, make saved listings easier to manage, and surface useful information without opening every detail page.",
+        afterPoints: "Mapping these needs against the existing screen surfaced improvement opportunities and focused the redesign on practical tasks: make seller contact easier, make saved listings easier to manage, and surface useful information without opening every detail page.",
         stats: [
           { value: "1,142", label: "survey respondents, DE and AT, Android and iOS" },
-          { value: "12+", label: "improvement opportunities mapped" },
         ],
         image: {
           src: "/images/projects/project-1/detail-1.png",
@@ -412,24 +371,16 @@ export const selectedProjects: Project[] = [
         points: [
           { icon: "gift", title: "Personal dealer offers", body: "A car in Favourites is a strong buying signal, so dealers can send those users a personal offer. It appears on the card as a collapsible panel with the date it arrived." },
           { icon: "grid", title: "A recommender on web", body: "Like on iOS, similar cars appear below the list, so Favourites keeps feeding discovery." },
-          { icon: "mail", title: "Email updates", body: "Users valued emails about their saved cars, with strong open rates. A toggle subscribes them to price drops, high demand and availability." },
+          { icon: "mail", title: "Email updates", body: "Users valued emails about their saved cars, with strong open rates. A toggle subscribes them to price drops, high demand and availability, mirrored in account settings. It also grew email subscribers." },
         ],
         gallery: {
           variant: "cards",
-          size: "small",
+          itemWidth: 200,
           items: [
             { src: "/images/projects/project-1/screens/offer-collapsed.png", alt: "Card with a collapsed personal dealer offer", caption: "Dealer offer, collapsed" },
-            { src: "/images/projects/project-1/screens/offer-expanded.png", alt: "Card with an expanded personal dealer offer", caption: "Expanded, with the date it arrived" },
-          ],
-        },
-      },
-      {
-        heading: "Email Updates",
-        body: "One switch at the top of Favourites, with clear feedback both ways and the same setting mirrored in the account notification settings. It gave users a real upgrade, and it grew email subscribers, feeding the wider goal of growing logged-in users.",
-        gallery: {
-          items: [
-            { src: "/images/projects/project-1/screens/toggle-on.png", alt: "Favourites with the email updates toggle on and a confirmation snackbar", caption: "Subscribed, confirmed with a snackbar" },
-            { src: "/images/projects/project-1/screens/toggle-off.png", alt: "Favourites with the email updates toggle off", caption: "Unsubscribed, with the same clarity" },
+            { src: "/images/projects/project-1/screens/offer-expanded.png", alt: "Card with an expanded personal dealer offer", caption: "Dealer offer, expanded with its date" },
+            { src: "/images/projects/project-1/screens/toggle-on.png", alt: "Favourites with the email updates toggle on and a confirmation snackbar", caption: "Email updates on, confirmed" },
+            { src: "/images/projects/project-1/screens/toggle-off.png", alt: "Favourites with the email updates toggle off", caption: "Email updates off" },
           ],
         },
       },
@@ -462,7 +413,7 @@ export const selectedProjects: Project[] = [
       height: 1080,
     },
     overview:
-      "AutoScout24's home screen felt more like a blog than a marketplace. It highlighted the newest vehicles, but the selection wasn't tailored to individual users, and 43% of users said they couldn't find what they were looking for. A personalised recommender is standard on competing marketplaces, and we already had the algorithms. The opportunity was to help users discover more relevant cars through recommendations shaped by their behaviour and interests.",
+      "AutoScout24's home screen didn't feel like a marketplace. It highlighted the newest vehicles, but the selection wasn't tailored to individual users, and 43% of users said they couldn't find what they were looking for. A personalised recommender is standard on competing marketplaces, and we already had the algorithms. The opportunity was to help users discover more relevant cars through recommendations shaped by their behaviour and interests.",
     sections: [
       {
         heading: "My Role & Team",
@@ -517,18 +468,6 @@ export const selectedProjects: Project[] = [
         },
       },
       {
-        heading: "Beyond the Home Screen",
-        body: "The same recommender also lived on the vehicle detail page, at the very bottom, below the seller details. I designed an experiment that moved it up, directly after the vehicle description, to catch users who were unsure about the car they were looking at.\n\nRecommender engagement stayed roughly the same, but engagement with everything below it dropped, including the seller details. A higher position didn't create new interest, it only moved attention around, so we rolled it back: a reminder to measure the whole page, not just the component being tested.",
-        gallery: {
-          variant: "cards",
-          itemWidth: 200,
-          items: [
-            { src: "/images/projects/project-2/screens/dp-before.png", alt: "Detail page with the recommender at the very bottom", caption: "Before: recommender at the very end" },
-            { src: "/images/projects/project-2/screens/dp-after.png", alt: "Detail page with the recommender after the vehicle description", caption: "Experiment: right after the description, rolled back" },
-          ],
-        },
-      },
-      {
         heading: "Outcome",
         body: "The work explored how recommendation relevance, feed density and navigation interact, comparing different ways of presenting cars and moving between categories rather than assuming a familiar pattern would improve discovery. Clicks, overall engagement, detail-page views and lead conversions were kept as separate measures.\n\nComparing recommendation types also showed a clear ranking: 'Based on your last view' and 'Reduced offers' performed best, followed by 'Based on your last search'. That decided the order of categories in the final design.",
         image: {
@@ -543,6 +482,7 @@ export const selectedProjects: Project[] = [
   {
     id: 3,
     slug: "deals-entry-point",
+    hidden: true,
     status: "published",
     title: "Deals Entry Point",
     subtitle: "A Clearer Entry Point for Super Deals",
@@ -634,6 +574,9 @@ export const selectedProjects: Project[] = [
     ],
   },
 ];
+
+// Cases marked hidden stay in the file but are left off this branch.
+export const selectedProjects = allSelectedProjects.filter((p) => !p.hidden);
 
 // Workshops and talks hosted, ordered by impact. Shown in their own section on the homepage
 export const workshops: Project[] = [

@@ -103,16 +103,6 @@ export default function ProjectPage({ params }: PageProps) {
                   </span>
                 </div>
               )}
-              {project.timeframe && (
-                <div>
-                  <span className="block text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-0.5">
-                    Timeframe
-                  </span>
-                  <span className="font-medium text-neutral-700">
-                    {project.timeframe}
-                  </span>
-                </div>
-              )}
               {project.platform && (
                 <div>
                   <span className="block text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-0.5">
@@ -127,6 +117,9 @@ export default function ProjectPage({ params }: PageProps) {
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
+              {project.timeframe && (
+                <Badge variant="outline">{project.timeframe}</Badge>
+              )}
               {project.tags.map((tag) => (
                 <Badge key={tag} variant="outline">
                   {tag}
@@ -177,6 +170,46 @@ export default function ProjectPage({ params }: PageProps) {
                 className={`py-16 ${i % 2 === 1 ? "bg-neutral-50/60" : ""}`}
               >
                 <Container>
+                  {section.galleryAt && section.gallery && !section.image ? (
+                    <>
+                      <div className="max-w-3xl mx-auto">
+                        <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-6">
+                          {section.heading}
+                        </h2>
+                        <div className="prose-body text-neutral-600 leading-relaxed text-base md:text-lg space-y-4">
+                          {section.body.split("\n\n").map((para, pi) => (
+                            <p key={pi}>{para}</p>
+                          ))}
+                        </div>
+                        {section.galleryAt === "beforeStats" && section.points && (
+                          <div className="mt-8">
+                            <PointList points={section.points} />
+                          </div>
+                        )}
+                      </div>
+                      <ScreenGallery gallery={section.gallery} />
+                      <div className="max-w-3xl mx-auto">
+                        {section.galleryAt === "afterBody" && section.points && (
+                          <div className="mt-10">
+                            <PointList points={section.points} />
+                          </div>
+                        )}
+                        {section.stats && (
+                          <div className="mt-10">
+                            <StatRow stats={section.stats} />
+                          </div>
+                        )}
+                        {section.afterPoints && (
+                          <div className="mt-8 prose-body text-neutral-600 leading-relaxed text-base md:text-lg space-y-4">
+                            {section.afterPoints.split("\n\n").map((para, pi) => (
+                              <p key={pi}>{para}</p>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </>
+                  ) : (
+                  <>
                   <div
                     className={
                       section.image
@@ -245,6 +278,8 @@ export default function ProjectPage({ params }: PageProps) {
 
                   {/* Screen gallery (full width, below text) */}
                   {section.gallery && <ScreenGallery gallery={section.gallery} />}
+                  </>
+                  )}
 
                   {/* Presentation viewer (full width, below text) */}
                   {section.presentation && (

@@ -55,6 +55,7 @@ export interface CaseStudySection {
   presentation?: string; // Path to PDF in /public
   media?: "onboarding-video"; // Renders an embedded video instead of the image
   gallery?: Gallery; // Full-width row of screens below the text
+  galleryAt?: "afterBody" | "beforeStats"; // Show the screens earlier, between text blocks
 }
 
 export interface Project {
@@ -67,7 +68,8 @@ export interface Project {
   company: string;
   role?: string;
   platform?: string;
-  timeframe?: string; // e.g. "Q2 2025 – Q3 2026"
+  timeframe?: string; // e.g. "Q2 2025 – Q3 2026", shown as the first tag
+  hidden?: boolean; // Keep the case in the file but leave it off this site
   tags: string[];
   thumbnail: ProjectImage;
   // Case study fields — only required when status === "published"
