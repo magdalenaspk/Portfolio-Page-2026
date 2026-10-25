@@ -103,6 +103,16 @@ export default function ProjectPage({ params }: PageProps) {
                   </span>
                 </div>
               )}
+              {project.timeframe && (
+                <div>
+                  <span className="block text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-0.5">
+                    Timeframe
+                  </span>
+                  <span className="font-medium text-neutral-700">
+                    {project.timeframe}
+                  </span>
+                </div>
+              )}
               {project.platform && (
                 <div>
                   <span className="block text-xs font-semibold text-neutral-500 uppercase tracking-wider mb-0.5">

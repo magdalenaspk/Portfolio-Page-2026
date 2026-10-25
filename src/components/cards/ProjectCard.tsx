@@ -35,6 +35,7 @@ export function ProjectCard({ project, ctaLabel = "View case study" }: ProjectCa
         <div className="p-6 flex-1">
           <p className="text-xs font-medium text-neutral-500 mb-1 uppercase tracking-wider">
             {project.company}
+            {project.timeframe && <> · {project.timeframe}</>}
           </p>
           <h3 className="text-lg font-bold text-neutral-900 mb-1 group-hover:text-neutral-700 transition-colors">
             {project.title}

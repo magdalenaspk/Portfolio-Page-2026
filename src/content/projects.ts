@@ -12,6 +12,7 @@ export const selectedProjects: Project[] = [
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android, Web, mWeb",
+    timeframe: "Q2 2025 – Q3 2026",
     tags: ["Growth", "Login & Registration", "A/B Testing", "Cross-platform"],
     thumbnail: {
       src: "/images/projects/project-7/thumb.png",
@@ -31,7 +32,7 @@ export const selectedProjects: Project[] = [
     sections: [
       {
         heading: "My Role & Team",
-        body: "Q2 2025 to Q3 2026. I was the product designer working across three teams, each with a product manager and three to four engineers. I designed the experiences and presented the work at a company-wide all-hands.",
+        body: "I was the product designer working across three teams, each with a product manager and three to four engineers. I designed the experiences and presented the work at a company-wide all-hands.",
       },
       {
         heading: "The Problem",
@@ -310,6 +311,7 @@ export const selectedProjects: Project[] = [
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android, Web",
+    timeframe: "Q1 – Q2 2025",
     tags: ["UX Design", "A/B Testing", "User Research", "Cross-platform"],
     thumbnail: {
       src: "/images/projects/project-1/thumb.png",
@@ -461,10 +463,11 @@ export const selectedProjects: Project[] = [
     title: "Homescreen Recommendations",
     subtitle: "Personalising the Home Screen",
     description:
-      "Helping people discover more relevant cars on the app home screen: which vehicles to recommend, and how to browse them.",
+      "Helping users discover more relevant cars on the app home screen: which vehicles to recommend, and how to browse them.",
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android",
+    timeframe: "Q4 2024 – Q3 2025",
     tags: ["Personalisation", "A/B Testing", "Experimentation", "Data-informed"],
     thumbnail: {
       src: "/images/projects/project-2/thumb.png",
@@ -480,51 +483,78 @@ export const selectedProjects: Project[] = [
       height: 1080,
     },
     overview:
-      "AutoScout24's home screen highlighted the newest vehicles, but the selection was not tailored to individual users. The opportunity was to help people discover more relevant cars through recommendations shaped by their behaviour and interests.",
+      "AutoScout24's home screen felt more like a blog than a marketplace. It highlighted the newest vehicles, but the selection wasn't tailored to individual users, and 43% of users said they couldn't find what they were looking for. A personalised recommender is standard on competing marketplaces, and we already had the algorithms. The opportunity was to help users discover more relevant cars through recommendations shaped by their behaviour and interests.",
     sections: [
       {
         heading: "My Role & Team",
-        body: "I worked with the app team across iOS and Android to explore both sides of the experience: which vehicles to recommend, and how the interface should help users browse those recommendations.",
+        body: "I worked with the app team across iOS and Android, a PM and four engineers, to explore both sides of the experience: which vehicles to recommend, and how the interface should help users browse those recommendations.",
       },
       {
-        heading: "Recommendation Pool & Feed Simplification",
-        body: "One workstream explored reducing clutter in recommendation cards and increasing the number of vehicles visible in the feed. The proposal removed low-usage playlists and last-search listing cards that duplicated other routes into content, while increasing the visible recommendation pool from 15 to 50 vehicles.\n\nThe hypothesis was that a cleaner feed with more relevant vehicles would create a more consistent discovery experience and encourage deeper browsing. The work was planned as phased experiments, with success evaluated against the team's habit metric: users reaching more than six detail-page views in their first week.",
-        stats: [
-          { value: "15 → 50", label: "vehicles in the visible recommendation pool", context: "Proposal" },
-          { value: ">6", label: "detail-page views in the first week", context: "Habit metric" },
+        heading: "More Vehicles, Less Clutter",
+        body: "I explored reducing clutter in recommendation cards and increasing the number of vehicles visible in the feed, one A/B test at a time.",
+        points: [
+          { icon: "grid", title: "More vehicles, step by step", body: "The visible pool grew from 15 to 50 recommendations, and later had no fixed limit." },
+          { icon: "bolt", title: "Loaded gradually", body: "Recommendations load in batches of 25: the first with the screen, the next in the background as users near the end." },
+          { icon: "layers", title: "Simpler cards", body: "Only model, price and key facts, so more cars fit on screen." },
         ],
+        stats: [
+          { value: "+48%", label: "recommendation clicks (approx.)", context: "Pool 15 → 50" },
+          { value: "+17%", label: "recommendation clicks (approx.)", context: "Card simplification" },
+        ],
+        afterPoints: "Success was evaluated against the team's habit metric: users reaching more than six detail-page views in their first week.",
         gallery: {
           items: [
-            { src: "/images/projects/project-2/screens/hs-0-baseline.png", alt: "Recommendation cards before simplification", caption: "Before" },
-            { src: "/images/projects/project-2/screens/hs-2-simplified.png", alt: "Simplified recommendation cards", caption: "Feed simplification, more vehicles" },
+            { src: "/images/projects/project-2/screens/hs-0-baseline.png", alt: "Original recommendations with long titles, badges and seller type", caption: "Before: long titles, badges and seller type" },
+            { src: "/images/projects/project-2/screens/hs-2-simplified.png", alt: "Simplified recommendation cards", caption: "After: model, price and key facts, ~17% more clicks" },
           ],
         },
       },
       {
         heading: "Variety in Recommendations",
-        body: "A second planned phase explored adding variety to the feed by mixing higher- and lower-scoring recommendations and showing a broader range of vehicle visuals. This remained a hypothesis.",
+        body: "A further planned phase explored adding variety to the feed by mixing higher- and lower-scoring recommendations and showing a broader range of vehicle visuals. This remained a hypothesis.",
       },
       {
-        heading: "Navigation Experiments",
-        body: "A Netflix-style vertical-feed concept underperformed in the iOS A/B test. Later tabs and chips explorations offered another way to navigate category-based recommendations. The two sets of results are separate.",
+        heading: "When Testing and Live Data Disagreed",
+        body: "Next, I tested a Netflix-style concept: a vertical feed of horizontal rows, with recommendations grouped by type. In user testing it did well, and participants found the categories intuitive. In the live iOS A/B test, it underperformed.",
         stats: [
           { value: "−20.9%", label: "home recommendation-card clicks", context: "Netflix-style · iOS A/B" },
           { value: "−1.5%", label: "detail-page lead conversions", context: "Netflix-style · iOS A/B" },
+        ],
+        afterPoints: "Rather than force the pattern, I treated it as a signal. The lesson stuck: user testing tells you whether users understand a design, but not always how they'll behave with it.",
+        gallery: {
+          items: [
+            { src: "/images/projects/project-2/screens/hs-3-horizontal.png", alt: "Horizontal rows grouped by recommendation type", caption: "Netflix-style rows: clear in testing, fewer clicks live" },
+          ],
+        },
+      },
+      {
+        heading: "From Tabs to Chips",
+        body: "I designed a tabbed layout that kept the categories but removed the horizontal scroll. A later iteration replaced the tabs with chips, so more recommendation types fit without crowding. Recommender engagement was evaluated separately from downstream seller interest.",
+        stats: [
           { value: "+7%", label: "clicks (reported)", context: "Tabs" },
           { value: "+12%", label: "overall engagement (reported)", context: "Tabs" },
         ],
-        afterPoints: "The learning was not that one familiar pattern always works better than another. The experience needed to fit the way people discover and compare cars, and recommender engagement needed to be evaluated separately from downstream seller interest.",
         gallery: {
           items: [
-            { src: "/images/projects/project-2/screens/hs-3-horizontal.png", alt: "Netflix-style rows grouped by recommendation type", caption: "Netflix-style navigation" },
             { src: "/images/projects/project-2/screens/hs-4-tabs.png", alt: "Recommendations organised in tabs", caption: "Tabs" },
-            { src: "/images/projects/project-2/screens/hs-5-chips.png", alt: "Recommendation types as chips", caption: "Chips" },
+            { src: "/images/projects/project-2/screens/hs-5-chips.png", alt: "Recommendation types as chips", caption: "Chips: more types, no crowding" },
+          ],
+        },
+      },
+      {
+        heading: "Beyond the Home Screen",
+        body: "The same recommender also lived on the vehicle detail page, at the very bottom, below the seller details. I designed an experiment that moved it up, directly after the vehicle description, to catch users who were unsure about the car they were looking at.\n\nRecommender engagement stayed roughly the same, but engagement with everything below it dropped, including the seller details. A higher position didn't create new interest, it only moved attention around, so we rolled it back: a reminder to measure the whole page, not just the component being tested.",
+        gallery: {
+          variant: "cards",
+          items: [
+            { src: "/images/projects/project-2/screens/dp-before.png", alt: "Detail page with the recommender at the very bottom", caption: "Before: recommender at the very end" },
+            { src: "/images/projects/project-2/screens/dp-after.png", alt: "Detail page with the recommender after the vehicle description", caption: "Experiment: right after the description, rolled back" },
           ],
         },
       },
       {
         heading: "Outcome",
-        body: "The work explored how recommendation relevance, feed density and navigation interact. The experiments compared different ways of presenting cars and moving between categories, rather than assuming a familiar pattern would automatically improve discovery. Clicks, overall engagement, detail-page views and lead conversions were kept as separate measures.",
+        body: "The work explored how recommendation relevance, feed density and navigation interact, comparing different ways of presenting cars and moving between categories rather than assuming a familiar pattern would improve discovery. Clicks, overall engagement, detail-page views and lead conversions were kept as separate measures.\n\nComparing recommendation types also showed a clear ranking: 'Based on your last view' and 'Reduced offers' performed best, followed by 'Based on your last search'. That decided the order of categories in the final design.",
         image: {
           src: "/images/projects/project-2/detail-3.png",
           alt: "Home-screen recommendations with category chips",
@@ -545,6 +575,7 @@ export const selectedProjects: Project[] = [
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android",
+    timeframe: "Q2 2025",
     tags: ["Product Strategy", "Navigation Design", "Usability Testing", "Growth"],
     thumbnail: {
       src: "/images/projects/project-3/thumb.png",

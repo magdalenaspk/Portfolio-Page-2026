@@ -66,6 +66,7 @@ export interface Project {
   company: string;
   role?: string;
   platform?: string;
+  timeframe?: string; // e.g. "Q2 2025 – Q3 2026"
   tags: string[];
   thumbnail: ProjectImage;
   // Case study fields — only required when status === "published"
