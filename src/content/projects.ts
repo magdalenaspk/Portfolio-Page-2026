@@ -591,11 +591,20 @@ export const selectedProjects: Project[] = [
       height: 1080,
     },
     overview:
-      "AutoScout24's Super Deals offered discounted vehicles, but they were not easy to discover in the app. There was evidence that users were interested in deals; the challenge was to give them a clearer entry point without overcrowding the existing navigation.",
+      "AutoScout24's Super Deals are listings priced at least 3.5% or €300 below market value, and they convert at three times the rate of regular listings. But they were not easy to discover in the app. There was evidence that users were interested in deals; the challenge was to give them a clearer entry point without overcrowding the existing navigation.",
     sections: [
       {
         heading: "My Role & Team",
         body: "I led product design for the Deals entry-point exploration, working with product and engineering to assess navigation options, validate concepts with users, and explore alternative placements for Super Deals.",
+      },
+      {
+        heading: "The Opportunity",
+        body: "Price is the most important factor for AutoScout24 users, and market research pointed the same way: most European consumers rank value for money as their top purchase criterion. Users were already looking for deals; the app wasn't showing them where.",
+        stats: [
+          { value: "3×", label: "conversion rate of Super Deals vs regular listings" },
+          { value: "2% → 13%", label: "Super Deals: 2% of detail-page views, but 13% of web enquiries" },
+          { value: "30%", label: "of LeasingMarkt.de revenue from deals, only 2% of listings", context: "Sister marketplace" },
+        ],
       },
       {
         heading: "Constraint and Decision",
@@ -617,7 +626,10 @@ export const selectedProjects: Project[] = [
           { icon: "stack", title: "Stacked sections", body: "Show saved vehicles and saved searches as two areas on the same screen." },
           { icon: "tabs", title: "Filter tabs", body: "Let users switch between saved vehicles and saved searches within one destination." },
         ],
-        afterPoints: "These concepts explored trade-offs between visibility, navigation depth and the effort required to switch between saved content. The unmoderated prototype test helped assess whether people understood the proposed navigation and where they clicked. It was concept validation, not a production experiment.",
+        afterPoints: "These concepts explored trade-offs between visibility, navigation depth and the effort required to switch between saved content. An unmoderated prototype test with seven participants assessed whether users understood the proposed navigation and where they clicked. It was concept validation, not a production experiment.\n\nStacked sections gave the clearest overview and made combining the two feel logical. The bottom sheet felt too minimal and disconnected, and the filter tabs looked too much like filter controls and risked being missed. The test also showed appetite for a Deals tab, and that users expected deals to be personalised to their searches, a finding that went straight into the roadmap.",
+        stats: [
+          { value: "6 of 7", label: "participants preferred stacked sections", context: "Unmoderated prototype test" },
+        ],
         gallery: {
           caption: "Unmoderated prototype test: usability / concept validation",
           items: [
