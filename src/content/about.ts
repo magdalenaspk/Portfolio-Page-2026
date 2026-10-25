@@ -99,7 +99,7 @@ export const aboutContent: AboutContent = {
       organization: "Formel Skin & Voy",
       period: "Oct 2026 – Present",
       description:
-        "Product design across two digital health brands, with a focus on growth and conversion optimisation.",
+        "Health tech across two brands: growing the user base of Formel Skin, an online dermatology clinic (web), and launching Voy weight loss in Germany by adapting features from the UK brand (app and web).",
     },
     {
       id: 1,
