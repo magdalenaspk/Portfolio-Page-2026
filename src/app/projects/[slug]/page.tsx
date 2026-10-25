@@ -16,6 +16,7 @@ import { PlaceholderImage } from "@/components/cards/PlaceholderImage";
 import { OnboardingAnimation } from "@/components/OnboardingAnimation";
 import { PresentationWrapper } from "@/components/PresentationWrapper";
 import { ScreenGallery } from "@/components/ScreenGallery";
+import { PointList, StatRow } from "@/components/CaseStudyHighlights";
 
 interface PageProps {
   params: { slug: string };
@@ -183,6 +184,23 @@ export default function ProjectPage({ params }: PageProps) {
                           <p key={pi}>{para}</p>
                         ))}
                       </div>
+                      {section.points && (
+                        <div className="mt-8">
+                          <PointList points={section.points} narrow={!!section.image} />
+                        </div>
+                      )}
+                      {section.stats && (
+                        <div className="mt-10">
+                          <StatRow stats={section.stats} narrow={!!section.image} />
+                        </div>
+                      )}
+                      {section.afterPoints && (
+                        <div className="mt-8 prose-body text-neutral-600 leading-relaxed text-base md:text-lg space-y-4">
+                          {section.afterPoints.split("\n\n").map((para, pi) => (
+                            <p key={pi}>{para}</p>
+                          ))}
+                        </div>
+                      )}
                     </div>
 
                     {/* Section image / animation */}

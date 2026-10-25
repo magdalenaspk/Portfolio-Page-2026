@@ -23,9 +23,32 @@ export interface Gallery {
   caption?: string;
 }
 
+export type IconName =
+  | "eye" | "sparkle" | "users" | "cursor" | "expand" | "layers" | "tag" | "key"
+  | "beaker" | "chart" | "bolt" | "gift" | "shield" | "sort" | "trash" | "undo"
+  | "chat" | "grid" | "mail" | "sheet" | "stack" | "tabs" | "x" | "phone" | "globe";
+
+// A large-number callout. Context names the initiative/test so results stay separate.
+export interface Stat {
+  value: string;
+  label: string;
+  context?: string;
+}
+
+// An icon-led point, for lists that read better scanned than as prose.
+export interface Point {
+  icon: IconName;
+  title: string;
+  body?: string;
+  tag?: string; // Small status label, e.g. "Planned", "Exploration"
+}
+
 export interface CaseStudySection {
   heading: string;
   body: string; // Supports \n for paragraphs
+  stats?: Stat[];
+  points?: Point[];
+  afterPoints?: string; // Text shown below the points
   image?: ProjectImage;
   imageCaption?: string; // Small caption under the side image, e.g. a status label
   presentation?: string; // Path to PDF in /public

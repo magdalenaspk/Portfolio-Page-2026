@@ -35,7 +35,11 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Popularity Feature",
-        body: "In usability sessions, people actively tried to access listing popularity information and said it helped them make decisions. The feature showed listing views and interactions, including detail-page views, gallery swipes and adding a vehicle to Favourites. Showing a sign-in prompt when this information was gated created a relevant reason to log in at the moment of interest.\n\nThe feature was already live on web. The internal results presentation reported that 5% of login attempts were driven by popularity, while the feature accounted for 2% of total logged-in users. These are different denominators: the feature created login intent, but some users dropped out before completing login.",
+        body: "In usability sessions, people actively tried to access listing popularity information and said it helped them make decisions. The feature showed listing views and interactions, including detail-page views, gallery swipes and adding a vehicle to Favourites. Showing a sign-in prompt when this information was gated created a relevant reason to log in at the moment of interest.\n\nThe feature was already live on web. The internal results presentation reported the two figures below. They use different denominators: the feature created login intent, but some users dropped out before completing login.",
+        stats: [
+          { value: "5%", label: "of login attempts were driven by popularity", context: "Login attempts" },
+          { value: "2%", label: "of total logged-in users came through the feature", context: "Logged-in users" },
+        ],
         gallery: {
           items: [
             { src: "/images/projects/project-7/screens/pop-1-blurred.png", alt: "Popularity section gated for logged-out users with a sign-in prompt", caption: "Logged out: popularity gated, with a sign-in prompt" },
@@ -46,7 +50,13 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Login Redesign",
-        body: "The existing login screen felt outdated, its visual design had not kept up with the rest of the product, and its hierarchy did not follow established login patterns.\n\nThe redesign made the value of signing in clearer, brought Google, Apple and Facebook options above the email form, established one primary action and widened the desktop modal for better readability.",
+        body: "The existing login screen felt outdated, its visual design had not kept up with the rest of the product, and its hierarchy did not follow established login patterns. The redesign:",
+        points: [
+          { icon: "sparkle", title: "Made the value of signing in clearer" },
+          { icon: "users", title: "Put Google, Apple and Facebook above the email form" },
+          { icon: "cursor", title: "Established one primary action" },
+          { icon: "expand", title: "Widened the desktop modal for better readability" },
+        ],
         image: {
           src: "/images/projects/project-7/detail-1.png",
           alt: "Legacy login modal compared with the redesigned login modal",
@@ -64,7 +74,12 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Dealer Login: The Trade-off",
-        body: "The dealer login created a genuine trade-off. Its original full-width button sat near the top and interrupted the main consumer journey. Dealer-side stakeholders needed the entry point to remain visible, but most users were private buyers.\n\nThe chosen direction moved dealer access lower and made it a secondary outlined button: still discoverable for dealers, but less likely to distract buyers.",
+        body: "The dealer login created a genuine trade-off between two needs:",
+        points: [
+          { icon: "users", title: "Private buyers", body: "Most users. The original full-width dealer button sat near the top and interrupted their journey." },
+          { icon: "shield", title: "Dealers", body: "Dealer-side stakeholders needed the entry point to remain visible." },
+        ],
+        afterPoints: "The chosen direction moved dealer access lower and made it a secondary outlined button: still discoverable for dealers, but less likely to distract buyers.",
         image: {
           src: "/images/projects/project-7/detail-2.png",
           alt: "Dealer entry point as a text link compared with a secondary outlined button",
@@ -74,15 +89,36 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Planned Next Steps",
-        body: "Follow-up ideas were planned as next steps: contextual login variants, removing the labels from the social sign-in buttons, one-time-code (OTP) login, and further testing of the dealer button.",
+        body: "Follow-up ideas were planned as next steps:",
+        points: [
+          { icon: "layers", title: "Contextual login variants", tag: "Planned" },
+          { icon: "tag", title: "Social buttons without labels", tag: "Planned" },
+          { icon: "key", title: "One-time-code (OTP) login", tag: "Planned" },
+          { icon: "beaker", title: "Further dealer-button testing", tag: "Planned" },
+        ],
       },
       {
         heading: "Separate Initiatives and Outcomes",
-        body: "Each initiative was measured separately, on its own platform and metric, so these results are not one overall login-redesign result.\n\nNew app onboarding: associated with +25% app logged-in users.\n\nPrice-history login: associated with +3% logged-in iOS users, +14.5% web logins and +24.6% web registrations.\n\nPopularity: associated with 5% of login attempts and a reported +1% increase in registrations.",
+        body: "Each initiative was measured separately, on its own platform and metric, so these results are not one overall login-redesign result.",
+        stats: [
+          { value: "+25%", label: "app logged-in users", context: "New app onboarding" },
+          { value: "+3%", label: "logged-in iOS users", context: "Price-history login" },
+          { value: "+14.5%", label: "web logins", context: "Price-history login" },
+          { value: "+24.6%", label: "web registrations", context: "Price-history login" },
+          { value: "5%", label: "of login attempts", context: "Popularity" },
+          { value: "+1%", label: "registrations (reported)", context: "Popularity" },
+        ],
       },
       {
         heading: "AutoScout24 Club: The Vision",
-        body: "I developed the AutoScout24 Club vision to connect separate logged-in benefits into a coherent membership proposition. Rather than asking users to register for its own sake, the idea was to make an account feel more valuable through useful vehicle insights, convenience features, exclusive benefits and a more consistent member experience.\n\nThe concept explored price history, price evaluation, listing popularity, information such as how long a listing had been online, saved vehicles and search updates, own-car price insights, early access to new listings, exclusive dealer offers, and trust and membership signals such as a verified buyer profile and exclusive content.\n\nThe vision was intended to make the value exchange clearer: users would have practical reasons to maintain an account, while AutoScout24 could build a more continuous relationship with them. I left the company before I could confirm what happened to the concept afterward, so it is a vision, not a launched product.",
+        body: "I developed the AutoScout24 Club vision to connect separate logged-in benefits into a coherent membership proposition. Rather than asking users to register for its own sake, the idea was to make an account feel more valuable through useful vehicle insights, convenience features, exclusive benefits and a more consistent member experience.",
+        points: [
+          { icon: "chart", title: "Vehicle insights", body: "Price history, price evaluation, listing popularity, how long a listing has been online" },
+          { icon: "bolt", title: "Convenience", body: "Saved vehicles and search updates, own-car price insights" },
+          { icon: "gift", title: "Exclusive benefits", body: "Early access to new listings, exclusive dealer offers" },
+          { icon: "shield", title: "Trust & membership", body: "A verified buyer profile, exclusive content" },
+        ],
+        afterPoints: "The vision was intended to make the value exchange clearer: users would have practical reasons to maintain an account, while AutoScout24 could build a more continuous relationship with them. I left the company before I could confirm what happened to the concept afterward, so it is a vision, not a launched product.",
         image: {
           src: "/images/projects/project-7/detail-3.png",
           alt: "AutoScout24 Club landing page concept",
@@ -132,6 +168,7 @@ export const selectedProjects: Project[] = [
       {
         heading: "Research",
         body: "I ran a survey with 1,142 respondents across Android and iOS to better understand how people used Favourites and what they needed from it. The research explored behaviours such as reviewing saved cars, comparing prices, checking for listing changes and understanding how long a vehicle had been online.\n\nThe findings helped focus the redesign on practical tasks: make seller contact easier, make saved listings easier to manage, and surface useful listing information without forcing users to open every detail page.",
+        stats: [{ value: "1,142", label: "survey respondents across Android and iOS" }],
         image: {
           src: "/images/projects/project-1/detail-1.png",
           alt: "Favourites before the redesign",
@@ -153,7 +190,15 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Design Decisions",
-        body: "At page level, users needed better ways to organise and manage saved vehicles: sorting by date, price, mileage and year; removing individual or multiple vehicles; and recovering from an accidental removal. Sold listings also needed a clearer state so users could distinguish them from cars still available.\n\nThe card itself needed to support the next action. Adding a contact button let users reach the seller directly from Favourites instead of opening the detail page first. An undo option after removal reduced the cost of a mistake, while the recommender sat below the saved vehicles so it did not interrupt the primary task.",
+        body: "At page level, users needed better ways to organise and manage saved vehicles, and the card itself needed to support the next action.",
+        points: [
+          { icon: "chat", title: "Contact from the card", body: "Reach the seller directly from Favourites instead of opening the detail page first." },
+          { icon: "sort", title: "Sorting", body: "By date, price, mileage and year." },
+          { icon: "trash", title: "Single and bulk removal", body: "Remove individual or multiple vehicles." },
+          { icon: "undo", title: "Undo", body: "Recover from an accidental removal, reducing the cost of a mistake." },
+          { icon: "x", title: "A clear sold state", body: "Distinguish sold listings from cars still available." },
+          { icon: "grid", title: "Recommender below", body: "Sits under the saved vehicles so it doesn't interrupt the primary task." },
+        ],
         gallery: {
           items: [
             { src: "/images/projects/project-1/screens/fav-list.png", alt: "Favourites page", caption: "Favourites" },
@@ -189,11 +234,16 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Outcome: +5.53% Enquiries",
-        body: "The source deck reports a +5.53% increase in enquiries in the contact-CTA experiment, a 7-day Android test across all users and all markets. The result belongs to the contact CTA; the experiment did not isolate the other parts of the redesign.",
+        body: "The contact-CTA experiment was a 7-day Android test across all users and all markets. The result belongs to the contact CTA; the experiment did not isolate the other parts of the redesign.",
+        stats: [{ value: "+5.53%", label: "enquiries", context: "Contact-CTA experiment · Android" }],
       },
       {
         heading: "Further Exploration",
-        body: "Further ideas explored how Favourites could support the buying journey over time, including email updates and more personalised dealer and buyer recommendations. These were explorations, separate from the contact-CTA result.",
+        body: "Further ideas explored how Favourites could support the buying journey over time. These were explorations, separate from the contact-CTA result.",
+        points: [
+          { icon: "mail", title: "Email updates", tag: "Exploration" },
+          { icon: "users", title: "Personalised dealer and buyer recommendations", tag: "Exploration" },
+        ],
         gallery: {
           variant: "cards",
           caption: "Exploration",
@@ -240,6 +290,10 @@ export const selectedProjects: Project[] = [
       {
         heading: "Recommendation Pool & Feed Simplification",
         body: "One workstream explored reducing clutter in recommendation cards and increasing the number of vehicles visible in the feed. The proposal removed low-usage playlists and last-search listing cards that duplicated other routes into content, while increasing the visible recommendation pool from 15 to 50 vehicles.\n\nThe hypothesis was that a cleaner feed with more relevant vehicles would create a more consistent discovery experience and encourage deeper browsing. The work was planned as phased experiments, with success evaluated against the team's habit metric: users reaching more than six detail-page views in their first week.",
+        stats: [
+          { value: "15 → 50", label: "vehicles in the visible recommendation pool", context: "Proposal" },
+          { value: ">6", label: "detail-page views in the first week", context: "Habit metric" },
+        ],
         gallery: {
           items: [
             { src: "/images/projects/project-2/screens/hs-0-baseline.png", alt: "Recommendation cards before simplification", caption: "Before" },
@@ -253,7 +307,14 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Navigation Experiments",
-        body: "A Netflix-style vertical-feed concept underperformed in the iOS A/B test, with a 20.9% decrease in home recommendation-card clicks and a 1.5% decrease in detail-page lead conversions.\n\nLater tabs and chips explorations offered another way to navigate category-based recommendations. The tabs approach was reported at +7% clicks and +12% overall engagement.\n\nThe learning was not that one familiar pattern always works better than another. The experience needed to fit the way people discover and compare cars, and recommender engagement needed to be evaluated separately from downstream seller interest.",
+        body: "A Netflix-style vertical-feed concept underperformed in the iOS A/B test. Later tabs and chips explorations offered another way to navigate category-based recommendations. The two sets of results are separate.",
+        stats: [
+          { value: "−20.9%", label: "home recommendation-card clicks", context: "Netflix-style · iOS A/B" },
+          { value: "−1.5%", label: "detail-page lead conversions", context: "Netflix-style · iOS A/B" },
+          { value: "+7%", label: "clicks (reported)", context: "Tabs" },
+          { value: "+12%", label: "overall engagement (reported)", context: "Tabs" },
+        ],
+        afterPoints: "The learning was not that one familiar pattern always works better than another. The experience needed to fit the way people discover and compare cars, and recommender engagement needed to be evaluated separately from downstream seller interest.",
         gallery: {
           items: [
             { src: "/images/projects/project-2/screens/hs-3-horizontal.png", alt: "Netflix-style rows grouped by recommendation type", caption: "Netflix-style navigation" },
@@ -308,7 +369,9 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Constraint and Decision",
-        body: "The app already used all five bottom-navigation slots, a familiar pattern on iOS and Android. Adding a sixth tab was not an option. To make room for Deals, I explored combining Favourites and Saved Searches under one \"Saved\" destination. Both are things users save for later: vehicles they want to revisit and searches they want to keep track of.\n\nThe challenge was to preserve the mental model for both types of saved content while freeing a navigation slot for a new destination.",
+        body: "The app already used all five bottom-navigation slots, a familiar pattern on iOS and Android. Adding a sixth tab was not an option.",
+        stats: [{ value: "5 / 5", label: "bottom-navigation slots already in use" }],
+        afterPoints: "To make room for Deals, I explored combining Favourites and Saved Searches under one \"Saved\" destination. Both are things users save for later: vehicles they want to revisit and searches they want to keep track of.\n\nThe challenge was to preserve the mental model for both types of saved content while freeing a navigation slot for a new destination.",
         gallery: {
           items: [
             { src: "/images/projects/project-3/screens/deals-before.png", alt: "App with all five bottom-navigation slots in use", caption: "All five bottom-navigation slots in use" },
@@ -318,7 +381,13 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "Three Saved Concepts",
-        body: "Bottom sheet: let users choose between Favourites and Saved Searches.\n\nStacked sections: show saved vehicles and saved searches as two areas on the same screen.\n\nFilter tabs: let users switch between saved vehicles and saved searches within one destination.\n\nThese concepts explored trade-offs between visibility, navigation depth and the effort required to switch between saved content. The unmoderated prototype test helped assess whether people understood the proposed navigation and where they clicked. It was concept validation, not a production experiment.",
+        body: "I explored three ways of combining saved vehicles and saved searches in one destination.",
+        points: [
+          { icon: "sheet", title: "Bottom sheet", body: "Let users choose between Favourites and Saved Searches." },
+          { icon: "stack", title: "Stacked sections", body: "Show saved vehicles and saved searches as two areas on the same screen." },
+          { icon: "tabs", title: "Filter tabs", body: "Let users switch between saved vehicles and saved searches within one destination." },
+        ],
+        afterPoints: "These concepts explored trade-offs between visibility, navigation depth and the effort required to switch between saved content. The unmoderated prototype test helped assess whether people understood the proposed navigation and where they clicked. It was concept validation, not a production experiment.",
         gallery: {
           caption: "Unmoderated prototype test: usability / concept validation",
           items: [
@@ -330,7 +399,13 @@ export const selectedProjects: Project[] = [
       },
       {
         heading: "What Happened Next",
-        body: "The proposed Deals bottom-navigation tab did not ship. Deals later appeared in the iOS home-screen recommender and on the web homepage, creating additional discovery surfaces without relying on the proposed navigation change.\n\nThese outcomes are distinct. The prototype test does not establish that the bottom-navigation concept increased detail-page views or enquiries, and the later placements are not proof that the tab shipped.",
+        body: "Deals found other discovery surfaces without relying on the proposed navigation change.",
+        points: [
+          { icon: "x", title: "Deals bottom-navigation tab", tag: "Not shipped" },
+          { icon: "phone", title: "Deals in the iOS home-screen recommender", tag: "Later" },
+          { icon: "globe", title: "Deals on the web homepage", tag: "Later" },
+        ],
+        afterPoints: "These outcomes are distinct. The prototype test does not establish that the bottom-navigation concept increased detail-page views or enquiries, and the later placements are not proof that the tab shipped.",
         image: {
           src: "/images/projects/project-3/detail-1.png",
           alt: "iOS home-screen recommender with Reduced offers selected",
