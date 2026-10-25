@@ -88,9 +88,7 @@ export const aboutContent: AboutContent = {
     "Prototyping",
     "Wireframing",
     "User Research & Testing",
-    "AI-assisted Design",
-    "AI Prototyping",
-    "Vibe Coding",
+    "AI-assisted Design & Prototyping",
   ],
   experience: [
     {
