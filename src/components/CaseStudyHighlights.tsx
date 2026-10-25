@@ -48,7 +48,7 @@ export function StatRow({ stats, narrow }: { stats: Stat[]; narrow?: boolean }) 
               {s.context}
             </p>
           )}
-          <dd className="font-display font-extrabold text-4xl md:text-5xl tracking-tight text-neutral-900 leading-none">
+          <dd className="font-sans font-bold text-4xl md:text-5xl tracking-tight tabular-nums text-neutral-900 leading-none">
             {s.value}
           </dd>
           <dt className="mt-2 text-sm leading-snug text-neutral-600">{s.label}</dt>
@@ -62,7 +62,7 @@ export function PointList({ points, narrow }: { points: Point[]; narrow?: boolea
   return (
     <ul className={`grid grid-cols-1 ${narrow ? "" : "sm:grid-cols-2"} gap-x-8 gap-y-6 pt-2`}>
       {points.map((p) => (
-        <li key={p.title} className="flex gap-4">
+        <li key={p.title} className="flex items-center gap-4">
           <span className="shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-lime-100 text-lime-800">
             <Icon name={p.icon} />
           </span>
