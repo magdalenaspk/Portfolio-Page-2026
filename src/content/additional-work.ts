@@ -2,6 +2,41 @@ import { AdditionalWorkItem } from "./types";
 
 export const additionalWork: AdditionalWorkItem[] = [
   {
+    id: 6,
+    title: "Creator Program",
+    company: "Pepper (hotukdeals)",
+    description:
+      "Gave the community's top posters a way to earn ad revenue from their deals, live today across iOS, Android and web.",
+    tags: ["Community", "Monetisation", "Mobile", "Web"],
+    thumbnail: {
+      src: "/images/additional-work/work-6.png",
+      alt: "Creator Program screens - Pepper",
+      width: 800,
+      height: 600,
+      background: "#F5F5F5",
+    },
+    overview:
+      "Pepper runs some of the largest deal communities in Europe, including hotukdeals in the UK, and the best deals come from a small group of dedicated posters. A points and levels programme already rewarded them for posting and referrals, and it worked well. The Creator Program was the next step: keep the top contributors posting great deals by letting them share in the ad revenue their deal pages generate.",
+    sections: [
+      {
+        heading: "My Role",
+        body: "I joined the Hyperion team, which owned the levels programme, and designed the Creator Program layer on top of it, working with a PM, a data analyst, and iOS, Android and web engineers. I designed how members discover the programme from Points & Rewards, the Become a Creator page explaining how it works, who can apply and how much they can earn, the application, its status messages in the inbox, the approved and rejected paths, the warning when a creator is about to lose their status, and the Creator label on their profile.",
+      },
+      {
+        heading: "The Legal Constraint",
+        body: "The long-term idea was that anyone could become a creator. Tax law made that impossible at first: in Germany, earning this kind of revenue meant creators had to be registered as a business with a business tax number, and similar rules applied in other markets, like the UK. So the first version was open only to members with a registered business, and the application had to collect that business information up front. It narrowed the audience considerably, but it let us launch legally and learn before widening access.",
+      },
+      {
+        heading: "Starting Small",
+        body: "Paying people is high-stakes, so the first version was deliberately manual. Only established posters with a history of good deals were accepted: Platinum contributors who had been members for at least six months and followed the community guidelines. Applications were reviewed by hand, and payouts were handled manually at first, with automation planned once the programme proved itself.\n\nStatus also had to be earned continuously. Points expire after twelve months, so I designed a warning that tells creators they are about to lose their level and Creator status, and what to do to keep it. I explored a fixed message and a countdown showing exactly how many days are left.",
+      },
+      {
+        heading: "Outcome",
+        body: "The Creator Program launched across iOS, Android and web, and it is still live on hotukdeals and other Pepper communities.",
+      },
+    ],
+  },
+  {
     id: 5,
     title: "Native Referral Flow",
     company: "Marley Spoon",
