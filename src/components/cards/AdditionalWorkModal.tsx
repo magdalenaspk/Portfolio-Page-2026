@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { AdditionalWorkItem } from "@/content/types";
 import { PlaceholderImage } from "./PlaceholderImage";
@@ -13,6 +14,8 @@ interface AdditionalWorkModalProps {
 
 export function AdditionalWorkModal({ item, onClose }: AdditionalWorkModalProps) {
   const [isMobile, setIsMobile] = useState(true);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 768px)");
@@ -22,10 +25,31 @@ export function AdditionalWorkModal({ item, onClose }: AdditionalWorkModalProps)
     return () => mq.removeEventListener("change", handler);
   }, []);
 
-  // Lock body scroll when open
+  // Lock page scroll while open. iOS Safari ignores overflow:hidden on the
+  // body, so pin the body in place and restore the exact position on close.
   useEffect(() => {
-    document.body.style.overflow = item ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    if (!item) return;
+    const y = window.scrollY;
+    const html = document.documentElement;
+    const body = document.body;
+    const prevBehavior = html.style.scrollBehavior;
+    body.style.position = "fixed";
+    body.style.top = `-${y}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+    return () => {
+      body.style.position = "";
+      body.style.top = "";
+      body.style.left = "";
+      body.style.right = "";
+      body.style.width = "";
+      body.style.overflow = "";
+      html.style.scrollBehavior = "auto"; // jump back instantly, no smooth scroll
+      window.scrollTo(0, y);
+      html.style.scrollBehavior = prevBehavior;
+    };
   }, [item]);
 
   // Close on Escape
@@ -38,7 +62,11 @@ export function AdditionalWorkModal({ item, onClose }: AdditionalWorkModalProps)
   const hidden  = isMobile ? { y: "100%" } : { x: "100%" };
   const visible = isMobile ? { y: 0 }      : { x: 0 };
 
-  return (
+  if (!mounted) return null;
+
+  // Render at the top of the document so no animated (transformed) ancestor
+  // can change what the fixed panel is positioned against.
+  return createPortal(
     <AnimatePresence>
       {item && (
         <>
@@ -62,7 +90,7 @@ export function AdditionalWorkModal({ item, onClose }: AdditionalWorkModalProps)
             animate={visible}
             exit={hidden}
             transition={{ type: "spring", damping: 32, stiffness: 320 }}
-            className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl overflow-hidden flex flex-col max-h-[90vh]
+            className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl overflow-hidden flex flex-col max-h-[90vh] max-h-[85dvh]
                        md:inset-y-0 md:left-auto md:right-0 md:bottom-auto md:top-0 md:w-[520px] md:max-w-[90vw] md:max-h-full md:rounded-none md:rounded-l-2xl md:shadow-2xl"
           >
             {/* Drag handle (mobile only) */}
@@ -82,7 +110,7 @@ export function AdditionalWorkModal({ item, onClose }: AdditionalWorkModalProps)
             </button>
 
             {/* Scrollable content */}
-            <div className="overflow-y-auto overscroll-contain">
+            <div className="overflow-y-auto overscroll-contain min-h-0 flex-1">
               {/* Thumbnail */}
               <div
                 className="aspect-[4/3] shrink-0"
@@ -140,6 +168,7 @@ export function AdditionalWorkModal({ item, onClose }: AdditionalWorkModalProps)
           </motion.div>
         </>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }
