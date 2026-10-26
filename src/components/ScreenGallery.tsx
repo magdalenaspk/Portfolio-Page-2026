@@ -16,7 +16,7 @@ function layoutClass(g: Gallery) {
   if (g.items.length <= 2) {
     return `grid ${g.items.length === 1 ? "grid-cols-1 max-w-[60%] mx-auto" : "grid-cols-2"} md:max-w-none justify-center`;
   }
-  return "flex overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-2 sm:-mx-8 sm:px-8 md:mx-0 md:px-0 md:pb-0 md:overflow-visible md:grid md:justify-center";
+  return "no-scrollbar flex overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-2 sm:-mx-8 sm:px-8 md:mx-0 md:px-0 md:pb-0 md:overflow-visible md:grid md:justify-center";
 }
 
 export function ScreenGallery({ gallery }: { gallery: Gallery }) {

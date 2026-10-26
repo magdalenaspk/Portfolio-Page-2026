@@ -30,3 +30,7 @@ body {
     white-space: pre-line;
   }
 }
+
+/* Swipe rows show their own dots, so hide the native scrollbar */
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
