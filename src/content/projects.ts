@@ -8,7 +8,7 @@ const allSelectedProjects: Project[] = [
     title: "Growing Logged-in Users",
     subtitle: "Timely Reasons to Log In",
     description:
-      "Well-timed reasons to log in and a simpler login: +40% logged-in iOS users from the new app launch, and ~40% growth in the share of logged-in users.",
+      "Well-timed reasons to log in and a simpler login: +40% logged-in iOS users from the new app launch, and 40% growth in the share of logged-in users.",
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android, Web, mWeb",
@@ -218,7 +218,7 @@ const allSelectedProjects: Project[] = [
         heading: "Outcome",
         body: "Each experiment moved its own number, measured on its own platform and metric, and together they made a significant difference. The bigger change was in approach: from a login wall to a series of well-timed, low-friction invitations.",
         stats: [
-          { value: "~40%", label: "growth in the share of logged-in users", context: "All initiatives together" },
+          { value: "40%", label: "growth in the share of logged-in users", context: "All initiatives together" },
         ],
       },
       {
@@ -246,7 +246,7 @@ const allSelectedProjects: Project[] = [
     title: "Favourites Redesign",
     subtitle: "A Working Space for Buyers",
     description:
-      "Made Favourites a working space for car buyers: contact from the card, page-level sorting and bulk actions, clearer states. ~5.5% more enquiries.",
+      "Made Favourites a working space for car buyers: contact from the card, page-level sorting and bulk actions, clearer states. +5.5% more enquiries.",
     company: "AutoScout24",
     role: "Product Designer",
     platform: "iOS, Android, Web",
@@ -438,7 +438,7 @@ const allSelectedProjects: Project[] = [
         gallery: {
           items: [
             { src: "/images/projects/project-2/screens/hs-0-baseline.png", alt: "Original recommendations with long titles, badges and seller type", caption: "Before: long titles, badges and seller type" },
-            { src: "/images/projects/project-2/screens/hs-2-simplified.png", alt: "Simplified recommendation cards", caption: "After: model, price and key facts, ~17% more clicks" },
+            { src: "/images/projects/project-2/screens/hs-2-simplified.png", alt: "Simplified recommendation cards", caption: "After: model, price and key facts, 17% more clicks" },
           ],
         },
       },
