@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import type { Gallery } from "@/content/types";
 
@@ -11,6 +11,10 @@ const ITEM_WIDTH = { phone: 200, cards: 260 } as const;
 function layoutClass(g: Gallery) {
   if (g.variant === "desktop") {
     return `grid ${g.items.length === 1 ? "grid-cols-1 md:w-1/2 md:mx-auto" : "grid-cols-1 md:grid-cols-2"}`;
+  }
+  // One or two screens fit side by side on phones, so they never scroll.
+  if (g.items.length <= 2) {
+    return `grid ${g.items.length === 1 ? "grid-cols-1 max-w-[60%] mx-auto" : "grid-cols-2"} md:max-w-none justify-center`;
   }
   return "flex overflow-x-auto snap-x snap-mandatory -mx-4 px-4 pb-2 sm:-mx-8 sm:px-8 md:mx-0 md:px-0 md:pb-0 md:overflow-visible md:grid md:justify-center";
 }
@@ -27,6 +31,24 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
   const gridStyle = isPhone
     ? { gridTemplateColumns: `repeat(${items.length}, minmax(0, ${colW}px))` }
     : undefined;
+
+  // Phone rows with 3+ screens swipe; track which screen is in view for the dots.
+  const swipes = isPhone && items.length > 2;
+  const rowRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+  useEffect(() => {
+    const row = rowRef.current;
+    if (!row || !swipes) return;
+    const onScroll = () => {
+      const first = row.children[0] as HTMLElement | undefined;
+      if (!first) return;
+      const stepW = first.getBoundingClientRect().width + parseFloat(getComputedStyle(row).columnGap || "0");
+      const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 4;
+      setActive(atEnd ? items.length - 1 : Math.round(row.scrollLeft / stepW));
+    };
+    row.addEventListener("scroll", onScroll, { passive: true });
+    return () => row.removeEventListener("scroll", onScroll);
+  }, [swipes, items.length]);
 
   const close = useCallback(() => setOpen(null), []);
   const step = useCallback(
@@ -56,6 +78,7 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
     <figure className="mt-10">
       <div className="rounded-2xl bg-gradient-to-br from-neutral-50 to-neutral-200/70 px-4 py-8 sm:px-8 md:px-10 md:py-12">
         <div
+          ref={rowRef}
           className={`gap-4 sm:gap-6 ${layoutClass(gallery)} items-start`}
           style={gridStyle}
         >
@@ -65,7 +88,7 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
               type="button"
               onClick={() => setOpen(i)}
               className={`group text-left focus:outline-none ${
-                isPhone ? "shrink-0 w-[58%] sm:w-[34%] snap-start md:w-auto" : ""
+                swipes ? "shrink-0 w-[68%] sm:w-[38%] snap-start md:w-auto" : ""
               }`}
               aria-label={`Enlarge: ${item.caption ?? item.alt}`}
             >
@@ -92,6 +115,18 @@ export function ScreenGallery({ gallery }: { gallery: Gallery }) {
             </button>
           ))}
         </div>
+        {swipes && (
+          <div className="mt-4 flex justify-center gap-1.5 md:hidden" aria-hidden="true">
+            {items.map((item, i) => (
+              <span
+                key={item.src}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === active ? "w-5 bg-neutral-700" : "w-1.5 bg-neutral-300"
+                }`}
+              />
+            ))}
+          </div>
+        )}
       </div>
       {gallery.caption && (
         <figcaption className="mt-3 text-sm text-neutral-500 text-center">
