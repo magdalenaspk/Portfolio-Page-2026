@@ -4,7 +4,11 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StaggerChildren } from "@/components/motion/StaggerChildren";
 import { AdditionalWorkCard } from "@/components/cards/AdditionalWorkCard";
 
-export function AdditionalWork() {
+// In preview (locked) mode, cards keep their teaser but drop the detail text.
+export function AdditionalWork({ preview = false }: { preview?: boolean }) {
+  const items = preview
+    ? additionalWork.map((item) => ({ ...item, overview: undefined, sections: undefined }))
+    : additionalWork;
   return (
     <section className="py-12 md:py-24">
       <Container>
@@ -16,7 +20,7 @@ export function AdditionalWork() {
           staggerDelay={0.1}
           className="flex flex-col gap-4 lg:gap-6"
         >
-          {additionalWork.map((item) => (
+          {items.map((item) => (
             <AdditionalWorkCard key={item.id} item={item} />
           ))}
         </StaggerChildren>

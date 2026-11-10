@@ -16,6 +16,7 @@ import { PlaceholderImage } from "@/components/cards/PlaceholderImage";
 import { OnboardingAnimation } from "@/components/OnboardingAnimation";
 import { PresentationWrapper } from "@/components/PresentationWrapper";
 import { ScreenGallery } from "@/components/ScreenGallery";
+import { WorkLock } from "@/components/lock/WorkLock";
 import { PointList, StatRow } from "@/components/CaseStudyHighlights";
 
 interface PageProps {
@@ -23,6 +24,9 @@ interface PageProps {
 }
 
 // Pre-render only published projects
+// Reads the access cookie, so render per request.
+export const dynamic = "force-dynamic";
+
 export function generateStaticParams() {
   return getPublishedProjects().map((p) => ({ slug: p.slug }));
 }
@@ -147,6 +151,24 @@ export default function ProjectPage({ params }: PageProps) {
         </FadeIn>
       </Container>
 
+      <WorkLock
+        disabled={workshop}
+        returnTo={`/projects/${project.slug}`}
+        preview={
+          <Container as="div">
+            {project.heroImage && (
+              <div className="w-full aspect-[960/420] overflow-hidden" style={{ background: project.thumbnail.background ?? "#f5f5f5" }}>
+                <PlaceholderImage src={project.heroImage.src} alt="" label={`${project.id}`} className="w-full h-full" />
+              </div>
+            )}
+            <div className="max-w-3xl mx-auto py-16 space-y-4">
+              {[100, 92, 96, 70, 0, 88, 100, 64].map((w, i) => (
+                <div key={i} className="h-4 rounded-full bg-neutral-200" style={{ width: `${w}%`, opacity: w ? 1 : 0 }} />
+              ))}
+            </div>
+          </Container>
+        }
+      >
       {/* Hero image */}
       {project.heroImage && (
         <SlideUp delay={0.1}>
@@ -310,6 +332,7 @@ export default function ProjectPage({ params }: PageProps) {
           ))}
         </div>
       )}
+      </WorkLock>
 
       {/* Prev / Next navigation */}
       <Container as="div" className="py-20 border-t border-neutral-100 mt-8">
