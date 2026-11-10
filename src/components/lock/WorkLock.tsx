@@ -42,7 +42,7 @@ export function WorkLock({ children, preview, returnTo, title = "My work is pass
               </svg>
             </div>
             <h2 className="text-lg font-bold text-neutral-900 mb-1">{title}</h2>
-            <p className="text-sm text-neutral-600">Enter the password to view the case studies.</p>
+            <p className="text-sm text-neutral-600">Enter the password to view case studies and workshops.</p>
           </div>
           <UnlockForm returnTo={returnTo} />
         </div>

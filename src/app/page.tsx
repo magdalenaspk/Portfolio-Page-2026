@@ -17,13 +17,14 @@ export default function HomePage() {
           <>
             <SelectedProjects />
             <AdditionalWork preview />
+            <Workshops />
           </>
         }
       >
         <SelectedProjects />
         <AdditionalWork />
+        <Workshops />
       </WorkLock>
-      <Workshops />
     </>
   );
 }

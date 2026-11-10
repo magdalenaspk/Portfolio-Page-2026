@@ -152,7 +152,6 @@ export default function ProjectPage({ params }: PageProps) {
       </Container>
 
       <WorkLock
-        disabled={workshop}
         returnTo={`/projects/${project.slug}`}
         preview={
           <Container as="div">
