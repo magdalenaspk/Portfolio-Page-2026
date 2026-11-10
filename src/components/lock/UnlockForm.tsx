@@ -1,18 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 import { unlockAction, type UnlockState } from "@/app/unlock/actions";
 
-function SubmitButton() {
+function SubmitButton({ done }: { done: boolean }) {
   const { pending } = useFormStatus();
   return (
     <button
       type="submit"
-      disabled={pending}
+      disabled={pending || done}
       className="w-full py-3 px-4 rounded-xl bg-lime-300 hover:bg-lime-200 disabled:opacity-60 text-neutral-950 font-semibold text-sm transition-colors duration-200"
     >
-      {pending ? "Unlocking…" : "Unlock"}
+      {pending || done ? "Unlocking…" : "Unlock"}
     </button>
   );
 }
@@ -20,6 +20,15 @@ function SubmitButton() {
 export function UnlockForm({ returnTo }: { returnTo: string }) {
   const [state, action] = useFormState<UnlockState, FormData>(unlockAction, { error: false });
   const [show, setShow] = useState(false);
+
+  // After a correct password, load the page fresh so the server sends the
+  // unlocked content. Staying on the same page keeps the scroll position.
+  useEffect(() => {
+    if (!state.unlocked) return;
+    const target = new URL(returnTo, window.location.href);
+    if (target.pathname === window.location.pathname) window.location.reload();
+    else window.location.assign(target.toString());
+  }, [state.unlocked, returnTo]);
 
   return (
     <form action={action} className="space-y-3">
@@ -61,7 +70,7 @@ export function UnlockForm({ returnTo }: { returnTo: string }) {
           Incorrect password. Try again.
         </p>
       )}
-      <SubmitButton />
+      <SubmitButton done={!!state.unlocked} />
     </form>
   );
 }
