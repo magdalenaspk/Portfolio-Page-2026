@@ -56,7 +56,7 @@ export const aboutContent: AboutContent = {
     {
       body: "She works closely with everyone in the team to understand product needs and find practical solutions through clear, simple and user-focused designs. Her collaborative approach has made product discussions smoother and more effective.",
       author: "Marcelo",
-      role: "Software Engineering Management",
+      role: "Software Engineering Manager",
     },
     {
       body: "I love your presentations at our All-Hands, and your Figma Make talk was fantastic as well. You always speak so clearly, structured, to the point, and entertaining.",
